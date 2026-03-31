@@ -1,87 +1,34 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { Home, MessageSquare, FileText, Mail } from "lucide-react";
 
 const navItems = [
-  { label: "Work", link: "#work" },
-  { label: "About", link: "#about" },
-  { label: "Experience", link: "#experience" },
-  { label: "Contact", link: "#contact" },
+  { icon: Home, link: "#", label: "Home" },
+  { icon: MessageSquare, link: "#work", label: "Work" },
+  { icon: FileText, link: "#experience", label: "Experience" },
+  { icon: Mail, link: "#contact", label: "Contact" },
 ];
 
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
     <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "nav-blur" : ""
-      }`}
+      initial={{ y: 40, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5, delay: 0.3 }}
+      className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50"
     >
-      <div className="container mx-auto flex items-center justify-between py-4 px-6">
-        <a href="#" className="text-lg font-bold tracking-tight">
-          Aakriti Thakur
-        </a>
-
-        {/* Desktop */}
-        <div className="hidden md:flex items-center gap-8">
-          {navItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.link}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
-            >
-              {item.label}
-            </a>
-          ))}
+      <div className="glass-card px-4 py-3 flex items-center gap-2">
+        {navItems.map((item) => (
           <a
-            href="#contact"
-            className="text-sm border border-border rounded-full px-5 py-2 text-muted-foreground hover:text-foreground hover:border-primary/40 transition-all duration-200"
+            key={item.label}
+            href={item.link}
+            className="w-10 h-10 rounded-xl flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-secondary/80 transition-all duration-200"
+            title={item.label}
           >
-            View Resume
+            <item.icon className="w-5 h-5" />
           </a>
-        </div>
-
-        {/* Mobile toggle */}
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden flex flex-col gap-1.5"
-          aria-label="Toggle menu"
-        >
-          <span className={`block w-6 h-0.5 bg-foreground transition-transform duration-200 ${mobileOpen ? "rotate-45 translate-y-2" : ""}`} />
-          <span className={`block w-6 h-0.5 bg-foreground transition-opacity duration-200 ${mobileOpen ? "opacity-0" : ""}`} />
-          <span className={`block w-6 h-0.5 bg-foreground transition-transform duration-200 ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`} />
-        </button>
+        ))}
       </div>
-
-      {/* Mobile menu */}
-      {mobileOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="md:hidden nav-blur px-6 pb-6 flex flex-col gap-4"
-        >
-          {navItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.link}
-              onClick={() => setMobileOpen(false)}
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {item.label}
-            </a>
-          ))}
-        </motion.div>
-      )}
     </motion.nav>
   );
 };
