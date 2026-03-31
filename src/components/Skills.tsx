@@ -1,41 +1,33 @@
 import { motion } from "framer-motion";
 
 const skills = [
-  "UX Strategy", "Product Design", "User Research", "Interaction Design",
-  "Design Systems", "Figma", "Hotjar", "Google Analytics", "ChatGPT", "Gemini",
+  "Product Design", "User Research", "Wireframing", "Prototyping",
+  "Design Systems", "Design Thinking", "Usability Testing",
+  "Data Visualization", "User Flows", "UI/UX Design",
 ];
 
+const SkillPill = ({ label }: { label: string }) => (
+  <span className="pill-tag whitespace-nowrap flex items-center gap-2">
+    {label}
+    <span className="text-primary">✦</span>
+  </span>
+);
+
 const Skills = () => (
-  <section className="py-24">
-    <div className="container mx-auto px-6">
-      <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="section-heading mb-10"
-      >
-        Skills & Tools
-      </motion.h2>
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="flex flex-wrap gap-3"
-      >
-        {skills.map((s, i) => (
-          <motion.span
-            key={s}
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.04 }}
-            className="pill-tag"
-          >
-            {s}
-          </motion.span>
+  <section className="py-6 px-4 overflow-hidden">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      className="max-w-3xl mx-auto glass-card py-4 overflow-hidden"
+    >
+      <div className="marquee-track">
+        {/* Duplicate skills for seamless loop */}
+        {[...skills, ...skills, ...skills, ...skills].map((s, i) => (
+          <SkillPill key={`${s}-${i}`} label={s} />
         ))}
-      </motion.div>
-    </div>
+      </div>
+    </motion.div>
   </section>
 );
 
