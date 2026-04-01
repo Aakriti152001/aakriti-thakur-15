@@ -26,7 +26,7 @@ const Navbar = () => {
         scrolled ? "top-2" : "top-4"
       }`}
     >
-      <div className="glass-card px-6 py-3 flex items-center gap-8">
+      <div className="glass-card px-8 py-3 flex items-center gap-8 rounded-full">
         <a href="#" className="text-foreground font-bold text-lg tracking-tight">
           Aakriti
         </a>
