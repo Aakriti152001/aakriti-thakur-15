@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 import portraitImg from "@/assets/portrait.jpg";
 
 const Hero = () => {
   return (
-    <section className="min-h-[90vh] flex items-center relative overflow-hidden">
+    <section className="min-h-[90vh] flex items-center relative overflow-hidden pt-24">
       {/* Background glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-primary/5 blur-[120px]" />
@@ -25,33 +26,30 @@ const Hero = () => {
             className="inline-flex items-center gap-2 glass-card px-4 py-2 w-fit text-sm"
           >
             <span className="w-2 h-2 rounded-full bg-primary animate-glow-pulse" />
-            <span className="text-muted-foreground">Open to opportunities</span>
+            <span className="text-muted-foreground">Product Designer</span>
           </motion.div>
 
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-none">
-            AAKRITI
+            Aakriti
             <br />
-            <span className="gradient-text">THAKUR</span>
+            <span className="text-muted-foreground/60">Thakur</span>
+            <ArrowUpRight className="inline-block w-8 h-8 md:w-10 md:h-10 ml-3 text-muted-foreground/40" />
           </h1>
 
-          <p className="text-xl text-muted-foreground">
-            UX Manager | Product Designer
-          </p>
-
           <p className="text-muted-foreground max-w-md leading-relaxed">
-            Designing scalable, user-centered products and leading UX strategy
-            across AI platforms.
+            I'm a versatile designer specializing in graphic, web, and product
+            design to help grow your business. Let's build something great!
           </p>
 
           <div className="flex gap-4 mt-2">
-            <a href="#work" className="gradient-btn">
-              View Work
+            <a href="#work" className="border border-border rounded-full px-6 py-3 text-foreground hover:bg-secondary/80 transition-all duration-300 text-sm font-medium">
+              See All Projects
             </a>
             <a
               href="#contact"
-              className="border border-border rounded-full px-6 py-3 text-muted-foreground hover:text-foreground hover:border-primary/40 transition-all duration-300"
+              className="bg-foreground text-background rounded-full px-6 py-3 hover:bg-foreground/90 transition-all duration-300 text-sm font-medium"
             >
-              Download Resume
+              Contact Now
             </a>
           </div>
         </motion.div>
