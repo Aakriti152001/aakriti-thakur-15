@@ -14,20 +14,21 @@ const SkillPill = ({ label }: { label: string }) => (
 );
 
 const Skills = () => (
-  <section className="py-6 px-4 overflow-hidden">
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      className="max-w-3xl mx-auto glass-card py-4 overflow-hidden"
-    >
-      <div className="marquee-track">
-        {/* Duplicate skills for seamless loop */}
-        {[...skills, ...skills, ...skills, ...skills].map((s, i) => (
-          <SkillPill key={`${s}-${i}`} label={s} />
-        ))}
-      </div>
-    </motion.div>
+  <section className="py-4 overflow-hidden">
+    <div className="container mx-auto max-w-6xl">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        className="overflow-hidden py-4"
+      >
+        <div className="marquee-track">
+          {[...skills, ...skills, ...skills, ...skills].map((s, i) => (
+            <SkillPill key={`${s}-${i}`} label={s} />
+          ))}
+        </div>
+      </motion.div>
+    </div>
   </section>
 );
 
