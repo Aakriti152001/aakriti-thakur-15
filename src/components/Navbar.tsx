@@ -22,16 +22,16 @@ const Navbar = () => {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ${
+      className={`fixed left-0 right-0 z-50 flex justify-center transition-all duration-300 ${
         scrolled ? "top-2" : "top-4"
       }`}
     >
-      <div className="glass-card px-8 py-3 flex items-center gap-8 rounded-full">
+      <div className="glass-card px-6 py-2.5 flex items-center gap-6 rounded-full">
         <a href="#" className="text-foreground font-bold text-lg tracking-tight">
           Aakriti
         </a>
 
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-5">
           {navItems.map((item) => (
             <a
               key={item.label}
@@ -45,7 +45,7 @@ const Navbar = () => {
 
         <a
           href="#contact"
-          className="ml-2 text-sm px-4 py-2 rounded-full bg-secondary text-foreground hover:bg-secondary/80 transition-colors duration-200 flex items-center gap-2"
+          className="text-sm px-4 py-2 rounded-full bg-secondary text-foreground hover:bg-secondary/80 transition-colors duration-200 flex items-center gap-2"
         >
           <span className="text-primary">✦</span>
           Get in Touch
