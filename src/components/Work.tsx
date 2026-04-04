@@ -34,7 +34,9 @@ const projects = [
   },
 ];
 
-const Work = () => (
+const Work = () => {
+  const navigate = useNavigate();
+  return (
   <section id="work" className="py-16 px-4">
     <div className="container mx-auto max-w-6xl">
       <motion.div
