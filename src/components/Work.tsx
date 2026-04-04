@@ -11,6 +11,7 @@ const projects = [
     image: project1,
     span: "md:col-span-1 md:row-span-2",
     aspectClass: "aspect-[3/4]",
+    link: "https://aakritithakur.designfolio.me/project/67375907626233dd4485446e",
   },
   {
     title: "AI Job Matcher",
