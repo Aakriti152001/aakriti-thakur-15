@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
@@ -11,7 +12,7 @@ const projects = [
     image: project1,
     span: "md:col-span-1 md:row-span-2",
     aspectClass: "aspect-[3/4]",
-    link: "https://aakritithakur.designfolio.me/project/67375907626233dd4485446e",
+    link: "/project/m2t",
   },
   {
     title: "AI Job Matcher",
@@ -33,7 +34,9 @@ const projects = [
   },
 ];
 
-const Work = () => (
+const Work = () => {
+  const navigate = useNavigate();
+  return (
   <section id="work" className="py-16 px-4">
     <div className="container mx-auto max-w-6xl">
       <motion.div
@@ -67,7 +70,7 @@ const Work = () => (
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
             className={`group cursor-pointer relative rounded-2xl overflow-hidden border border-border/30 ${p.span}`}
-            {...(p.link ? { onClick: () => window.open(p.link, '_blank') } : {})}
+            {...(p.link ? { onClick: () => navigate(p.link!) } : {})}
           >
             <div className={`${p.aspectClass} w-full`}>
               <img
@@ -88,7 +91,7 @@ const Work = () => (
         ))}
       </div>
     </div>
-  </section>
-);
-
+    </section>
+  );
+};
 export default Work;
