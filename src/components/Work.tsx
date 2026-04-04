@@ -90,6 +90,7 @@ const Work = () => {
           </motion.div>
         ))}
       </div>
+    </div>
     </section>
   );
 };
