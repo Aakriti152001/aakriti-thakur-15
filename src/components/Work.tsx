@@ -67,6 +67,7 @@ const Work = () => (
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
             className={`group cursor-pointer relative rounded-2xl overflow-hidden border border-border/30 ${p.span}`}
+            {...(p.link ? { onClick: () => window.open(p.link, '_blank') } : {})}
           >
             <div className={`${p.aspectClass} w-full`}>
               <img
