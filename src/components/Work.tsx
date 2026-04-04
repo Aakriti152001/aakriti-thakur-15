@@ -91,7 +91,6 @@ const Work = () => {
         ))}
       </div>
     </div>
-  </section>
-);
-
+  );
+};
 export default Work;
