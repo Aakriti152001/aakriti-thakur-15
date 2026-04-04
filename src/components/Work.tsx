@@ -25,6 +25,7 @@ const projects = [
     image: project3,
     span: "md:col-span-1",
     aspectClass: "aspect-[16/10]",
+    link: "/project/fundin-bharat",
   },
   {
     title: "AI SaaS Dashboards",
