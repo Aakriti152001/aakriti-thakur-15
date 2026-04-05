@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import ProjectM2T from "./pages/ProjectM2T.tsx";
 import ProjectFundinBharat from "./pages/ProjectFundinBharat.tsx";
+import ProjectFundinDashboard from "./pages/ProjectFundinDashboard.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -20,6 +21,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/project/docbot" element={<ProjectM2T />} />
           <Route path="/project/fundin-bharat" element={<ProjectFundinBharat />} />
+          <Route path="/product/fundin-bharat-dashboard" element={<ProjectFundinDashboard />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

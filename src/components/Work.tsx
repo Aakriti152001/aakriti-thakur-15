@@ -19,6 +19,7 @@ const projects = [
     image: project2,
     span: "md:col-span-1",
     aspectClass: "aspect-[16/10]",
+    link: "/product/fundin-bharat-dashboard",
   },
   {
     title: "Fundin Bharat",
