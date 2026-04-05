@@ -12,7 +12,7 @@ const projects = [
     image: project1,
     span: "md:col-span-1 md:row-span-2",
     aspectClass: "aspect-[3/4]",
-    link: "/project/m2t",
+    link: "/project/docbot",
   },
   {
     title: "AI Job Matcher",
