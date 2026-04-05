@@ -8,7 +8,7 @@ import project4 from "@/assets/project-4.jpg";
 
 const projects = [
   {
-    title: "M2T Website",
+    title: "DOCBOT",
     image: project1,
     span: "md:col-span-1 md:row-span-2",
     aspectClass: "aspect-[3/4]",
