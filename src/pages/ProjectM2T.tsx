@@ -12,6 +12,20 @@ import img7 from "@/assets/m2t-project/img7.jpg";
 import img8 from "@/assets/m2t-project/img8.jpg";
 import img9 from "@/assets/m2t-project/img9.jpg";
 import img10 from "@/assets/m2t-project/img10.jpg";
+import img11 from "@/assets/m2t-project/img11.jpg";
+import img12 from "@/assets/m2t-project/img12.jpg";
+import img13 from "@/assets/m2t-project/img13.jpg";
+import img14 from "@/assets/m2t-project/img14.jpg";
+import img15 from "@/assets/m2t-project/img15.jpg";
+import img16 from "@/assets/m2t-project/img16.jpg";
+import img17 from "@/assets/m2t-project/img17.jpg";
+import img18 from "@/assets/m2t-project/img18.jpg";
+import img19 from "@/assets/m2t-project/img19.jpg";
+import img20 from "@/assets/m2t-project/img20.jpg";
+import img21 from "@/assets/m2t-project/img21.jpg";
+import img22 from "@/assets/m2t-project/img22.jpg";
+import img23 from "@/assets/m2t-project/img23.jpg";
+import img24 from "@/assets/m2t-project/img24.jpg";
 
 const details = [
   { label: "App name / Client", value: "DOCBOT" },
@@ -20,7 +34,11 @@ const details = [
   { label: "Platform", value: "App design" },
 ];
 
-const galleryImages = [heroImg, img2, img3, img4, img5, img6, img7, img8, img9, img10];
+const galleryImages = [
+  heroImg, img2, img3, img4, img5, img6, img7, img8, img9, img10,
+  img11, img12, img13, img14, img15, img16, img17, img18, img19, img20,
+  img21, img22, img23, img24,
+];
 
 const ProjectM2T = () => {
   const navigate = useNavigate();
