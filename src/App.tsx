@@ -7,6 +7,7 @@ import Index from "./pages/Index.tsx";
 import ProjectM2T from "./pages/ProjectM2T.tsx";
 import ProjectFundinBharat from "./pages/ProjectFundinBharat.tsx";
 import ProjectFundinDashboard from "./pages/ProjectFundinDashboard.tsx";
+import ProjectGigpot from "./pages/ProjectGigpot.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
