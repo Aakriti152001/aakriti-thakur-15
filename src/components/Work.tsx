@@ -5,6 +5,7 @@ import project1 from "@/assets/project-docbot.png";
 import project2 from "@/assets/project-ai-job-matcher.png";
 import project3 from "@/assets/project-fundin-bharat.png";
 import project4 from "@/assets/project-4.png";
+import project5 from "@/assets/project-crypto-lottery.png";
 
 const projects = [
   {
