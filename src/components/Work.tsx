@@ -5,6 +5,7 @@ import project1 from "@/assets/project-docbot.png";
 import project2 from "@/assets/project-ai-job-matcher.png";
 import project3 from "@/assets/project-fundin-bharat.png";
 import project4 from "@/assets/project-4.png";
+import project5 from "@/assets/project-crypto-lottery.png";
 
 const projects = [
   {
@@ -34,6 +35,13 @@ const projects = [
     span: "md:col-span-1",
     aspectClass: "aspect-[16/10]",
     link: "/product/gigpot",
+  },
+  {
+    title: "CryptoLottery",
+    image: project5,
+    span: "md:col-span-1",
+    aspectClass: "aspect-[16/10]",
+    link: "/product/crypto-lottery",
   },
 ];
 
