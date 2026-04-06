@@ -36,6 +36,13 @@ const projects = [
     aspectClass: "aspect-[16/10]",
     link: "/product/gigpot",
   },
+  {
+    title: "CryptoLottery",
+    image: project5,
+    span: "md:col-span-1",
+    aspectClass: "aspect-[16/10]",
+    link: "/product/crypto-lottery",
+  },
 ];
 
 const Work = () => {
