@@ -12,10 +12,8 @@ import img7 from "@/assets/crypto-lottery-project/img7.jpg";
 import img8 from "@/assets/crypto-lottery-project/img8.jpg";
 
 const details = [
-  { label: "Client", value: "CryptoLottery" },
+  { label: "App name / Client", value: "CryptoLottery" },
   { label: "My Role", value: "UI/UX Designer" },
-  { label: "Industry", value: "Crypto / Gaming" },
-  { label: "Platform", value: "Website" },
 ];
 
 const galleryImages = [heroImg, img2, img3, img4, img5, img6, img7, img8];
@@ -54,7 +52,7 @@ const ProjectCryptoLottery = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"
+          className="grid grid-cols-2 gap-6 mb-12"
         >
           {details.map((d) => (
             <div key={d.label}>
@@ -83,6 +81,25 @@ const ProjectCryptoLottery = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* About This Project Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-12 rounded-2xl bg-card border border-border/30 p-8 md:p-12"
+        >
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">
+            About This Project
+          </h2>
+          <p className="text-muted-foreground leading-relaxed">
+            CryptoLottery is an online platform that enables cryptocurrency-based betting and gaming. The platform
+            allows users to use digital currencies like Bitcoin and Ethereum on a variety of games and sporting events. The
+            goal is to create a social destination for crypto enthusiasts to connect, compete, and win big. Key features
+            include real-time game streaming, leader boards, and community chat. The platform aims to provide a
+            secure, transparent, and highly engaging experience for crypto bettors worldwide.
+          </p>
+        </motion.div>
       </div>
     </div>
   );
