@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import project1 from "@/assets/project-docbot.png";
 import project2 from "@/assets/project-ai-job-matcher.png";
-import project3 from "@/assets/project-3.jpg";
+import project3 from "@/assets/project-fundin-bharat.png";
 import project4 from "@/assets/project-4.jpg";
 
 const projects = [
