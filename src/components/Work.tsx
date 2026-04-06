@@ -33,6 +33,7 @@ const projects = [
     image: project4,
     span: "md:col-span-1",
     aspectClass: "aspect-[16/10]",
+    link: "/product/gigpot",
   },
 ];
 
