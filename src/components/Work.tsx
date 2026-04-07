@@ -47,24 +47,24 @@ const projects = [
     link: "/product/crypto-lottery",
   },
   {
+    title: "ShopVault",
+    image: project8,
+    span: "md:col-span-1 md:row-span-2 md:col-start-2",
+    aspectClass: "aspect-[3/4]",
+    link: "",
+  },
+  {
     title: "Analytics Pro",
     image: project6,
-    span: "md:col-span-1",
+    span: "md:col-span-1 md:col-start-1",
     aspectClass: "aspect-[16/10]",
     link: "",
   },
   {
     title: "PayFlow",
     image: project7,
-    span: "md:col-span-1",
+    span: "md:col-span-1 md:col-start-1",
     aspectClass: "aspect-[16/10]",
-    link: "",
-  },
-  {
-    title: "ShopVault",
-    image: project8,
-    span: "md:col-span-1 md:row-span-2",
-    aspectClass: "aspect-[3/4]",
     link: "",
   },
 ];
