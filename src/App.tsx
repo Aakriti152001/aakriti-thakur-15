@@ -10,6 +10,7 @@ import ProjectFundinDashboard from "./pages/ProjectFundinDashboard.tsx";
 import ProjectGigpot from "./pages/ProjectGigpot.tsx";
 import ProjectCryptoLottery from "./pages/ProjectCryptoLottery.tsx";
 import ProjectChaiHatii from "./pages/ProjectChaiHatii.tsx";
+import ProjectUniversus from "./pages/ProjectUniversus.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/product/gigpot" element={<ProjectGigpot />} />
           <Route path="/product/crypto-lottery" element={<ProjectCryptoLottery />} />
           <Route path="/product/chaihatii" element={<ProjectChaiHatii />} />
+          <Route path="/product/universus" element={<ProjectUniversus />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

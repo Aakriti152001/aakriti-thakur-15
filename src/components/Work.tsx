@@ -58,7 +58,7 @@ const projects = [
     image: project6,
     span: "md:col-span-1 md:col-start-1",
     aspectClass: "aspect-[16/10]",
-    link: "",
+    link: "/product/universus",
   },
   {
     title: "PayFlow",
