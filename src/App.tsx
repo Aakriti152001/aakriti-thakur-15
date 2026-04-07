@@ -10,6 +10,7 @@ import ProjectFundinDashboard from "./pages/ProjectFundinDashboard.tsx";
 import ProjectGigpot from "./pages/ProjectGigpot.tsx";
 import ProjectCryptoLottery from "./pages/ProjectCryptoLottery.tsx";
 import ProjectChaiHatii from "./pages/ProjectChaiHatii.tsx";
+import ProjectUniversus from "./pages/ProjectUniversus.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
