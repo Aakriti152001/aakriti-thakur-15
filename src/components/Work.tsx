@@ -6,6 +6,9 @@ import project2 from "@/assets/project-ai-job-matcher.png";
 import project3 from "@/assets/project-fundin-bharat.png";
 import project4 from "@/assets/project-4.png";
 import project5 from "@/assets/project-crypto-lottery.png";
+import project6 from "@/assets/project-placeholder-6.jpg";
+import project7 from "@/assets/project-placeholder-7.jpg";
+import project8 from "@/assets/project-placeholder-8.jpg";
 
 const projects = [
   {
@@ -43,8 +46,28 @@ const projects = [
     aspectClass: "aspect-[16/10]",
     link: "/product/crypto-lottery",
   },
+  {
+    title: "Analytics Pro",
+    image: project6,
+    span: "md:col-span-1",
+    aspectClass: "aspect-[16/10]",
+    link: "",
+  },
+  {
+    title: "PayFlow",
+    image: project7,
+    span: "md:col-span-1",
+    aspectClass: "aspect-[16/10]",
+    link: "",
+  },
+  {
+    title: "ShopVault",
+    image: project8,
+    span: "md:col-span-1 md:row-span-2",
+    aspectClass: "aspect-[3/4]",
+    link: "",
+  },
 ];
-
 const Work = () => {
   const navigate = useNavigate();
   return (
