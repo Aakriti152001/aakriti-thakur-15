@@ -5,7 +5,7 @@ import project1 from "@/assets/project-docbot.png";
 import project2 from "@/assets/project-ai-job-matcher.png";
 import project3 from "@/assets/project-fundin-bharat.png";
 import project4 from "@/assets/project-4.png";
-import project5 from "@/assets/project-crypto-lottery-new.png";
+import project5 from "@/assets/a8a6c40d-be96-47e3-981a-5071d925b8d5.png";
 import project6 from "@/assets/project-placeholder-6.jpg";
 import project7 from "@/assets/project-placeholder-7.jpg";
 import project8 from "@/assets/project-placeholder-8.jpg";
