@@ -51,7 +51,7 @@ const projects = [
     image: project8,
     span: "md:col-span-1 md:row-span-2 md:col-start-2",
     aspectClass: "aspect-[3/4]",
-    link: "",
+    link: "/product/chaihatii",
   },
   {
     title: "Analytics Pro",
