@@ -9,6 +9,7 @@ import ProjectFundinBharat from "./pages/ProjectFundinBharat.tsx";
 import ProjectFundinDashboard from "./pages/ProjectFundinDashboard.tsx";
 import ProjectGigpot from "./pages/ProjectGigpot.tsx";
 import ProjectCryptoLottery from "./pages/ProjectCryptoLottery.tsx";
+import ProjectChaiHatii from "./pages/ProjectChaiHatii.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/product/fundin-bharat-dashboard" element={<ProjectFundinDashboard />} />
           <Route path="/product/gigpot" element={<ProjectGigpot />} />
           <Route path="/product/crypto-lottery" element={<ProjectCryptoLottery />} />
+          <Route path="/product/chaihatii" element={<ProjectChaiHatii />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
