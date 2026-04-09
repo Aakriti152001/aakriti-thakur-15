@@ -7,7 +7,7 @@ import project3 from "@/assets/project-fundin-bharat.png";
 import project4 from "@/assets/project-4.png";
 import project5 from "@/assets/a8a6c40d-be96-47e3-981a-5071d925b8d5.png";
 import project6 from "@/assets/b0cb4673-c0c3-4378-ae9d-2a69b5c2e91e.png";
-import project7 from "@/assets/7115ac0f-b09d-4283-95eb-d18e57f52d2c.png";
+import project7 from "@/assets/0b103e30-00d5-4bb8-b11a-d9398772db4a.png";
 import project8 from "@/assets/project-placeholder-8.jpg";
 
 const projects = [
