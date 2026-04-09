@@ -95,7 +95,7 @@ const Work = () => {
         </div>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 gap-5">
+      <div className="grid md:grid-cols-2 gap-5" style={{ gridAutoFlow: 'dense' }}>
         {projects.map((p, i) => (
           <motion.div
             key={p.title}
