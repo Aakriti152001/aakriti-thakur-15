@@ -56,14 +56,14 @@ const projects = [
   {
     title: "Analytics Pro",
     image: project6,
-    span: "md:col-span-1 md:col-start-1",
+    span: "md:col-span-1",
     aspectClass: "aspect-[16/10]",
     link: "/product/universus",
   },
   {
     title: "PayFlow",
     image: project7,
-    span: "md:col-span-1 md:col-start-1",
+    span: "md:col-span-1",
     aspectClass: "aspect-[16/10]",
     link: "/product/unlockivy",
   },
