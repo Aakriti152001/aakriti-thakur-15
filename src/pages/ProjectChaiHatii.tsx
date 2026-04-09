@@ -70,7 +70,8 @@ const ProjectChaiHatii = () => {
               <img
                 src={src}
                 alt={`Chai Hatti project screenshot ${i + 1}`}
-                className="w-full h-auto"
+                className="w-full h-auto max-w-full"
+                style={{ imageRendering: 'auto' }}
                 loading={i === 0 ? "eager" : "lazy"}
               />
             </motion.div>
