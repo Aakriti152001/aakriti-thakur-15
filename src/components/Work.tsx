@@ -8,7 +8,7 @@ import project4 from "@/assets/project-4.png";
 import project5 from "@/assets/a8a6c40d-be96-47e3-981a-5071d925b8d5.png";
 import project6 from "@/assets/b0cb4673-c0c3-4378-ae9d-2a69b5c2e91e.png";
 import project7 from "@/assets/0b103e30-00d5-4bb8-b11a-d9398772db4a.png";
-import project8 from "@/assets/project-placeholder-8.jpg";
+import project8 from "@/assets/e71695fa-9b0e-4e3b-9070-58a4c08d3ddb.png";
 
 const projects = [
   {
