@@ -65,7 +65,7 @@ const projects = [
     image: project7,
     span: "md:col-span-1 md:col-start-1",
     aspectClass: "aspect-[16/10]",
-    link: "",
+    link: "/product/unlockivy",
   },
 ];
 const Work = () => {
