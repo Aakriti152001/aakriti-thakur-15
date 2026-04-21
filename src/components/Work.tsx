@@ -42,7 +42,7 @@ const projects = [
     link: "/product/crypto-lottery",
   },
   {
-    title: "Analytics Pro",
+    title: "Universus- Dashboard Redesign",
     description: "Web app redesign that simplified complex analytics into actionable, focused insights.",
     image: project6,
     link: "/product/universus",
