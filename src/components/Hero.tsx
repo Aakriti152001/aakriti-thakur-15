@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Download } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import portraitImg from "@/assets/portrait.jpg";
 
 const Hero = () => {
@@ -42,7 +42,7 @@ const Hero = () => {
             Designing AI-powered products and data-driven experiences that turn complexity into clarity.
           </p>
 
-          <div className="flex flex-wrap gap-4 mt-2">
+          <div className="flex gap-4 mt-2">
             <a href="#work" className="border border-border rounded-full px-6 py-3 text-foreground hover:bg-secondary/80 transition-all duration-300 text-sm font-medium">
               See All Projects
             </a>
@@ -51,14 +51,6 @@ const Hero = () => {
               className="bg-foreground text-background rounded-full px-6 py-3 hover:bg-foreground/90 transition-all duration-300 text-sm font-medium"
             >
               Contact Now
-            </a>
-            <a
-              href="/Aakriti_Thakur_Resume.pdf"
-              download="Aakriti_Thakur_Resume.pdf"
-              className="inline-flex items-center gap-2 border border-border rounded-full px-6 py-3 text-foreground hover:bg-secondary/80 transition-all duration-300 text-sm font-medium"
-            >
-              <Download className="w-4 h-4" />
-              Download Resume
             </a>
           </div>
         </motion.div>
