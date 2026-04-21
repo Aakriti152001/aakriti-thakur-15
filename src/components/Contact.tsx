@@ -36,13 +36,13 @@ const Contact = () => {
           transition={{ delay: 0.2 }}
           className="flex flex-wrap gap-4 justify-center"
         >
-          <button
-            onClick={handleCopyEmail}
+          <a
+            href={`mailto:${EMAIL}`}
             className="inline-flex items-center gap-2 bg-foreground text-background rounded-full px-6 py-3 text-sm font-medium hover:bg-foreground/90 transition-all"
           >
-            <Copy className="w-4 h-4" />
-            Copy email address
-          </button>
+            <Mail className="w-4 h-4" />
+            Email me
+          </a>
           <a
             href={LINKEDIN_URL}
             target="_blank"
