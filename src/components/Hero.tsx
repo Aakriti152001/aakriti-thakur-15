@@ -37,8 +37,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-muted-foreground max-w-md leading-relaxed">
-            I'm a versatile designer specializing in graphic, web, and product
-            design to help grow your business. Let's build something great!
+            Designing AI-powered products and data-driven experiences that turn complexity into clarity.
           </p>
 
           <div className="flex gap-4 mt-2">
