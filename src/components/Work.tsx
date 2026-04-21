@@ -43,7 +43,7 @@ const projects = [
   },
   {
     title: "Universus- Dashboard Redesign",
-    description: "Web app redesign that simplified complex analytics into actionable, focused insights.",
+    description: "Redesigning customer service workflows for faster, efficient support operations",
     image: project6,
     link: "/product/universus",
   },
