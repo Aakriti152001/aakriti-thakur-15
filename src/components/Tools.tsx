@@ -33,18 +33,6 @@ const Tools = () => (
   <section className="py-12 px-4 overflow-hidden">
     <div className="container mx-auto max-w-6xl">
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="mb-10"
-      >
-        <p className="section-heading mb-3">Tools I Use</p>
-        <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-          My Design <span className="text-muted-foreground/50">Toolkit</span>
-        </h2>
-      </motion.div>
-
-      <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
