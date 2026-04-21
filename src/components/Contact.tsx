@@ -1,61 +1,79 @@
 import { motion } from "framer-motion";
+import { Copy, Linkedin, FileText } from "lucide-react";
+import { toast } from "@/hooks/use-toast";
 
-const Contact = () => (
-  <section id="contact" className="py-16 px-4 pb-24">
-    <div className="container mx-auto max-w-6xl">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="mb-12"
-      >
-        <p className="section-heading mb-3">Let's Connect</p>
-        <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-          Let's Grow <span className="text-muted-foreground/50">Together</span>
-        </h2>
-      </motion.div>
+const EMAIL = "hello@aakritithakur.com";
+const LINKEDIN_URL = "https://www.linkedin.com/";
+const RESUME_URL = "#";
 
-      <div className="grid md:grid-cols-2 gap-5 mb-8">
-        <motion.div
+const Contact = () => {
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+      toast({ title: "Email copied", description: EMAIL });
+    } catch {
+      toast({ title: "Couldn't copy", description: EMAIL });
+    }
+  };
+
+  return (
+    <section id="contact" className="py-24 px-4 pb-32">
+      <div className="container mx-auto max-w-4xl text-center">
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="glass-card-hover p-8 rounded-2xl"
+          className="text-4xl md:text-6xl font-bold tracking-tight mb-6"
         >
-          <h3 className="text-lg font-bold mb-2">UX & Product Design</h3>
-          <p className="text-muted-foreground text-sm mb-4">
-            End-to-end product design for SaaS platforms, AI dashboards, and web/mobile applications.
-          </p>
-        </motion.div>
-        <motion.div
+          Let's connect
+        </motion.h2>
+
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="glass-card-hover p-8 rounded-2xl"
+          className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto mb-12"
         >
-          <h3 className="text-lg font-bold mb-2">Design Leadership</h3>
-          <p className="text-muted-foreground text-sm mb-4">
-            Building design teams, defining UX strategy, and driving product vision across organizations.
-          </p>
+          I'm always open to discussing product, AI, and design — or exploring new opportunities.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="flex flex-wrap gap-4 justify-center"
+        >
+          <button
+            onClick={handleCopyEmail}
+            className="inline-flex items-center gap-2 bg-foreground text-background rounded-full px-6 py-3 text-sm font-medium hover:bg-foreground/90 transition-all"
+          >
+            <Copy className="w-4 h-4" />
+            Copy email address
+          </button>
+          <a
+            href={LINKEDIN_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 border border-border rounded-full px-6 py-3 text-sm font-medium text-foreground hover:bg-secondary/80 transition-all"
+          >
+            <Linkedin className="w-4 h-4" />
+            View LinkedIn
+          </a>
+          <a
+            href={RESUME_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 border border-border rounded-full px-6 py-3 text-sm font-medium text-foreground hover:bg-secondary/80 transition-all"
+          >
+            <FileText className="w-4 h-4" />
+            View Resume
+          </a>
         </motion.div>
       </div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="flex gap-3 justify-center"
-      >
-        <a href="#work" className="border border-border rounded-full px-5 py-2.5 text-sm text-foreground hover:bg-secondary/80 transition-all">
-          See All Projects
-        </a>
-        <a href="mailto:hello@aakritithakur.com" className="bg-foreground text-background rounded-full px-5 py-2.5 text-sm hover:bg-foreground/90 transition-all">
-          Get Started Now
-        </a>
-      </motion.div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default Contact;
