@@ -42,22 +42,10 @@ const projects = [
     link: "/product/crypto-lottery",
   },
   {
-    title: "ShopVault",
-    description: "E-commerce branding and storefront design focused on conversion and visual storytelling.",
-    image: project8,
-    link: "/product/chaihatii",
-  },
-  {
     title: "Analytics Pro",
     description: "Web app redesign that simplified complex analytics into actionable, focused insights.",
     image: project6,
     link: "/product/universus",
-  },
-  {
-    title: "PayFlow",
-    description: "Logo and identity system crafted to convey clarity, motion, and financial trust.",
-    image: project7,
-    link: "/product/unlockivy",
   },
 ];
 const Work = () => {
