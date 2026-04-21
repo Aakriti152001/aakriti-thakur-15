@@ -18,7 +18,7 @@ const projects = [
     link: "/project/docbot",
   },
   {
-    title: "Fundin Website Design",
+    title: "Fundin Bharat - Website Design",
     description: "Risk-free trading platform empowering growth without financial barriers",
     image: project3,
     link: "/project/fundin-bharat",
