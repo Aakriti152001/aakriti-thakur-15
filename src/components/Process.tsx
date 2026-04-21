@@ -65,25 +65,6 @@ const Process = () => (
         ))}
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="mt-8 glass-card p-8 rounded-2xl text-center"
-      >
-        <h3 className="text-lg font-bold mb-2">I am with you in every step</h3>
-        <p className="text-muted-foreground text-sm mb-6">
-          Alongside you at each step for a seamless experience.
-        </p>
-        <div className="flex gap-3 justify-center">
-          <a href="#work" className="border border-border rounded-full px-5 py-2.5 text-sm text-foreground hover:bg-secondary/80 transition-all">
-            See All Projects
-          </a>
-          <a href="#contact" className="bg-foreground text-background rounded-full px-5 py-2.5 text-sm hover:bg-foreground/90 transition-all">
-            Contact Now
-          </a>
-        </div>
-      </motion.div>
     </div>
   </section>
 );
