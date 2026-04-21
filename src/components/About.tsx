@@ -66,10 +66,13 @@ const About = () => (
 
           <div className="glass-card p-6 rounded-2xl">
             <p className="text-muted-foreground text-sm leading-relaxed">
-              I'm Aakriti Thakur, a dedicated Product Designer specializing in
-              AI-powered SaaS platforms, dashboards, and web/mobile applications.
-              I simplify complex workflows into intuitive experiences that drive
-              business growth.
+              I'm a Product Designer with 4+ years of experience designing AI-powered SaaS products, dashboards, and web/mobile applications. I focus on simplifying complex workflows and transforming AI-driven insights into intuitive, user-friendly experiences.
+              <br />
+              <br />
+              Currently, I lead UX & Design at Mantras2Transform, where I define product direction, manage design efforts, and collaborate closely with leadership, product, and engineering teams. My work involves improving usability, building scalable design systems, and shaping end-to-end product experiences.
+              <br />
+              <br />
+              I've worked across AI-driven platforms in sales, HR, and healthcare, designing solutions that make complex systems easier to understand and use.
             </p>
           </div>
 
