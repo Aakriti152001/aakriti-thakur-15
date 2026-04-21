@@ -50,19 +50,6 @@ const About = () => (
           viewport={{ once: true }}
           className="flex flex-col gap-6"
         >
-          <div className="glass-card p-6 rounded-2xl">
-            <div className="flex items-center gap-2 mb-2">
-              <span className="w-2 h-2 rounded-full bg-primary animate-glow-pulse" />
-              <span className="text-sm text-muted-foreground">Available for work</span>
-            </div>
-            <h3 className="text-xl font-bold mb-1">Hello I am Aakriti Thakur</h3>
-            <p className="text-muted-foreground text-sm mb-4">
-              UX Manager & Product Designer based in India.
-            </p>
-            <a href="#contact" className="text-sm text-primary hover:underline">
-              Connect with me →
-            </a>
-          </div>
 
           <div className="glass-card p-6 rounded-2xl">
             <p className="text-muted-foreground text-sm leading-relaxed">
