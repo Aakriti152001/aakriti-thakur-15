@@ -1,20 +1,11 @@
 import { motion } from "framer-motion";
-import { Copy, Linkedin, FileText } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
+import { Mail, Linkedin, FileText } from "lucide-react";
 
-const EMAIL = "hello@aakritithakur.com";
+const EMAIL = "aakritithakur930@gmail.com";
 const LINKEDIN_URL = "https://www.linkedin.com/in/aakriti-thakur-9b75071a9/";
 const RESUME_URL = "/Aakriti_Thakur_Resume.pdf";
 
 const Contact = () => {
-  const handleCopyEmail = async () => {
-    try {
-      await navigator.clipboard.writeText(EMAIL);
-      toast({ title: "Email copied", description: EMAIL });
-    } catch {
-      toast({ title: "Couldn't copy", description: EMAIL });
-    }
-  };
 
   return (
     <section id="contact" className="py-24 px-4 pb-32">
