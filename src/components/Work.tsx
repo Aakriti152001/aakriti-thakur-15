@@ -24,7 +24,7 @@ const projects = [
     link: "/project/fundin-bharat",
   },
   {
-    title: "AI Job Matcher",
+    title: "Fundin Dashboard Design",
     description: "Smart job matching dashboard pairing candidates with relevant opportunities using AI.",
     image: project2,
     link: "/product/fundin-bharat-dashboard",
