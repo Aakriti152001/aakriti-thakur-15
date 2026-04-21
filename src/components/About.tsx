@@ -73,11 +73,6 @@ const About = () => (
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-2">
-            {skills.map((s) => (
-              <span key={s} className="pill-tag">{s}</span>
-            ))}
-          </div>
 
           {/* Experience list */}
           <div className="space-y-3">
