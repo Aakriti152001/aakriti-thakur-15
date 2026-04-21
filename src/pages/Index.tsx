@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import Skills from "@/components/Skills";
 import Work from "@/components/Work";
 import About from "@/components/About";
-import Process from "@/components/Process";
+
 
 
 import Experience from "@/components/Experience";
@@ -18,7 +18,6 @@ const Index = () => (
     <Skills />
     <Work />
     <About />
-    <Process />
     
     <Experience />
     
