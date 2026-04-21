@@ -25,7 +25,7 @@ const projects = [
   },
   {
     title: "Fundin Dashboard Design",
-    description: "Smart job matching dashboard pairing candidates with relevant opportunities using AI.",
+    description: "Risk-free trading platform empowering growth without financial barriers",
     image: project2,
     link: "/product/fundin-bharat-dashboard",
   },
