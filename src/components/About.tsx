@@ -49,8 +49,11 @@ const About = () => (
         >
 
           <div className="glass-card p-6 rounded-2xl">
+            <p className="text-foreground text-lg font-semibold mb-3">
+              Hi, I'm Aakriti Thakur.
+            </p>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              I'm a Product Designer with 4+ years of experience in AI-powered SaaS, dashboards, and web/mobile applications, focused on simplifying complex workflows and turning AI-driven insights into intuitive user experiences.
+              A Product Designer with 4+ years of experience in AI-powered SaaS, dashboards, and web/mobile applications, focused on simplifying complex workflows and turning AI-driven insights into intuitive user experiences.
               <br />
               <br />
               Currently, I lead UX & Design at Mantras2Transform, driving product direction, building scalable design systems, and collaborating closely with product and engineering teams.
