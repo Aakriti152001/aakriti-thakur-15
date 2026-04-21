@@ -22,6 +22,15 @@ const items = [
     ],
   },
   {
+    title: "UI Designer",
+    company: "Net Solutions",
+    meta: "Apr 2025 – Sept 2025",
+    points: [
+      "Designed marketing and social media assets",
+      "Ensured visual consistency across brand",
+    ],
+  },
+  {
     title: "Senior UI/UX Designer",
     company: "Zipteams",
     meta: "Mar 2023 – Jan 2025",
@@ -29,15 +38,6 @@ const items = [
       "Founding designer, owned end-to-end design",
       "Designed AI-powered dashboards",
       "Built scalable design system",
-    ],
-  },
-  {
-    title: "UI Designer",
-    company: "Net Solutions",
-    meta: "Apr 2025 – Sept 2025",
-    points: [
-      "Designed marketing and social media assets",
-      "Ensured visual consistency across brand",
     ],
   },
 ];
