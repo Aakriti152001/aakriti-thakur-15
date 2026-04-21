@@ -1,18 +1,18 @@
 import { motion } from "framer-motion";
 
 const tools = [
-  { name: "Adobe Illustrator", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" },
+  { name: "Figma", url: "https://www.vectorlogo.zone/logos/figma/figma-icon.svg" },
+  { name: "Adobe Illustrator", url: "https://www.vectorlogo.zone/logos/adobe_illustrator/adobe_illustrator-icon.svg" },
+  { name: "Adobe Photoshop", url: "https://www.vectorlogo.zone/logos/adobe_photoshop/adobe_photoshop-icon.svg" },
+  { name: "Framer", url: "https://www.vectorlogo.zone/logos/framer/framer-icon.svg" },
+  { name: "Spline", url: "https://avatars.githubusercontent.com/u/77478294?s=200&v=4" },
+  { name: "Canva", url: "https://www.vectorlogo.zone/logos/canva/canva-icon.svg" },
+  { name: "Trello", url: "https://www.vectorlogo.zone/logos/trello/trello-icon.svg" },
+  { name: "Notion", url: "https://www.vectorlogo.zone/logos/notion/notion-icon.svg" },
+  { name: "Miro", url: "https://www.vectorlogo.zone/logos/miro/miro-icon.svg" },
+  { name: "Hotjar", url: "https://www.vectorlogo.zone/logos/hotjar/hotjar-icon.svg" },
+  { name: "Slack", url: "https://www.vectorlogo.zone/logos/slack/slack-icon.svg" },
   { name: "Lovable", url: "https://lovable.dev/favicon.ico" },
-  { name: "After Effects", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-original.svg" },
-  { name: "Spline", url: "https://spline.design/favicon.ico" },
-  { name: "Canva", url: "https://static.canva.com/static/images/favicon-1.ico" },
-  { name: "Trello", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg" },
-  { name: "Hotjar", url: "https://www.hotjar.com/favicon.ico" },
-  { name: "Framer", url: "https://framerusercontent.com/images/atXqxn0fLLPgOgCheElLIcUOWY.png" },
-  { name: "Figma", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
-  { name: "Adobe Photoshop", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" },
-  { name: "Notion", url: "https://www.notion.so/images/favicon.ico" },
-  { name: "Miro", url: "https://miro.com/favicon.ico" },
 ];
 
 const ToolIcon = ({ name, url }: { name: string; url: string }) => (
