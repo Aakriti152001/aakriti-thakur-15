@@ -33,7 +33,9 @@ const Hero = () => {
             Aakriti
             <br />
             <span className="text-muted-foreground/60">Thakur</span>
-            <ArrowUpRight className="inline-block w-8 h-8 md:w-10 md:h-10 ml-3 text-muted-foreground/40" />
+            <a href="#about" aria-label="Go to More About Me section" className="inline-block align-middle">
+              <ArrowUpRight className="inline-block w-8 h-8 md:w-10 md:h-10 ml-3 text-muted-foreground/40 hover:text-foreground transition-colors cursor-pointer" />
+            </a>
           </h1>
 
           <p className="text-muted-foreground max-w-md leading-relaxed">
