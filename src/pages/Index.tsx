@@ -4,7 +4,7 @@ import Skills from "@/components/Skills";
 import Work from "@/components/Work";
 import About from "@/components/About";
 import Process from "@/components/Process";
-import Services from "@/components/Services";
+
 
 import Experience from "@/components/Experience";
 import Testimonials from "@/components/Testimonials";
@@ -19,7 +19,7 @@ const Index = () => (
     <Work />
     <About />
     <Process />
-    <Services />
+    
     <Experience />
     
     <Testimonials />
