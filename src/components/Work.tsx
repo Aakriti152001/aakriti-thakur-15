@@ -19,7 +19,7 @@ const projects = [
   },
   {
     title: "Fundin Website Design",
-    description: "Redesigned the mobile experience for a fintech product, improving task completion by 40%.",
+    description: "Risk-free trading platform empowering growth without financial barriers",
     image: project3,
     link: "/project/fundin-bharat",
   },
