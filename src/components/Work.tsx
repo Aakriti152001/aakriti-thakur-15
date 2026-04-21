@@ -30,7 +30,7 @@ const projects = [
     link: "/product/fundin-bharat-dashboard",
   },
   {
-    title: "AI SaaS Dashboards",
+    title: "GigPot Mobile App Design",
     description: "Data-rich SaaS dashboards designed for clarity, speed, and confident decision-making.",
     image: project4,
     link: "/product/gigpot",
