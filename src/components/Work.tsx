@@ -31,7 +31,7 @@ const projects = [
   },
   {
     title: "GigPot Mobile App Design",
-    description: "Data-rich SaaS dashboards designed for clarity, speed, and confident decision-making.",
+    description: "Secure, seamless crypto trading experience built for trust and clarity",
     image: project4,
     link: "/product/gigpot",
   },
