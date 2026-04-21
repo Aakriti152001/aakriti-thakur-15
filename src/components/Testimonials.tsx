@@ -56,9 +56,6 @@ const Testimonials = () => (
             <a href="#work" className="border border-border rounded-full px-5 py-2.5 text-sm text-foreground hover:bg-secondary/80 transition-all">
               See All Projects
             </a>
-            <a href="#contact" className="bg-foreground text-background rounded-full px-5 py-2.5 text-sm hover:bg-foreground/90 transition-all">
-              Contact Now
-            </a>
           </div>
         </div>
       </motion.div>
