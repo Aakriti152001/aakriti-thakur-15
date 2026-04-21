@@ -3,7 +3,7 @@ import { Copy, Linkedin, FileText } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
 const EMAIL = "hello@aakritithakur.com";
-const LINKEDIN_URL = "https://www.linkedin.com/";
+const LINKEDIN_URL = "https://www.linkedin.com/in/aakriti-thakur-9b75071a9/";
 const RESUME_URL = "#";
 
 const Contact = () => {
