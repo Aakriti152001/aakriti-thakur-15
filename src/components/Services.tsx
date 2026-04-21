@@ -69,21 +69,6 @@ const Services = () => (
         ))}
       </div>
 
-      {/* Scrolling service tags */}
-      <div className="overflow-hidden py-3">
-        <div className="marquee-track">
-          {moreServices.map((s, i) => (
-            <span key={`${s}-${i}`} className="pill-tag whitespace-nowrap">{s}</span>
-          ))}
-        </div>
-      </div>
-      <div className="overflow-hidden py-3">
-        <div className="marquee-track" style={{ animationDirection: "reverse" }}>
-          {moreServices2.map((s, i) => (
-            <span key={`${s}-${i}`} className="pill-tag whitespace-nowrap">{s}</span>
-          ))}
-        </div>
-      </div>
     </div>
   </section>
 );
