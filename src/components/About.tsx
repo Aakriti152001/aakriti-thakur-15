@@ -20,9 +20,6 @@ const About = () => (
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
           Aakriti Thakur, <span className="text-muted-foreground/50">Your Designer</span>
         </h2>
-        <p className="text-muted-foreground mt-3 max-w-lg">
-          Brief initial presentation of myself and my previous experiences.
-        </p>
       </motion.div>
 
       <div className="grid md:grid-cols-2 gap-8">
