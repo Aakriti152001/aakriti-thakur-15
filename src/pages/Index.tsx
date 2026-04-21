@@ -5,7 +5,7 @@ import Work from "@/components/Work";
 import About from "@/components/About";
 import Process from "@/components/Process";
 import Services from "@/components/Services";
-import WhyMe from "@/components/WhyMe";
+
 import Experience from "@/components/Experience";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
@@ -21,7 +21,7 @@ const Index = () => (
     <Process />
     <Services />
     <Experience />
-    <WhyMe />
+    
     <Testimonials />
     <FAQ />
     <Contact />
