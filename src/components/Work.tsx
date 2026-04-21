@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import project1 from "@/assets/project-docbot.png";
+import project1 from "@/assets/eab04f18-c9e5-47a5-b75f-c346c0d51007.png";
 import project2 from "@/assets/project-ai-job-matcher.png";
 import project3 from "@/assets/project-fundin-bharat.png";
 import project4 from "@/assets/project-4.png";
