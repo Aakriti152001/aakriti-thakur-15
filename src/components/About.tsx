@@ -18,7 +18,7 @@ const About = () => (
       >
         <p className="section-heading mb-3">Expert Designer</p>
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-          Aakriti Thakur, <span className="text-muted-foreground/50">Your Designer</span>
+          Aakriti Thakur, <span className="text-muted-foreground/50">Product Designer</span>
         </h2>
       </motion.div>
 
