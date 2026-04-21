@@ -33,7 +33,7 @@ const Process = () => (
         viewport={{ once: true }}
         className="mb-12"
       >
-        <p className="section-heading mb-3">How it works</p>
+        <p className="section-heading mb-3">Design Process</p>
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
           How I Design <span className="text-muted-foreground/50">AI Product</span>
         </h2>
