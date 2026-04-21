@@ -54,11 +54,15 @@ const About = () => (
               <br />
               <br />
               Currently, I lead UX & Design at Mantras2Transform, driving product direction, building scalable design systems, and collaborating closely with product and engineering teams.
-              <br />
-              <br />
-              I've worked across AI platforms in sales, HR, and healthcare, making complex systems clear, usable, and impactful.
             </p>
           </div>
+
+          <a
+            href="#contact"
+            className="self-start bg-foreground text-background rounded-full px-6 py-3 hover:bg-foreground/90 transition-all duration-300 text-sm font-medium"
+          >
+            Connect Now
+          </a>
 
 
           {/* Experience list */}
