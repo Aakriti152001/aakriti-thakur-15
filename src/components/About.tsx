@@ -22,13 +22,13 @@ const About = () => (
         </h2>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-2 gap-8 items-stretch">
         {/* Portrait card */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="rounded-2xl overflow-hidden border border-border/30 aspect-[3/4] max-h-[500px]"
+          className="rounded-2xl overflow-hidden border border-border/30 h-full min-h-[400px]"
         >
           <img
             src={portraitImg}
