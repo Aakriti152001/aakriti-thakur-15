@@ -5,12 +5,7 @@ const skills = [
   "Product Design", "UX Design", "UI Design", "Figma", "Branding", "Design Systems",
 ];
 
-const experience = [
-  { company: "Mantras2Transform", year: "2025", role: "UX & Design Manager" },
-  { company: "Zipteams", year: "2023", role: "Senior UI/UX Designer" },
-  { company: "Net Solutions", year: "2025", role: "UI Designer" },
-  { company: "Freelance", year: "2021", role: "Product Designer" },
-];
+const experience: { company: string; year: string; role: string }[] = [];
 
 const About = () => (
   <section id="about" className="py-16 px-4">
