@@ -37,9 +37,6 @@ const Process = () => (
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
           Process Is <span className="text-muted-foreground/50">Everything</span>
         </h2>
-        <p className="text-muted-foreground mt-3">
-          Simple, streamlined process is what gets you results.
-        </p>
       </motion.div>
 
       <div className="grid md:grid-cols-2 gap-5">
