@@ -76,14 +76,6 @@ const Work = () => {
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
             Recent <span className="text-muted-foreground/50">Designs</span>
           </h2>
-          <div className="flex gap-3">
-            <a href="#work" className="border border-border rounded-full px-5 py-2.5 text-sm text-foreground hover:bg-secondary/80 transition-all duration-300">
-              See All Projects
-            </a>
-            <a href="#contact" className="bg-foreground text-background rounded-full px-5 py-2.5 text-sm hover:bg-foreground/90 transition-all duration-300">
-              Contact Now
-            </a>
-          </div>
         </div>
       </motion.div>
 
