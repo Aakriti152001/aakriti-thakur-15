@@ -2,10 +2,8 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const navItems = [
-  { label: "Services", link: "#services" },
   { label: "Projects", link: "#work" },
   { label: "Testimonials", link: "#testimonials" },
-  { label: "Contact", link: "#contact" },
 ];
 
 const Navbar = () => {
