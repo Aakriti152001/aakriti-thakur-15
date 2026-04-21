@@ -18,7 +18,7 @@ const projects = [
     link: "/project/docbot",
   },
   {
-    title: "Fintech Mobile App",
+    title: "Fundin Website Design",
     description: "Redesigned the mobile experience for a fintech product, improving task completion by 40%.",
     image: project3,
     link: "/project/fundin-bharat",
