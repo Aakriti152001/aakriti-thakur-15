@@ -53,13 +53,13 @@ const About = () => (
 
           <div className="glass-card p-6 rounded-2xl">
             <p className="text-muted-foreground text-sm leading-relaxed">
-              I'm a Product Designer with 4+ years of experience designing AI-powered SaaS products, dashboards, and web/mobile applications. I focus on simplifying complex workflows and transforming AI-driven insights into intuitive, user-friendly experiences.
+              I'm a Product Designer with 4+ years of experience in AI-powered SaaS, dashboards, and web/mobile applications, focused on simplifying complex workflows and turning AI-driven insights into intuitive user experiences.
               <br />
               <br />
-              Currently, I lead UX & Design at Mantras2Transform, where I define product direction, manage design efforts, and collaborate closely with leadership, product, and engineering teams. My work involves improving usability, building scalable design systems, and shaping end-to-end product experiences.
+              Currently, I lead UX & Design at Mantras2Transform, driving product direction, building scalable design systems, and collaborating closely with product and engineering teams.
               <br />
               <br />
-              I've worked across AI-driven platforms in sales, HR, and healthcare, designing solutions that make complex systems easier to understand and use.
+              I've worked across AI platforms in sales, HR, and healthcare, making complex systems clear, usable, and impactful.
             </p>
           </div>
 
