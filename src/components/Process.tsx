@@ -35,7 +35,7 @@ const Process = () => (
       >
         <p className="section-heading mb-3">How it works</p>
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-          How I <span className="text-muted-foreground/50">Design</span>
+          How I Design <span className="text-muted-foreground/50">AI Product</span>
         </h2>
       </motion.div>
 
