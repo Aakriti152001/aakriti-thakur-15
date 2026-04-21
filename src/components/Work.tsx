@@ -75,7 +75,7 @@ const Work = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className="group cursor-pointer rounded-2xl overflow-hidden border border-border/30 bg-card/40 flex flex-col"
+            className="group cursor-pointer rounded-2xl overflow-hidden border border-border/30 bg-card/40 flex flex-col transition-all duration-300 hover:border-primary/50 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10 hover:bg-card/60"
             {...(p.link ? { onClick: () => navigate(p.link!) } : {})}
           >
             <div className="aspect-[16/10] w-full overflow-hidden">
