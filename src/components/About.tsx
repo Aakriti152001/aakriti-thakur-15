@@ -28,7 +28,7 @@ const About = () => (
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="rounded-2xl overflow-hidden border border-border/30 h-full min-h-[400px] relative"
+          className="rounded-2xl overflow-hidden border border-border/30 h-full relative"
         >
           <img
             src={portraitImg}
