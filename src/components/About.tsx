@@ -28,12 +28,12 @@ const About = () => (
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="rounded-2xl overflow-hidden border border-border/30 h-full min-h-[400px]"
+          className="rounded-2xl overflow-hidden border border-border/30 h-full min-h-[400px] relative"
         >
           <img
             src={portraitImg}
             alt="Aakriti Thakur"
-            className="w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover object-center"
             loading="lazy"
             width={640}
             height={800}
