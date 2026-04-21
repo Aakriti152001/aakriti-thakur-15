@@ -12,59 +12,51 @@ import project8 from "@/assets/e71695fa-9b0e-4e3b-9070-58a4c08d3ddb.png";
 
 const projects = [
   {
-    title: "DOCBOT",
+    title: "Docbot - Mobile App Design",
+    description: "End-to-end UX for a healthcare platform enabling remote care and real-time vitals monitoring.",
     image: project1,
-    span: "md:col-span-1 md:row-span-2",
-    aspectClass: "aspect-[3/4]",
     link: "/project/docbot",
   },
   {
-    title: "AI Job Matcher",
-    image: project2,
-    span: "md:col-span-1",
-    aspectClass: "aspect-[16/10]",
-    link: "/product/fundin-bharat-dashboard",
-  },
-  {
-    title: "Fundin Bharat",
+    title: "Fintech Mobile App",
+    description: "Redesigned the mobile experience for a fintech product, improving task completion by 40%.",
     image: project3,
-    span: "md:col-span-1",
-    aspectClass: "aspect-[16/10]",
     link: "/project/fundin-bharat",
   },
   {
+    title: "AI Job Matcher",
+    description: "Smart job matching dashboard pairing candidates with relevant opportunities using AI.",
+    image: project2,
+    link: "/product/fundin-bharat-dashboard",
+  },
+  {
     title: "AI SaaS Dashboards",
+    description: "Data-rich SaaS dashboards designed for clarity, speed, and confident decision-making.",
     image: project4,
-    span: "md:col-span-1",
-    aspectClass: "aspect-[16/10]",
     link: "/product/gigpot",
   },
   {
     title: "CryptoLottery",
+    description: "A playful, trust-forward crypto lottery experience with transparent on-chain mechanics.",
     image: project5,
-    span: "md:col-span-1",
-    aspectClass: "aspect-[16/10]",
     link: "/product/crypto-lottery",
   },
   {
     title: "ShopVault",
+    description: "E-commerce branding and storefront design focused on conversion and visual storytelling.",
     image: project8,
-    span: "md:col-span-1 md:row-span-2 md:col-start-2",
-    aspectClass: "aspect-[3/4]",
     link: "/product/chaihatii",
   },
   {
     title: "Analytics Pro",
+    description: "Web app redesign that simplified complex analytics into actionable, focused insights.",
     image: project6,
-    span: "md:col-span-1",
-    aspectClass: "aspect-[16/10]",
     link: "/product/universus",
   },
   {
     title: "PayFlow",
+    description: "Logo and identity system crafted to convey clarity, motion, and financial trust.",
     image: project7,
-    span: "md:col-span-1",
-    aspectClass: "aspect-[16/10]",
     link: "/product/unlockivy",
   },
 ];
@@ -95,7 +87,7 @@ const Work = () => {
         </div>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 gap-5" style={{ gridAutoFlow: 'dense' }}>
+      <div className="grid md:grid-cols-2 gap-6">
         {projects.map((p, i) => (
           <motion.div
             key={p.title}
@@ -103,21 +95,29 @@ const Work = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className={`group cursor-pointer relative rounded-2xl overflow-hidden border border-border/30 ${p.span}`}
+            className="group cursor-pointer rounded-2xl overflow-hidden border border-border/30 bg-card/40 flex flex-col"
             {...(p.link ? { onClick: () => navigate(p.link!) } : {})}
           >
-            <div className={`${p.aspectClass} w-full`}>
+            <div className="aspect-[16/10] w-full overflow-hidden">
               <img
                 src={p.image}
                 alt={p.title}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
                 width={960}
-                height={720}
+                height={600}
               />
             </div>
-            <div className="absolute bottom-4 left-4">
-              <div className="w-10 h-10 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center border border-border/50 group-hover:bg-primary group-hover:text-background transition-all duration-300">
+            <div className="p-6 md:p-8 flex items-start justify-between gap-4">
+              <div className="flex-1">
+                <h3 className="text-xl md:text-2xl font-bold tracking-tight mb-3">
+                  {p.title}
+                </h3>
+                <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+                  {p.description}
+                </p>
+              </div>
+              <div className="w-11 h-11 shrink-0 rounded-full border border-border/50 flex items-center justify-center group-hover:bg-primary group-hover:text-background group-hover:border-primary transition-all duration-300">
                 <ArrowUpRight className="w-5 h-5" />
               </div>
             </div>
