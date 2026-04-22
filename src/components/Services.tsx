@@ -34,7 +34,7 @@ const moreServices2 = [
 ];
 
 const Services = () => (
-  <section id="services" className="py-16 px-6">
+  <section id="services" className="py-16 px-0 sm:px-6">
     <div className="container mx-auto max-w-6xl">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
