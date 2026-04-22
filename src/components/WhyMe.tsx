@@ -38,7 +38,7 @@ const WhyMe = () => (
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="glass-card p-6 rounded-2xl border-primary/20"
+              className="glass-card px-4 py-5 sm:p-6 rounded-2xl border-primary/20"
             >
               <div className="flex items-center gap-2 mb-2">
                 <span className="w-2 h-2 rounded-full bg-primary" />
@@ -56,7 +56,7 @@ const WhyMe = () => (
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="glass-card p-6 rounded-2xl opacity-60"
+              className="glass-card px-4 py-5 sm:p-6 rounded-2xl opacity-60"
             >
               <div className="flex items-center gap-2 mb-2">
                 <span className="w-2 h-2 rounded-full bg-destructive" />

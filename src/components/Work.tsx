@@ -88,7 +88,7 @@ const Work = () => {
                 height={600}
               />
             </div>
-            <div className="p-3 sm:p-6 md:p-8 flex items-start justify-between gap-3 sm:gap-4">
+            <div className="px-4 py-5 sm:p-6 md:p-8 flex items-start justify-between gap-3 sm:gap-4">
               <div className="flex-1 min-w-0">
                 <h3 className="text-lg sm:text-xl md:text-2xl font-bold tracking-tight mb-2 sm:mb-3">
                   {p.title}

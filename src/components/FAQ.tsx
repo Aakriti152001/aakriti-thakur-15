@@ -43,13 +43,13 @@ const FAQ = () => {
             >
               <button
                 onClick={() => setOpen(open === i ? null : i)}
-                className="w-full flex items-center justify-between p-5 text-left"
+                className="w-full flex items-center justify-between px-4 py-5 sm:p-5 text-left"
               >
                 <span className="text-sm font-medium">{f.q}</span>
                 <ChevronDown className={`w-4 h-4 text-muted-foreground transition-transform duration-200 ${open === i ? "rotate-180" : ""}`} />
               </button>
               {open === i && (
-                <div className="px-5 pb-5">
+                <div className="px-4 pb-5 sm:px-5">
                   <p className="text-sm text-muted-foreground leading-relaxed">{f.a}</p>
                 </div>
               )}

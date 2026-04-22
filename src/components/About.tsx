@@ -48,7 +48,7 @@ const About = () => (
           className="flex flex-col gap-6"
         >
 
-          <div className="glass-card p-5 sm:p-6 rounded-2xl">
+          <div className="glass-card px-4 py-5 sm:p-6 rounded-2xl">
             <p className="text-foreground text-base sm:text-lg font-semibold mb-3">
               Hi, I'm Aakriti Thakur.<span className="ml-2">👋</span>
             </p>
