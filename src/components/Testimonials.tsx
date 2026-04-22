@@ -39,7 +39,7 @@ const testimonials = [
 ];
 
 const Testimonials = () => (
-  <section id="testimonials" className="py-16 px-4">
+  <section id="testimonials" className="py-16 px-6">
     <div className="container mx-auto max-w-6xl">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -61,17 +61,17 @@ const Testimonials = () => (
       </motion.div>
 
       {/* Stats */}
-      <div className="grid grid-cols-3 gap-5 mb-10">
+      <div className="grid grid-cols-3 gap-3 sm:gap-5 mb-10">
         {stats.map((s) => (
           <motion.div
             key={s.label}
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-card p-6 rounded-2xl text-center"
+            className="glass-card p-4 sm:p-6 rounded-2xl text-center"
           >
-            <p className="text-3xl md:text-4xl font-bold gradient-text">{s.value}</p>
-            <p className="text-sm text-muted-foreground mt-1">{s.label}</p>
+            <p className="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text">{s.value}</p>
+            <p className="text-xs sm:text-sm text-muted-foreground mt-1">{s.label}</p>
           </motion.div>
         ))}
       </div>

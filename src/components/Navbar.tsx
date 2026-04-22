@@ -22,12 +22,12 @@ const Navbar = () => {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className={`fixed left-0 right-0 z-50 flex justify-center transition-all duration-300 ${
+      className={`fixed left-0 right-0 z-50 flex justify-center px-4 transition-all duration-300 ${
         scrolled ? "top-2" : "top-4"
       }`}
     >
-      <div className="glass-card px-6 py-2.5 flex items-center gap-6 rounded-full">
-        <a href="#" className="text-foreground font-bold text-lg tracking-tight">
+      <div className="glass-card px-3 sm:px-6 py-2 sm:py-2.5 flex items-center gap-3 sm:gap-6 rounded-full max-w-full">
+        <a href="#" className="text-foreground font-bold text-base sm:text-lg tracking-tight shrink-0">
           Aakriti
         </a>
 
@@ -45,10 +45,10 @@ const Navbar = () => {
 
         <a
           href="#contact"
-          className="text-sm px-4 py-2 rounded-full bg-secondary text-foreground hover:bg-secondary/80 transition-colors duration-200 flex items-center gap-2"
+          className="text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-secondary text-foreground hover:bg-secondary/80 transition-colors duration-200 flex items-center gap-1.5 sm:gap-2 shrink-0"
         >
           <span className="text-primary">✦</span>
-          Get in Touch
+          <span className="whitespace-nowrap">Get in Touch</span>
         </a>
       </div>
     </motion.nav>

@@ -8,7 +8,7 @@ const skills = [
 const experience: { company: string; year: string; role: string }[] = [];
 
 const About = () => (
-  <section id="about" className="py-16 px-4">
+  <section id="about" className="py-16 px-6">
     <div className="container mx-auto max-w-6xl">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -22,13 +22,13 @@ const About = () => (
         </h2>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 gap-8 items-stretch">
+      <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-stretch">
         {/* Portrait card */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="rounded-2xl overflow-hidden border border-border/30 h-full relative"
+          className="rounded-2xl overflow-hidden border border-border/30 relative aspect-[4/5] md:aspect-auto md:h-full"
         >
           <img
             src={portraitImg}
@@ -48,8 +48,8 @@ const About = () => (
           className="flex flex-col gap-6"
         >
 
-          <div className="glass-card p-6 rounded-2xl">
-            <p className="text-foreground text-lg font-semibold mb-3">
+          <div className="glass-card p-5 sm:p-6 rounded-2xl">
+            <p className="text-foreground text-base sm:text-lg font-semibold mb-3">
               Hi, I'm Aakriti Thakur.<span className="ml-2">👋</span>
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed">

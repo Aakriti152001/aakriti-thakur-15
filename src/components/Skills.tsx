@@ -14,7 +14,7 @@ const SkillPill = ({ label }: { label: string }) => (
 );
 
 const Skills = () => (
-  <section className="py-4 overflow-hidden">
+  <section className="py-4 px-6 overflow-hidden">
     <div className="container mx-auto max-w-6xl">
       <motion.div
         initial={{ opacity: 0 }}
