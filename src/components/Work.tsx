@@ -88,18 +88,18 @@ const Work = () => {
                 height={600}
               />
             </div>
-            <div className="px-4 py-5 sm:p-6 md:p-8 flex items-start justify-between gap-3 sm:gap-4">
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold tracking-tight mb-2 sm:mb-3">
+            <div className="px-4 py-5 sm:p-6 md:p-8 flex flex-col gap-2 sm:gap-3">
+              <div className="flex items-start justify-between gap-3 sm:gap-4">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold tracking-tight flex-1 min-w-0">
                   {p.title}
                 </h3>
-                <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
-                  {p.description}
-                </p>
+                <div className="w-10 h-10 sm:w-11 sm:h-11 shrink-0 rounded-full border border-border/50 flex items-center justify-center group-hover:bg-primary group-hover:text-background group-hover:border-primary transition-all duration-300">
+                  <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5" />
+                </div>
               </div>
-              <div className="w-10 h-10 sm:w-11 sm:h-11 shrink-0 rounded-full border border-border/50 flex items-center justify-center group-hover:bg-primary group-hover:text-background group-hover:border-primary transition-all duration-300">
-                <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5" />
-              </div>
+              <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+                {p.description}
+              </p>
             </div>
           </motion.div>
         ))}
