@@ -68,7 +68,7 @@ const Testimonials = () => (
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-card p-4 sm:p-6 rounded-2xl text-center"
+            className="glass-card px-2 py-4 sm:p-6 rounded-2xl text-center"
           >
             <p className="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text">{s.value}</p>
             <p className="text-xs sm:text-sm text-muted-foreground mt-1">{s.label}</p>
@@ -85,7 +85,7 @@ const Testimonials = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.08 }}
-            className="glass-card-hover p-6 rounded-2xl flex flex-col gap-4"
+            className="glass-card-hover px-4 py-5 sm:p-6 rounded-2xl flex flex-col gap-4"
           >
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-xs font-bold text-foreground">

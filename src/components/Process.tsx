@@ -49,7 +49,7 @@ const Process = () => (
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="glass-card-hover p-6 sm:p-8 rounded-2xl flex flex-col gap-4"
+              className="glass-card-hover px-4 py-5 sm:p-8 rounded-2xl flex flex-col gap-4"
             >
               <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
                 <Icon className="w-6 h-6 text-primary" />
