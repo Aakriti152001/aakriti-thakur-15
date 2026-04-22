@@ -4,14 +4,14 @@ import portraitImg from "@/assets/portrait.jpg";
 
 const Hero = () => {
   return (
-    <section className="min-h-[90vh] flex items-center relative overflow-hidden pt-24">
+    <section className="min-h-[90vh] flex items-center relative overflow-hidden pt-28 md:pt-24">
       {/* Background glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-primary/5 blur-[120px]" />
         <div className="absolute bottom-1/4 right-1/4 w-72 h-72 rounded-full bg-accent/5 blur-[100px]" />
       </div>
 
-      <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="container mx-auto px-6 grid md:grid-cols-2 gap-10 md:gap-12 items-center relative z-10">
         {/* Left */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -29,26 +29,29 @@ const Hero = () => {
             <span className="text-muted-foreground">Product Designer</span>
           </motion.div>
 
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-none">
+          <h1 className="text-[2.75rem] sm:text-6xl md:text-7xl font-bold tracking-tight leading-[1.05] md:leading-none">
             Aakriti
             <br />
             <span className="text-muted-foreground/60">Thakur</span>
-            <a href="#about" aria-label="Go to More About Me section" className="inline-block align-middle">
-              <ArrowUpRight className="inline-block w-8 h-8 md:w-10 md:h-10 ml-3 text-muted-foreground/40 hover:text-foreground transition-colors cursor-pointer" />
-            </a>
+            <span className="inline-flex items-center ml-2 md:ml-3 align-middle gap-2 md:gap-3">
+              <span className="text-3xl sm:text-4xl md:text-5xl" role="img" aria-label="waving hand">👋</span>
+              <a href="#about" aria-label="Go to More About Me section" className="inline-block">
+                <ArrowUpRight className="inline-block w-7 h-7 md:w-10 md:h-10 text-muted-foreground/40 hover:text-foreground transition-colors cursor-pointer" />
+              </a>
+            </span>
           </h1>
 
-          <p className="text-muted-foreground max-w-md leading-relaxed">
+          <p className="text-muted-foreground max-w-md leading-relaxed text-sm sm:text-base">
             Designing AI-powered products and data-driven experiences that turn complexity into clarity.
           </p>
 
-          <div className="flex gap-4 mt-2">
-            <a href="#work" className="border border-border rounded-full px-6 py-3 text-foreground hover:bg-secondary/80 transition-all duration-300 text-sm font-medium">
+          <div className="flex flex-wrap gap-3 sm:gap-4 mt-2">
+            <a href="#work" className="border border-border rounded-full px-5 sm:px-6 py-3 text-foreground hover:bg-secondary/80 transition-all duration-300 text-sm font-medium">
               See All Projects
             </a>
             <a
               href="#contact"
-              className="bg-foreground text-background rounded-full px-6 py-3 hover:bg-foreground/90 transition-all duration-300 text-sm font-medium"
+              className="bg-foreground text-background rounded-full px-5 sm:px-6 py-3 hover:bg-foreground/90 transition-all duration-300 text-sm font-medium"
             >
               Contact Now
             </a>
@@ -62,7 +65,7 @@ const Hero = () => {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="flex justify-center md:justify-end"
         >
-          <div className="relative w-72 md:w-80 lg:w-96 aspect-[3/4] rounded-2xl overflow-hidden border border-border/50 shadow-[var(--shadow-glow)]">
+          <div className="relative w-full max-w-sm md:w-80 lg:w-96 aspect-[3/4] rounded-2xl overflow-hidden border border-border/50 shadow-[var(--shadow-glow)]">
             <img
               src={portraitImg}
               alt="Aakriti Thakur"
