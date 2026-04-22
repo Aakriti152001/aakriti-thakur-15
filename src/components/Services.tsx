@@ -61,7 +61,7 @@ const Services = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className="glass-card-hover p-8 rounded-2xl"
+            className="glass-card-hover px-4 py-5 sm:p-8 rounded-2xl"
           >
             <h3 className="text-lg font-bold mb-3">{s.title}</h3>
             <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
