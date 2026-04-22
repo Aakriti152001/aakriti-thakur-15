@@ -51,7 +51,7 @@ const projects = [
 const Work = () => {
   const navigate = useNavigate();
   return (
-  <section id="work" className="py-16 px-4">
+  <section id="work" className="py-16 px-6">
     <div className="container mx-auto max-w-6xl">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -88,17 +88,17 @@ const Work = () => {
                 height={600}
               />
             </div>
-            <div className="p-6 md:p-8 flex items-start justify-between gap-4">
-              <div className="flex-1">
-                <h3 className="text-xl md:text-2xl font-bold tracking-tight mb-3">
+            <div className="p-5 sm:p-6 md:p-8 flex items-start justify-between gap-3 sm:gap-4">
+              <div className="flex-1 min-w-0">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold tracking-tight mb-2 sm:mb-3">
                   {p.title}
                 </h3>
                 <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
                   {p.description}
                 </p>
               </div>
-              <div className="w-11 h-11 shrink-0 rounded-full border border-border/50 flex items-center justify-center group-hover:bg-primary group-hover:text-background group-hover:border-primary transition-all duration-300">
-                <ArrowUpRight className="w-5 h-5" />
+              <div className="w-10 h-10 sm:w-11 sm:h-11 shrink-0 rounded-full border border-border/50 flex items-center justify-center group-hover:bg-primary group-hover:text-background group-hover:border-primary transition-all duration-300">
+                <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
             </div>
           </motion.div>

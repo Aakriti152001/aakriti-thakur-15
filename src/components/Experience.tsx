@@ -43,7 +43,7 @@ const items = [
 ];
 
 const Experience = () => (
-  <section id="experience" className="py-16 px-4">
+  <section id="experience" className="py-16 px-6">
     <div className="container mx-auto max-w-6xl">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -65,7 +65,7 @@ const Experience = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className="glass-card-hover p-6 md:p-8 rounded-2xl"
+            className="glass-card-hover p-5 sm:p-6 md:p-8 rounded-2xl"
           >
             <div className="flex flex-col md:flex-row md:items-start gap-4">
               <div className="md:w-44 shrink-0">

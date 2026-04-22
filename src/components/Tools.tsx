@@ -30,7 +30,7 @@ const ToolIcon = ({ name, url }: { name: string; url: string }) => (
 );
 
 const Tools = () => (
-  <section className="py-12 px-4 overflow-hidden">
+  <section className="py-12 px-6 overflow-hidden">
     <div className="container mx-auto max-w-6xl">
       <motion.div
         initial={{ opacity: 0 }}
