@@ -57,7 +57,7 @@ const Experience = () => (
         </h2>
       </motion.div>
 
-      <div className="space-y-4">
+      <div className="grid md:grid-cols-2 gap-4">
         {items.map((item, i) => (
           <motion.div
             key={item.title + item.company}
@@ -67,11 +67,9 @@ const Experience = () => (
             transition={{ delay: i * 0.1 }}
             className="glass-card-hover px-4 py-5 sm:p-6 md:p-8 rounded-2xl"
           >
-            <div className="flex flex-col md:flex-row md:items-start gap-4">
-              <div className="md:w-44 shrink-0">
-                <p className="text-xs text-muted-foreground">{item.meta}</p>
-              </div>
-              <div className="flex-1">
+            <div className="flex flex-col gap-4">
+              <p className="text-xs text-muted-foreground">{item.meta}</p>
+              <div>
                 <h3 className="text-base font-bold mb-1">{item.title}</h3>
                 <p className="text-sm text-muted-foreground mb-3">
                   at <span className="text-foreground/80">{item.company}</span>
