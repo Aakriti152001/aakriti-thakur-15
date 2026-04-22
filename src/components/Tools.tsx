@@ -1,18 +1,21 @@
 import { motion } from "framer-motion";
+import illustratorIcon from "@/assets/tools/illustrator.svg";
+import photoshopIcon from "@/assets/tools/photoshop.svg";
+import framerIcon from "@/assets/tools/framer.jpg";
+import miroIcon from "@/assets/tools/miro.svg";
+import splineIcon from "@/assets/tools/spline.svg";
 
 const tools = [
-  { name: "Adobe Illustrator", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" },
+  { name: "Adobe Illustrator", url: illustratorIcon },
   { name: "Lovable", url: "https://lovable.dev/favicon.ico" },
-  { name: "After Effects", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-original.svg" },
-  { name: "Spline", url: "https://spline.design/favicon.ico" },
-  { name: "Canva", url: "https://static.canva.com/static/images/favicon-1.ico" },
+  { name: "Spline", url: splineIcon },
   { name: "Trello", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg" },
   { name: "Hotjar", url: "https://www.hotjar.com/favicon.ico" },
-  { name: "Framer", url: "https://framerusercontent.com/images/atXqxn0fLLPgOgCheElLIcUOWY.png" },
+  { name: "Framer", url: framerIcon },
   { name: "Figma", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
-  { name: "Adobe Photoshop", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" },
+  { name: "Adobe Photoshop", url: photoshopIcon },
   { name: "Notion", url: "https://www.notion.so/images/favicon.ico" },
-  { name: "Miro", url: "https://miro.com/favicon.ico" },
+  { name: "Miro", url: miroIcon },
 ];
 
 const ToolIcon = ({ name, url }: { name: string; url: string }) => (
