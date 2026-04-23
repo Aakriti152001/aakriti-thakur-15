@@ -41,16 +41,16 @@ const cardTransforms = [
 ];
 
 const Experience = () => (
-  <section id="experience" className="py-20 px-6 overflow-hidden">
+  <section id="experience" className="py-20 px-0 sm:px-6 overflow-hidden">
     <div className="container mx-auto max-w-7xl">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="mb-12"
+        className="mb-16 text-left px-4 sm:px-0"
       >
         <p className="section-heading mb-3">Career Path</p>
-        <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
+        <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
           Work <span className="text-muted-foreground/50">Experience</span>
         </h2>
       </motion.div>
@@ -76,7 +76,7 @@ const Experience = () => (
         ))}
       </div>
 
-      <div className="hidden md:flex justify-center items-center px-4 py-20">
+      <div className="hidden md:flex justify-center items-center gap-0 px-4 py-20">
         {items.map((item, i) => (
           <motion.div
             key={item.title + item.company}
@@ -84,11 +84,11 @@ const Experience = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.12, duration: 0.6 }}
-            style={{ marginLeft: i === 0 ? 0 : "-1.5rem", zIndex: items.length - i }}
-            className={`group relative w-[280px] h-[340px] p-6 rounded-2xl bg-card/95 backdrop-blur-xl border border-border/60 shadow-2xl transition-all duration-500 ease-out transform-gpu will-change-transform ${cardTransforms[i % cardTransforms.length]} hover:!rotate-0 hover:!translate-y-0 hover:scale-105 hover:border-primary/50 hover:shadow-[0_25px_70px_-15px_hsla(160,100%,50%,0.4)] hover:!z-30`}
+            style={{ marginLeft: i === 0 ? 0 : "-4rem", zIndex: items.length - i }}
+            className={`group relative w-[280px] h-[320px] p-6 rounded-2xl bg-card/95 backdrop-blur-xl border border-border/60 shadow-2xl transition-all duration-500 ease-out transform-gpu will-change-transform ${cardTransforms[i % cardTransforms.length]} hover:!rotate-0 hover:!translate-y-0 hover:scale-110 hover:border-primary/50 hover:shadow-[0_25px_70px_-15px_hsla(160,100%,50%,0.4)] hover:!z-30`}
           >
             <div className="flex flex-col h-full">
-              <div className="flex items-start justify-between mb-4 gap-3">
+              <div className="flex items-start justify-between mb-4 gap-2">
                 <h3 className="text-sm font-bold text-primary leading-tight">
                   {item.company}
                 </h3>
