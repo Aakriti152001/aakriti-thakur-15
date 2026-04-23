@@ -36,7 +36,7 @@ const projects = [
     link: "/product/gigpot",
   },
   {
-    title: "CryptoLottery- Website Design",
+    title: "CryptoLottery – Crypto Betting Website",
     description: "A playful, trust-forward crypto lottery experience with transparent on-chain mechanics.",
     image: project5,
     link: "/product/crypto-lottery",
