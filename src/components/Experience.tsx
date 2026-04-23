@@ -31,12 +31,13 @@ const items = [
   },
 ];
 
-// Fan-out rotations & vertical offsets — full class names so Tailwind picks them up.
+// Zig-zag layout: alternating tilt + vertical offset (up/down/up/down)
+// Full class names so Tailwind JIT picks them up.
 const cardTransforms = [
-  "md:-rotate-[8deg] md:translate-y-2",
-  "md:rotate-[5deg] md:-translate-y-3",
-  "md:-rotate-[4deg] md:translate-y-4",
-  "md:rotate-[7deg] md:-translate-y-2",
+  "md:-rotate-[7deg] md:-translate-y-6",   // up
+  "md:rotate-[6deg] md:translate-y-8",     // down
+  "md:-rotate-[5deg] md:-translate-y-8",   // up
+  "md:rotate-[7deg] md:translate-y-6",     // down
 ];
 
 const Experience = () => (
@@ -75,7 +76,7 @@ const Experience = () => (
         ))}
       </div>
 
-      <div className="hidden md:flex justify-center items-center gap-0 px-4 py-12">
+      <div className="hidden md:flex justify-center items-center gap-0 px-4 py-20">
         {items.map((item, i) => (
           <motion.div
             key={item.title + item.company}
@@ -83,19 +84,21 @@ const Experience = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.12, duration: 0.6 }}
-            style={{ marginLeft: i === 0 ? 0 : "-3rem", zIndex: items.length - i }}
-            className={`group relative w-[260px] h-[300px] p-6 rounded-2xl bg-card/90 backdrop-blur-xl border border-border/60 shadow-xl transition-all duration-500 ease-out transform-gpu will-change-transform ${cardTransforms[i % cardTransforms.length]} hover:!rotate-0 hover:!translate-y-0 hover:scale-110 hover:border-primary/50 hover:shadow-[0_25px_70px_-15px_hsla(160,100%,50%,0.4)] hover:!z-30`}
+            style={{ marginLeft: i === 0 ? 0 : "-4rem", zIndex: items.length - i }}
+            className={`group relative w-[280px] h-[320px] p-6 rounded-2xl bg-card/95 backdrop-blur-xl border border-border/60 shadow-2xl transition-all duration-500 ease-out transform-gpu will-change-transform ${cardTransforms[i % cardTransforms.length]} hover:!rotate-0 hover:!translate-y-0 hover:scale-110 hover:border-primary/50 hover:shadow-[0_25px_70px_-15px_hsla(160,100%,50%,0.4)] hover:!z-30`}
           >
             <div className="flex flex-col h-full">
               <div className="flex items-start justify-between mb-4 gap-2">
-                <h3 className="text-sm font-bold text-foreground/90 leading-tight">
+                <h3 className="text-sm font-bold text-primary leading-tight">
                   {item.company}
                 </h3>
                 <span className="text-[10px] text-muted-foreground whitespace-nowrap pt-0.5">
                   {item.meta}
                 </span>
               </div>
-              <h4 className="text-lg font-bold mb-3 leading-tight">{item.title}</h4>
+              <h4 className="text-xl font-bold mb-3 leading-tight text-foreground">
+                {item.title}
+              </h4>
               <p className="text-xs text-muted-foreground leading-relaxed">
                 {item.description}
               </p>
