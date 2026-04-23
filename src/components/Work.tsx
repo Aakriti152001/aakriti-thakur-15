@@ -30,7 +30,7 @@ const projects = [
     link: "/product/fundin-bharat-dashboard",
   },
   {
-    title: "GigPot - Mobile App Design",
+    title: "GIGPOT – Crypto Trading Mobile App",
     description: "Secure, seamless crypto trading experience built for trust and clarity",
     image: project4,
     link: "/product/gigpot",
