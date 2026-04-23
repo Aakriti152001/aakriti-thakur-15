@@ -24,7 +24,7 @@ const projects = [
     link: "/project/fundin-bharat",
   },
   {
-    title: "Fundin Bharat - Dashboard Design",
+    title: "Fundin Bharat – Trading Dashboard",
     description: "Risk-free trading platform empowering growth without financial barriers",
     image: project2,
     link: "/product/fundin-bharat-dashboard",
