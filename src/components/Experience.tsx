@@ -6,7 +6,12 @@ const items = [
     company: "Mantras2Transform Pvt. Ltd.",
     meta: "Jan 2026 – Present",
     description:
-      "Leading UX strategy across multiple AI platforms. Managing and mentoring the design team while establishing scalable design systems.",
+      "Leading UX strategy across multiple AI platforms while mentoring the design team and establishing scalable design systems.",
+    highlights: [
+      "Drive end-to-end UX vision across products",
+      "Mentor designers & run design critiques",
+      "Build a unified design system at scale",
+    ],
   },
   {
     title: "UI/UX Consultant",
@@ -14,6 +19,11 @@ const items = [
     meta: "Oct 2025 – Dec 2025",
     description:
       "Founded the design function from the ground up. Defined UX strategy for the M2T website and redesigned the AI Job Matcher dashboard.",
+    highlights: [
+      "Set up the design function from scratch",
+      "Shipped M2T marketing site UX",
+      "Redesigned AI Job Matcher dashboard",
+    ],
   },
   {
     title: "UI Designer",
@@ -21,6 +31,11 @@ const items = [
     meta: "Apr 2025 – Sept 2025",
     description:
       "Designed marketing and social media assets while ensuring visual consistency across the brand identity.",
+    highlights: [
+      "Crafted marketing & campaign visuals",
+      "Owned social media design system",
+      "Maintained brand consistency end-to-end",
+    ],
   },
   {
     title: "Senior UI/UX Designer",
@@ -28,6 +43,11 @@ const items = [
     meta: "Mar 2023 – Jan 2025",
     description:
       "Founding designer — owned end-to-end design. Crafted AI-powered dashboards and built a scalable design system from scratch.",
+    highlights: [
+      "Founding designer, end-to-end ownership",
+      "Designed AI-powered sales dashboards",
+      "Built a scalable design system 0 → 1",
+    ],
   },
 ];
 
