@@ -12,7 +12,7 @@ import project8 from "@/assets/e71695fa-9b0e-4e3b-9070-58a4c08d3ddb.png";
 
 const projects = [
   {
-    title: "Docbot - Mobile App Design",
+    title: "Docbot - Healthcare Mobile App",
     description: "End-to-end UX for a healthcare platform enabling remote care and real-time vitals monitoring.",
     image: project1,
     link: "/project/docbot",
