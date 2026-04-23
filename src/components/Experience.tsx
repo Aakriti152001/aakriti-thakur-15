@@ -49,7 +49,7 @@ const Experience = () => (
         viewport={{ once: true }}
         className="mb-16 text-center"
       >
-        <p className="section-heading mb-3">Career path</p>
+        <p className="section-heading mb-3">Experience</p>
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
           My <span className="text-muted-foreground/50">Journey</span>
         </h2>
