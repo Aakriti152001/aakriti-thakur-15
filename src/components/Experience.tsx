@@ -47,11 +47,11 @@ const Experience = () => (
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="mb-16 text-center"
+        className="mb-16 text-left px-4 sm:px-0"
       >
-        <p className="section-heading mb-3">Experience</p>
-        <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-          My <span className="text-muted-foreground/50">Journey</span>
+        <p className="section-heading mb-3">Career Path</p>
+        <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
+          Work<span className="text-muted-foreground/50">Experience</span>
         </h2>
       </motion.div>
 
