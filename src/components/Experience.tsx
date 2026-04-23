@@ -124,12 +124,20 @@ const Experience = () => (
                   {item.meta}
                 </span>
               </div>
-              <h4 className="text-xl font-bold mb-3 leading-tight text-foreground">
+              <h4 className="text-lg font-bold mb-2 leading-tight text-foreground">
                 {item.title}
               </h4>
-              <p className="text-xs text-muted-foreground leading-relaxed">
+              <p className="text-xs text-muted-foreground leading-relaxed mb-3">
                 {item.description}
               </p>
+              <ul className="space-y-1.5 mt-auto">
+                {item.highlights.map((h) => (
+                  <li key={h} className="text-[11px] text-muted-foreground/90 flex gap-1.5 leading-snug">
+                    <span className="text-primary mt-0.5">•</span>
+                    <span>{h}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </motion.div>
         ))}
