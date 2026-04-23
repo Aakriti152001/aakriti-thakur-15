@@ -6,7 +6,12 @@ const items = [
     company: "Mantras2Transform Pvt. Ltd.",
     meta: "Jan 2026 – Present",
     description:
-      "Leading UX strategy across multiple AI platforms. Managing and mentoring the design team while establishing scalable design systems.",
+      "Leading UX strategy across multiple AI platforms while mentoring the design team and establishing scalable design systems.",
+    highlights: [
+      "Drive end-to-end UX vision across products",
+      "Mentor designers & run design critiques",
+      "Build a unified design system at scale",
+    ],
   },
   {
     title: "UI/UX Consultant",
@@ -14,6 +19,11 @@ const items = [
     meta: "Oct 2025 – Dec 2025",
     description:
       "Founded the design function from the ground up. Defined UX strategy for the M2T website and redesigned the AI Job Matcher dashboard.",
+    highlights: [
+      "Set up the design function from scratch",
+      "Shipped M2T marketing site UX",
+      "Redesigned AI Job Matcher dashboard",
+    ],
   },
   {
     title: "UI Designer",
@@ -21,6 +31,11 @@ const items = [
     meta: "Apr 2025 – Sept 2025",
     description:
       "Designed marketing and social media assets while ensuring visual consistency across the brand identity.",
+    highlights: [
+      "Crafted marketing & campaign visuals",
+      "Owned social media design system",
+      "Maintained brand consistency end-to-end",
+    ],
   },
   {
     title: "Senior UI/UX Designer",
@@ -28,6 +43,11 @@ const items = [
     meta: "Mar 2023 – Jan 2025",
     description:
       "Founding designer — owned end-to-end design. Crafted AI-powered dashboards and built a scalable design system from scratch.",
+    highlights: [
+      "Founding designer, end-to-end ownership",
+      "Designed AI-powered sales dashboards",
+      "Built a scalable design system 0 → 1",
+    ],
   },
 ];
 
@@ -71,7 +91,15 @@ const Experience = () => (
             <p className="text-sm text-muted-foreground mb-3">
               at <span className="text-foreground/80">{item.company}</span>
             </p>
-            <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-3">{item.description}</p>
+            <ul className="space-y-1.5">
+              {item.highlights.map((h) => (
+                <li key={h} className="text-xs text-muted-foreground flex gap-2">
+                  <span className="text-primary mt-0.5">•</span>
+                  <span>{h}</span>
+                </li>
+              ))}
+            </ul>
           </motion.div>
         ))}
       </div>
@@ -96,12 +124,20 @@ const Experience = () => (
                   {item.meta}
                 </span>
               </div>
-              <h4 className="text-xl font-bold mb-3 leading-tight text-foreground">
+              <h4 className="text-lg font-bold mb-2 leading-tight text-foreground">
                 {item.title}
               </h4>
-              <p className="text-xs text-muted-foreground leading-relaxed">
+              <p className="text-xs text-muted-foreground leading-relaxed mb-3">
                 {item.description}
               </p>
+              <ul className="space-y-1.5 mt-auto">
+                {item.highlights.map((h) => (
+                  <li key={h} className="text-[11px] text-muted-foreground/90 flex gap-1.5 leading-snug">
+                    <span className="text-primary mt-0.5">•</span>
+                    <span>{h}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </motion.div>
         ))}
