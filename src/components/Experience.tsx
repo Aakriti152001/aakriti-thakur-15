@@ -41,16 +41,16 @@ const cardTransforms = [
 ];
 
 const Experience = () => (
-  <section id="experience" className="py-20 px-0 sm:px-6 overflow-hidden">
+  <section id="experience" className="py-20 px-6 overflow-hidden">
     <div className="container mx-auto max-w-7xl">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="mb-16 text-left px-4 sm:px-0"
+        className="mb-12"
       >
         <p className="section-heading mb-3">Career Path</p>
-        <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
+        <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
           Work <span className="text-muted-foreground/50">Experience</span>
         </h2>
       </motion.div>
