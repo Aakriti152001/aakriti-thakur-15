@@ -83,8 +83,8 @@ const Experience = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.12, duration: 0.6 }}
-            style={{ marginLeft: i === 0 ? 0 : "-3rem" }}
-            className={`group relative w-[260px] h-[300px] p-6 rounded-2xl bg-card/90 backdrop-blur-xl border border-border/60 shadow-xl transition-all duration-500 ease-out transform-gpu will-change-transform ${cardTransforms[i % cardTransforms.length]} hover:!rotate-0 hover:!translate-y-0 hover:scale-110 hover:border-primary/50 hover:shadow-[0_25px_70px_-15px_hsla(160,100%,50%,0.4)] hover:z-20`}
+            style={{ marginLeft: i === 0 ? 0 : "-3rem", zIndex: items.length - i }}
+            className={`group relative w-[260px] h-[300px] p-6 rounded-2xl bg-card/90 backdrop-blur-xl border border-border/60 shadow-xl transition-all duration-500 ease-out transform-gpu will-change-transform ${cardTransforms[i % cardTransforms.length]} hover:!rotate-0 hover:!translate-y-0 hover:scale-110 hover:border-primary/50 hover:shadow-[0_25px_70px_-15px_hsla(160,100%,50%,0.4)] hover:!z-30`}
           >
             <div className="flex flex-col h-full">
               <div className="flex items-start justify-between mb-4 gap-2">
