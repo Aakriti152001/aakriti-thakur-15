@@ -42,9 +42,14 @@ const items = [
   },
 ];
 
-// Subtle scattered rotation per card, straightens on hover
-const rotations = ["-rotate-3", "rotate-2", "-rotate-2", "rotate-3"];
-const offsets = ["md:-translate-y-2", "md:translate-y-3", "md:-translate-y-1", "md:translate-y-2"];
+// Subtle scattered rotation per card, straightens on hover.
+// Full class names so Tailwind JIT detects them.
+const cardTransforms = [
+  "md:-rotate-3 md:-translate-y-2",
+  "md:rotate-2 md:translate-y-3",
+  "md:-rotate-2 md:-translate-y-1",
+  "md:rotate-3 md:translate-y-2",
+];
 
 const Experience = () => (
   <section id="experience" className="py-16 px-0 sm:px-6">
@@ -69,7 +74,7 @@ const Experience = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
-            className={`group relative px-4 py-5 sm:p-6 md:p-8 rounded-2xl bg-card/80 backdrop-blur-xl border border-border/50 transition-all duration-500 ease-out transform-gpu will-change-transform ${rotations[i % rotations.length]} ${offsets[i % offsets.length]} hover:rotate-0 hover:translate-y-0 hover:-translate-y-1 hover:scale-[1.02] hover:border-primary/30 hover:shadow-[0_20px_60px_-15px_hsla(160,100%,50%,0.25)] hover:z-10`}
+            className={`group relative px-4 py-5 sm:p-6 md:p-8 rounded-2xl bg-card/80 backdrop-blur-xl border border-border/50 transition-all duration-500 ease-out transform-gpu will-change-transform ${cardTransforms[i % cardTransforms.length]} hover:!rotate-0 hover:!translate-y-0 hover:scale-[1.03] hover:border-primary/40 hover:shadow-[0_20px_60px_-15px_hsla(160,100%,50%,0.3)] hover:z-10`}
           >
             <div className="flex flex-col gap-4">
               <p className="text-xs text-muted-foreground">{item.meta}</p>
