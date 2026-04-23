@@ -51,7 +51,7 @@ const Experience = () => (
       >
         <p className="section-heading mb-3">Career Path</p>
         <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
-          Work<span className="text-muted-foreground/50">Experience</span>
+          Work <span className="text-muted-foreground/50">Experience</span>
         </h2>
       </motion.div>
 
