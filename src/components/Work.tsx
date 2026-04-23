@@ -42,7 +42,7 @@ const projects = [
     link: "/product/crypto-lottery",
   },
   {
-    title: "Universus- Dashboard Redesign",
+    title: "Universus – Customer Service Dashboard",
     description: "Redesigning customer service workflows for faster, efficient support operations",
     image: project6,
     link: "/product/universus",
