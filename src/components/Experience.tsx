@@ -94,12 +94,12 @@ const Experience = () => (
             <ul className="space-y-1.5">
               <li className="text-xs text-muted-foreground flex gap-2">
                 <span className="text-primary mt-0.5">•</span>
-                <span>{item.description}</span>
+                <span className="text-sm">{item.description}</span>
               </li>
               {item.highlights.map((h) => (
                 <li key={h} className="text-xs text-muted-foreground flex gap-2">
                   <span className="text-primary mt-0.5">•</span>
-                  <span>{h}</span>
+                  <span className="text-sm">{h}</span>
                 </li>
               ))}
             </ul>
@@ -133,12 +133,12 @@ const Experience = () => (
               <ul className="space-y-1.5 mt-auto">
                 <li className="text-[11px] text-muted-foreground/90 flex gap-1.5 leading-snug">
                   <span className="text-primary mt-0.5">•</span>
-                  <span>{item.description}</span>
+                  <span className="text-sm">{item.description}</span>
                 </li>
                 {item.highlights.map((h) => (
                   <li key={h} className="text-[11px] text-muted-foreground/90 flex gap-1.5 leading-snug">
                     <span className="text-primary mt-0.5">•</span>
-                    <span>{h}</span>
+                    <span className="text-sm">{h}</span>
                   </li>
                 ))}
               </ul>
