@@ -91,15 +91,15 @@ const Experience = () => (
             <p className="text-sm text-muted-foreground mb-3">
               at <span className="text-foreground/80">{item.company}</span>
             </p>
-            <ul className="space-y-1.5">
-              <li className="text-xs text-muted-foreground flex gap-2">
-                <span className="text-primary mt-0.5">•</span>
-                <span className="text-sm">{item.description}</span>
+            <ul className="space-y-2">
+              <li className="text-sm text-muted-foreground flex gap-2 leading-snug">
+                <span className="text-primary leading-snug">•</span>
+                <span className="flex-1">{item.description}</span>
               </li>
               {item.highlights.map((h) => (
-                <li key={h} className="text-xs text-muted-foreground flex gap-2">
-                  <span className="text-primary mt-0.5">•</span>
-                  <span className="text-sm">{h}</span>
+                <li key={h} className="text-sm text-muted-foreground flex gap-2 leading-snug">
+                  <span className="text-primary leading-snug">•</span>
+                  <span className="flex-1">{h}</span>
                 </li>
               ))}
             </ul>
@@ -116,9 +116,9 @@ const Experience = () => (
             viewport={{ once: true }}
             transition={{ delay: i * 0.12, duration: 0.6 }}
             style={{ marginLeft: i === 0 ? 0 : "-1.5rem", zIndex: items.length - i }}
-            className={`group relative w-[280px] h-[340px] p-6 rounded-2xl bg-card/95 backdrop-blur-xl border border-border/60 shadow-2xl transition-all duration-500 ease-out transform-gpu will-change-transform ${cardTransforms[i % cardTransforms.length]} hover:!rotate-0 hover:!translate-y-0 hover:scale-105 hover:border-primary/50 hover:shadow-[0_25px_70px_-15px_hsla(160,100%,50%,0.4)] hover:!z-30`}
+            className={`group relative w-[280px] p-6 rounded-2xl bg-card/95 backdrop-blur-xl border border-border/60 shadow-2xl transition-all duration-500 ease-out transform-gpu will-change-transform ${cardTransforms[i % cardTransforms.length]} hover:!rotate-0 hover:!translate-y-0 hover:scale-105 hover:border-primary/50 hover:shadow-[0_25px_70px_-15px_hsla(160,100%,50%,0.4)] hover:!z-30`}
           >
-            <div className="flex flex-col h-full">
+            <div className="flex flex-col">
               <div className="flex items-start justify-between mb-4 gap-3">
                 <h3 className="text-sm font-bold text-primary leading-tight">
                   {item.company}
@@ -127,18 +127,18 @@ const Experience = () => (
                   {item.meta}
                 </span>
               </div>
-              <h4 className="text-lg font-bold mb-2 leading-tight text-foreground">
+              <h4 className="text-lg font-bold mb-3 leading-tight text-foreground">
                 {item.title}
               </h4>
-              <ul className="space-y-1.5 mt-auto">
-                <li className="text-[11px] text-muted-foreground/90 flex gap-1.5 leading-snug">
-                  <span className="text-primary mt-0.5">•</span>
-                  <span className="text-sm">{item.description}</span>
+              <ul className="space-y-2">
+                <li className="text-sm text-muted-foreground/90 flex gap-2 leading-snug">
+                  <span className="text-primary leading-snug">•</span>
+                  <span className="flex-1">{item.description}</span>
                 </li>
                 {item.highlights.map((h) => (
-                  <li key={h} className="text-[11px] text-muted-foreground/90 flex gap-1.5 leading-snug">
-                    <span className="text-primary mt-0.5">•</span>
-                    <span className="text-sm">{h}</span>
+                  <li key={h} className="text-sm text-muted-foreground/90 flex gap-2 leading-snug">
+                    <span className="text-primary leading-snug">•</span>
+                    <span className="flex-1">{h}</span>
                   </li>
                 ))}
               </ul>
