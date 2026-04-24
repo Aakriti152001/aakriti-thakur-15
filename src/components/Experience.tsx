@@ -127,7 +127,7 @@ const Experience = () => (
                   {item.meta}
                 </span>
               </div>
-              <h4 className="text-lg font-bold mb-3 leading-tight text-foreground">
+              <h4 className="text-lg font-bold mb-3 leading-tight text-foreground min-h-[3.5rem]">
                 {item.title}
               </h4>
               <ul className="space-y-2">
