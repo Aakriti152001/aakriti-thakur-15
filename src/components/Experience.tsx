@@ -91,8 +91,11 @@ const Experience = () => (
             <p className="text-sm text-muted-foreground mb-3">
               at <span className="text-foreground/80">{item.company}</span>
             </p>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-3">{item.description}</p>
             <ul className="space-y-1.5">
+              <li className="text-xs text-muted-foreground flex gap-2">
+                <span className="text-primary mt-0.5">•</span>
+                <span>{item.description}</span>
+              </li>
               {item.highlights.map((h) => (
                 <li key={h} className="text-xs text-muted-foreground flex gap-2">
                   <span className="text-primary mt-0.5">•</span>
@@ -127,10 +130,11 @@ const Experience = () => (
               <h4 className="text-lg font-bold mb-2 leading-tight text-foreground">
                 {item.title}
               </h4>
-              <p className="text-xs text-muted-foreground leading-relaxed mb-3">
-                {item.description}
-              </p>
               <ul className="space-y-1.5 mt-auto">
+                <li className="text-[11px] text-muted-foreground/90 flex gap-1.5 leading-snug">
+                  <span className="text-primary mt-0.5">•</span>
+                  <span>{item.description}</span>
+                </li>
                 {item.highlights.map((h) => (
                   <li key={h} className="text-[11px] text-muted-foreground/90 flex gap-1.5 leading-snug">
                     <span className="text-primary mt-0.5">•</span>
