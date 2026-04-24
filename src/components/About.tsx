@@ -49,7 +49,7 @@ const About = () => (
         >
 
           <div className="glass-card px-4 py-5 sm:p-6 rounded-2xl">
-            <p className="text-foreground text-base sm:text-lg font-semibold mb-3">
+            <p className="text-foreground text-base font-semibold mb-3 sm:text-xl">
               Hi, I'm Aakriti Thakur.<span className="ml-2">👋</span>
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed">
