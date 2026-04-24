@@ -100,7 +100,7 @@ const Testimonials = () => (
                 <span className="text-xs font-medium">{t.rating}</span>
               </div>
             </div>
-            <p className="text-muted-foreground text-sm leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed text-base">
               {t.text}
             </p>
           </motion.div>
