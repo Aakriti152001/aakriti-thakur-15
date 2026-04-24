@@ -97,7 +97,7 @@ const Work = () => {
                   <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
               </div>
-              <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed text-base">
                 {p.description}
               </p>
             </div>
