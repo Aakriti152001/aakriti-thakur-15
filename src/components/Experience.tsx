@@ -130,10 +130,14 @@ const Experience = () => (
               <h4 className="text-lg font-bold mb-2 leading-tight text-foreground">
                 {item.title}
               </h4>
-              <p className="text-xs text-muted-foreground leading-relaxed mb-3">
+              <p className="text-xs text-muted-foreground leading-relaxed mb-3 sr-only">
                 {item.description}
               </p>
               <ul className="space-y-1.5 mt-auto">
+                <li className="text-[11px] text-muted-foreground/90 flex gap-1.5 leading-snug">
+                  <span className="text-primary mt-0.5">•</span>
+                  <span>{item.description}</span>
+                </li>
                 {item.highlights.map((h) => (
                   <li key={h} className="text-[11px] text-muted-foreground/90 flex gap-1.5 leading-snug">
                     <span className="text-primary mt-0.5">•</span>
