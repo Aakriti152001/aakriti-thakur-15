@@ -52,7 +52,7 @@ const About = () => (
             <p className="text-foreground text-base font-semibold mb-3 sm:text-xl">
               Hi, I'm Aakriti Thakur.<span className="ml-2">👋</span>
             </p>
-            <p className="text-muted-foreground text-sm leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed text-base">
               A Product Designer with 4+ years of experience in AI-powered SaaS, dashboards, and web/mobile applications, focused on simplifying complex workflows and turning AI-driven insights into intuitive user experiences.
               <br />
               <br />

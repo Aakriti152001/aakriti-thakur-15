@@ -64,7 +64,7 @@ const Services = () => (
             className="glass-card-hover px-4 py-5 sm:p-8 rounded-2xl"
           >
             <h3 className="text-lg font-bold mb-3">{s.title}</h3>
-            <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
+            <p className="text-muted-foreground leading-relaxed text-base">{s.desc}</p>
           </motion.div>
         ))}
       </div>

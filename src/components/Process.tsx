@@ -55,7 +55,7 @@ const Process = () => (
                 <Icon className="w-6 h-6 text-primary" />
               </div>
               <h3 className="text-lg font-bold">{s.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
+              <p className="text-muted-foreground leading-relaxed text-base">{s.desc}</p>
             </motion.div>
           );
         })}
