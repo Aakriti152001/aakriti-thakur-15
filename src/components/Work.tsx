@@ -78,17 +78,15 @@ const Work = () => {
             className="group cursor-pointer rounded-2xl overflow-hidden border border-border/30 bg-card/40 flex flex-col transition-all duration-300 hover:border-primary/50 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10 hover:bg-card/60"
             {...(p.link ? { onClick: () => navigate(p.link!) } : {})}
           >
-            <div className="w-full overflow-hidden flex items-center justify-center" style={{ height: "calc((100% * 10 / 16) - 20px)", aspectRatio: "auto" }}>
-              <div className="w-full overflow-hidden" style={{ height: "calc((56.25cqw) - 20px)" }}>
-                <img
-                  src={p.image}
-                  alt={p.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                  width={960}
-                  height={600}
-                />
-              </div>
+            <div className="w-full overflow-hidden" style={{ height: "calc(56.25cqw - 20px)", containerType: "inline-size" }}>
+              <img
+                src={p.image}
+                alt={p.title}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+                width={960}
+                height={600}
+              />
             </div>
             <div className="px-4 py-5 sm:p-6 md:p-8 flex flex-col gap-2 sm:gap-3">
               <div className="flex items-start justify-between gap-3 sm:gap-4">
