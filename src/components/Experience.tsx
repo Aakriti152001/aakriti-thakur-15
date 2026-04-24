@@ -67,7 +67,7 @@ const Experience = () => (
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="mb-12"
+        className="mb-10"
       >
         <p className="section-heading mb-3">Career Path</p>
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
