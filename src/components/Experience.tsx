@@ -104,7 +104,7 @@ const Experience = () => (
         ))}
       </div>
 
-      <div className="hidden md:flex justify-center items-center px-4 py-20">
+      <div className="hidden md:flex justify-center items-center px-4">
         {items.map((item, i) => (
           <motion.div
             key={item.title + item.company}
