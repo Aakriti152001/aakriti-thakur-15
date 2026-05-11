@@ -59,7 +59,7 @@ const Work = () => {
         viewport={{ once: true }}
         className="mb-12"
       >
-        <p className="section-heading mb-3">Recent Projects</p>
+        
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
             Recent <span className="text-muted-foreground/50">Designs</span>
