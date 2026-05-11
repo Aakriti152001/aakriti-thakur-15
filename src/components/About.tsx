@@ -56,7 +56,7 @@ const About = () => (
               A Product Designer with 4+ years of experience in AI-powered SaaS, dashboards, and web/mobile applications, focused on simplifying complex workflows and turning AI-driven insights into intuitive user experiences.
               <br />
               <br />
-              Currently, I lead UX & Design at Mantras2Transform, driving product direction, building scalable design systems, and collaborating closely with AI products.
+              Currently, I lead UX & Design at Mantras2Transform, driving product direction, building scalable design systems for multiple AI products, and collaborating closely with development & marketing teams.
             </p>
           </div>
 
