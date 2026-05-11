@@ -16,7 +16,7 @@ const About = () => (
         viewport={{ once: true }}
         className="mb-12"
       >
-        <p className="section-heading mb-3">Expert Designer</p>
+        
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
           More <span className="text-muted-foreground/50">About Me</span>
         </h2>
