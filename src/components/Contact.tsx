@@ -14,9 +14,9 @@ const Contact = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-6xl font-bold tracking-tight mb-6"
+          className="text-4xl font-bold tracking-tight mb-6 md:text-5xl"
         >
-          Let's connect
+          Let’s Build Something Impactful
         </motion.h2>
 
         <motion.p
