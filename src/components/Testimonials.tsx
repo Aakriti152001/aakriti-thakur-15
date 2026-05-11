@@ -50,7 +50,7 @@ const Testimonials = () => (
         
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-            Clients <span className="text-muted-foreground/50">Love My work</span>
+            Impact
           </h2>
           <div className="flex gap-3">
             <a href="#work" className="border border-border rounded-full px-5 py-2.5 text-sm text-foreground hover:bg-secondary/80 transition-all">
