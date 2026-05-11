@@ -47,7 +47,7 @@ const Testimonials = () => (
         viewport={{ once: true }}
         className="mb-12"
       >
-        <p className="section-heading mb-3">Happy Clients</p>
+        
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
             Clients <span className="text-muted-foreground/50">Love My work</span>
