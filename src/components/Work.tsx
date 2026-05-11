@@ -78,11 +78,11 @@ const Work = () => {
             className="group cursor-pointer rounded-2xl overflow-hidden border border-border/30 bg-card/40 flex flex-col transition-all duration-300 hover:border-primary/50 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10 hover:bg-card/60"
             {...(p.link ? { onClick: () => navigate(p.link!) } : {})}
           >
-            <div className="aspect-[16/10] w-full overflow-hidden -mb-[20px]">
+            <div className="aspect-[16/10] w-full overflow-hidden -mb-[40px]">
               <img
                 src={p.image}
                 alt={p.title}
-                className="w-full h-[calc(100%-20px)] object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-[calc(100%-40px)] object-cover object-center transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
                 width={960}
                 height={600}
