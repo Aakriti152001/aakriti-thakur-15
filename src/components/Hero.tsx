@@ -26,7 +26,7 @@ const Hero = () => {
             className="inline-flex items-center gap-2 glass-card px-4 py-2 w-fit text-sm"
           >
             <span className="w-2 h-2 rounded-full bg-primary animate-glow-pulse" />
-            <span className="text-muted-foreground">Product Designer</span>
+            <span className="text-muted-foreground">UX Manager & Product Designer</span>
           </motion.div>
 
           <h1 className="text-[2.75rem] sm:text-6xl md:text-7xl font-bold tracking-tight leading-[1.05] md:leading-none">
