@@ -35,7 +35,7 @@ const Process = () => (
       >
         
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-          How I Design <span className="text-muted-foreground/50">AI Product</span>
+          Designing for <span className="text-muted-foreground/50">AI Product</span>
         </h2>
       </motion.div>
 
