@@ -34,7 +34,7 @@ const Hero = () => {
             <br />
             <span className="text-muted-foreground/60">Thakur</span>
             <span className="inline-flex items-center ml-2 md:ml-3 align-middle gap-2 md:gap-3">
-              <span className="text-3xl sm:text-4xl md:text-5xl" role="img" aria-label="waving hand">👋</span>
+              <span className="text-3xl sm:text-4xl md:text-5xl wave-hand" role="img" aria-label="waving hand">👋</span>
               <a href="#about" aria-label="Go to More About Me section" className="inline-block">
                 <ArrowUpRight className="inline-block w-7 h-7 md:w-10 md:h-10 text-muted-foreground/40 hover:text-foreground transition-colors cursor-pointer" />
               </a>
