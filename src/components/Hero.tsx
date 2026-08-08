@@ -65,15 +65,22 @@ const Hero = () => {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="flex justify-center md:justify-end"
         >
-          <div className="relative w-full max-w-sm md:w-80 lg:w-96 aspect-[3/4] rounded-[500px] overflow-hidden border border-border/50 shadow-[var(--shadow-glow)]">
-            <img
-              src={portraitImg}
-              alt="Aakriti Thakur"
-              className="w-full h-full object-cover"
-              width={640}
-              height={800}
+          <div className="relative">
+            {/* Decorative capsule outline behind image */}
+            <div
+              className="absolute -inset-5 rounded-[500px] border border-white/50 bg-transparent pointer-events-none"
+              aria-hidden="true"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+            <div className="relative w-full max-w-sm md:w-80 lg:w-96 aspect-[3/4] rounded-[500px] overflow-hidden border border-border/50 shadow-[var(--shadow-glow)]">
+              <img
+                src={portraitImg}
+                alt="Aakriti Thakur"
+                className="w-full h-full object-cover"
+                width={640}
+                height={800}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+            </div>
           </div>
         </motion.div>
       </div>
