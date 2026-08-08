@@ -71,15 +71,15 @@ const Hero = () => {
               className="absolute -inset-5 rounded-[500px] border border-white/50 bg-transparent pointer-events-none"
               aria-hidden="true"
             />
-            <div className="relative w-full max-w-[364px] md:w-[300px] lg:w-[364px] aspect-[3/4] rounded-[500px] overflow-hidden border border-border/50 shadow-[var(--shadow-glow)]">
+            <div className="relative w-full max-w-[364px] md:w-[300px] lg:w-[364px] aspect-[3/2] rounded-[500px] overflow-hidden border border-border/50 shadow-[var(--shadow-glow)]">
               <img
                 src={portraitImg}
                 alt="Aakriti Thakur"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
                 width={640}
                 height={800}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
             </div>
           </div>
         </motion.div>
