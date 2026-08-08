@@ -5,10 +5,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import ProjectM2T from "./pages/ProjectM2T.tsx";
-import ProjectFundinBharat from "./pages/ProjectFundinBharat.tsx";
 import ProjectFundinDashboard from "./pages/ProjectFundinDashboard.tsx";
-import ProjectGigpot from "./pages/ProjectGigpot.tsx";
-import ProjectCryptoLottery from "./pages/ProjectCryptoLottery.tsx";
+
 import ProjectChaiHatii from "./pages/ProjectChaiHatii.tsx";
 import ProjectUniversus from "./pages/ProjectUniversus.tsx";
 import ProjectUnlockIvy from "./pages/ProjectUnlockIvy.tsx";
