@@ -65,13 +65,19 @@ const Hero = () => {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="flex justify-center md:justify-end"
         >
-          <div className="relative perspective-[1200px]">
+          <div className="relative" style={{ perspective: "1200px" }}>
             {/* Decorative capsule outline behind image */}
             <div
               className="absolute -inset-5 rounded-[500px] border border-white/50 bg-transparent pointer-events-none"
               aria-hidden="true"
             />
-            <div className="flip-card relative w-full max-w-[364px] md:w-[300px] lg:w-[364px] aspect-[3/4] rounded-[500px] overflow-hidden border border-border/50 shadow-[var(--shadow-glow)]">
+            <motion.div
+              initial={{ rotateY: 180 }}
+              animate={{ rotateY: 0 }}
+              transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1], delay: 0.35 }}
+              style={{ transformStyle: "preserve-3d" }}
+              className="relative w-full max-w-[364px] md:w-[300px] lg:w-[364px] aspect-[3/4] rounded-[500px] overflow-hidden border border-border/50 shadow-[var(--shadow-glow)]"
+            >
               <img
                 src={portraitImg}
                 alt="Aakriti Thakur"
@@ -80,7 +86,7 @@ const Hero = () => {
                 height={800}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
-            </div>
+            </motion.div>
           </div>
         </motion.div>
       </div>
