@@ -65,13 +65,13 @@ const Hero = () => {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="flex justify-center md:justify-end"
         >
-          <div className="relative">
+          <div className="relative perspective-[1200px]">
             {/* Decorative capsule outline behind image */}
             <div
               className="absolute -inset-5 rounded-[500px] border border-white/50 bg-transparent pointer-events-none"
               aria-hidden="true"
             />
-            <div className="relative w-full max-w-[364px] md:w-[300px] lg:w-[364px] aspect-[3/4] rounded-[500px] overflow-hidden border border-border/50 shadow-[var(--shadow-glow)]">
+            <div className="flip-card relative w-full max-w-[364px] md:w-[300px] lg:w-[364px] aspect-[3/4] rounded-[500px] overflow-hidden border border-border/50 shadow-[var(--shadow-glow)]">
               <img
                 src={portraitImg}
                 alt="Aakriti Thakur"
