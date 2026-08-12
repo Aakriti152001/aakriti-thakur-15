@@ -152,3 +152,23 @@ html {
   75% { transform: rotate(10deg); }
   100% { transform: rotate(0deg); }
 }
+
+@keyframes card-flip {
+  0% {
+    transform: rotateY(-90deg);
+    opacity: 0.6;
+  }
+  40% {
+    transform: rotateY(-10deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+.flip-card {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  animation: card-flip 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
