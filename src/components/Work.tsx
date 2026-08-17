@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import project1 from "@/assets/eab04f18-c9e5-47a5-b75f-c346c0d51007.png";
+import docbotCover from "@/assets/docbot-cover.png.asset.json";
 import project2 from "@/assets/project-ai-job-matcher.png";
 import project6 from "@/assets/b0cb4673-c0c3-4378-ae9d-2a69b5c2e91e.png";
 
@@ -9,7 +9,7 @@ const projects = [
   {
     title: "Docbot - Healthcare Mobile App",
     description: "End-to-end UX for a healthcare platform enabling remote care and real-time vitals monitoring.",
-    image: project1,
+    image: docbotCover.url,
     link: "/project/docbot",
   },
   {
