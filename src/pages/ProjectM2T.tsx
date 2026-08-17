@@ -3,7 +3,7 @@ import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import heroImg from "@/assets/m2t-project/hero.jpg";
+import slide1Asset from "@/assets/docbot-slide1.png.asset.json";
 import img2 from "@/assets/m2t-project/img2.jpg";
 import img3 from "@/assets/m2t-project/img3.jpg";
 import img4 from "@/assets/m2t-project/img4.jpg";
@@ -36,7 +36,7 @@ const details = [
 ];
 
 const galleryImages = [
-  heroImg, img2, img3, img4, img5, img6, img7, img8, img9, img10,
+  slide1Asset.url, img2, img3, img4, img5, img6, img7, img8, img9, img10,
   img11, img12, img13, img14, img15, img16, img17, img18, img19, img20,
   img21, img22, img23, img24,
 ];
