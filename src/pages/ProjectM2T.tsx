@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import slide1Asset from "@/assets/docbot-slide1.png.asset.json";
+import slide2Asset from "@/assets/docbot-slide2.png.asset.json";
 import img2 from "@/assets/m2t-project/img2.jpg";
 import img3 from "@/assets/m2t-project/img3.jpg";
 import img4 from "@/assets/m2t-project/img4.jpg";
