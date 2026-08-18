@@ -22,7 +22,6 @@ import slide14Asset from "@/assets/docbot-slide14.png.asset.json";
 import slide15Asset from "@/assets/docbot-slide15.png.asset.json";
 
 const details = [
-  { label: "App name / Client", value: "DOCBOT" },
   { label: "My Role", value: "UI/UX Designer" },
   { label: "Industry", value: "Healthcare" },
   { label: "Platform", value: "Mobile App design" },
