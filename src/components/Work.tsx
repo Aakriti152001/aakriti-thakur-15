@@ -21,7 +21,7 @@ const projects = [
   {
     title: "Universus – Customer Service Dashboard",
     description: "Redesigning customer service workflows for faster, efficient support operations",
-    image: project6,
+    image: universusCover.url,
     link: "/product/universus",
   },
 ];
