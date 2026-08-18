@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import slide1Asset from "@/assets/docbot-slide1.png.asset.json";
 import slide2Asset from "@/assets/docbot-slide2.png.asset.json";
 import slide3Asset from "@/assets/docbot-slide3.png.asset.json";
-import img2 from "@/assets/m2t-project/img2.jpg";
+
 
 import slide4Asset from "@/assets/docbot-slide4.png.asset.json";
 import slide5Asset from "@/assets/docbot-slide5.png.asset.json";
