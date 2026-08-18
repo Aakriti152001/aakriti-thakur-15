@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import docbotCover from "@/assets/docbot-cover.png.asset.json";
+import universusCover from "@/assets/universus-cover.png.asset.json";
 import project2 from "@/assets/project-ai-job-matcher.png";
-import project6 from "@/assets/b0cb4673-c0c3-4378-ae9d-2a69b5c2e91e.png";
 
 const projects = [
   {
@@ -21,7 +21,7 @@ const projects = [
   {
     title: "Universus – Customer Service Dashboard",
     description: "Redesigning customer service workflows for faster, efficient support operations",
-    image: project6,
+    image: universusCover.url,
     link: "/product/universus",
   },
 ];
