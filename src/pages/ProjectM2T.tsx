@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import slide1Asset from "@/assets/docbot-slide1.png.asset.json";
 import slide2Asset from "@/assets/docbot-slide2.png.asset.json";
 import slide3Asset from "@/assets/docbot-slide3.png.asset.json";
-import img2 from "@/assets/m2t-project/img2.jpg";
+
 
 import slide4Asset from "@/assets/docbot-slide4.png.asset.json";
 import slide5Asset from "@/assets/docbot-slide5.png.asset.json";
@@ -21,26 +21,6 @@ import slide13Asset from "@/assets/docbot-slide13.png.asset.json";
 import slide14Asset from "@/assets/docbot-slide14.png.asset.json";
 import slide15Asset from "@/assets/docbot-slide15.png.asset.json";
 
-import img5 from "@/assets/m2t-project/img5.jpg";
-import img6 from "@/assets/m2t-project/img6.jpg";
-
-import img9 from "@/assets/m2t-project/img9.jpg";
-import img10 from "@/assets/m2t-project/img10.jpg";
-import img11 from "@/assets/m2t-project/img11.jpg";
-import img12 from "@/assets/m2t-project/img12.jpg";
-import img13 from "@/assets/m2t-project/img13.jpg";
-import img14 from "@/assets/m2t-project/img14.jpg";
-import img15 from "@/assets/m2t-project/img15.jpg";
-import img16 from "@/assets/m2t-project/img16.jpg";
-import img17 from "@/assets/m2t-project/img17.jpg";
-import img18 from "@/assets/m2t-project/img18.jpg";
-import img19 from "@/assets/m2t-project/img19.jpg";
-import img20 from "@/assets/m2t-project/img20.jpg";
-import img21 from "@/assets/m2t-project/img21.jpg";
-import img22 from "@/assets/m2t-project/img22.jpg";
-import img23 from "@/assets/m2t-project/img23.jpg";
-import img24 from "@/assets/m2t-project/img24.jpg";
-
 const details = [
   { label: "App name / Client", value: "DOCBOT" },
   { label: "My Role", value: "UI/UX Designer" },
@@ -49,9 +29,7 @@ const details = [
 ];
 
 const galleryImages = [
-  slide1Asset.url, slide2Asset.url, slide3Asset.url, slide4Asset.url, slide5Asset.url, slide6Asset.url, slide7Asset.url, slide8Asset.url, slide9Asset.url, slide10Asset.url, slide11Asset.url, slide12Asset.url, slide13Asset.url, slide14Asset.url, slide15Asset.url, img9,
-  img10, img11, img12, img13, img14, img15, img16, img17, img18, img19,
-  img20, img21, img22, img23, img24,
+  slide1Asset.url, slide2Asset.url, slide3Asset.url, slide4Asset.url, slide5Asset.url, slide6Asset.url, slide7Asset.url, slide8Asset.url, slide9Asset.url, slide10Asset.url, slide11Asset.url, slide12Asset.url, slide13Asset.url, slide14Asset.url, slide15Asset.url,
 ];
 
 const ProjectM2T = () => {
