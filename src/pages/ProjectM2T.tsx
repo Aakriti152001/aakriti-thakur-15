@@ -48,7 +48,7 @@ const details = [
 ];
 
 const galleryImages = [
-  slide1Asset.url, slide2Asset.url, slide3Asset.url, slide4Asset.url, slide5Asset.url, slide6Asset.url, slide7Asset.url, slide8Asset.url, slide9Asset.url, slide10Asset.url, slide11Asset.url, slide12Asset.url, slide13Asset.url, img9,
+  slide1Asset.url, slide2Asset.url, slide3Asset.url, slide4Asset.url, slide5Asset.url, slide6Asset.url, slide7Asset.url, slide8Asset.url, slide9Asset.url, slide10Asset.url, slide11Asset.url, slide12Asset.url, slide13Asset.url, slide14Asset.url, img9,
   img10, img11, img12, img13, img14, img15, img16, img17, img18, img19,
   img20, img21, img22, img23, img24,
 ];
