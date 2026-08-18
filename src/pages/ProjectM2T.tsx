@@ -98,7 +98,7 @@ const ProjectM2T = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12"
+          className="grid grid-cols-2 md:grid-cols-3 gap-1 mb-12"
         >
           {details.map((d) => (
             <div key={d.label}>
