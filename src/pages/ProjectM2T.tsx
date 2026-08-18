@@ -25,7 +25,7 @@ const details = [
   { label: "App name / Client", value: "DOCBOT" },
   { label: "My Role", value: "UI/UX Designer" },
   { label: "Industry", value: "Healthcare" },
-  { label: "Platform", value: "App design" },
+  { label: "Platform", value: "Mobile App design" },
 ];
 
 const galleryImages = [
