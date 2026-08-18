@@ -9,6 +9,7 @@ import slide3Asset from "@/assets/docbot-slide3.png.asset.json";
 import img2 from "@/assets/m2t-project/img2.jpg";
 
 import slide4Asset from "@/assets/docbot-slide4.png.asset.json";
+import slide5Asset from "@/assets/docbot-slide5.png.asset.json";
 import img5 from "@/assets/m2t-project/img5.jpg";
 import img6 from "@/assets/m2t-project/img6.jpg";
 import img7 from "@/assets/m2t-project/img7.jpg";
@@ -38,7 +39,7 @@ const details = [
 ];
 
 const galleryImages = [
-  slide1Asset.url, slide2Asset.url, slide3Asset.url, slide4Asset.url, img5, img6, img7, img8, img9, img10,
+  slide1Asset.url, slide2Asset.url, slide3Asset.url, slide4Asset.url, slide5Asset.url, img6, img7, img8, img9, img10,
   img11, img12, img13, img14, img15, img16, img17, img18, img19, img20,
   img21, img22, img23, img24,
 ];
