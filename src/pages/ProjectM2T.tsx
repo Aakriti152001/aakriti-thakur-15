@@ -16,6 +16,7 @@ import slide8Asset from "@/assets/docbot-slide8.png.asset.json";
 import slide9Asset from "@/assets/docbot-slide9.png.asset.json";
 import slide10Asset from "@/assets/docbot-slide10.png.asset.json";
 import slide11Asset from "@/assets/docbot-slide11.png.asset.json";
+import slide12Asset from "@/assets/docbot-slide12.png.asset.json";
 import img5 from "@/assets/m2t-project/img5.jpg";
 import img6 from "@/assets/m2t-project/img6.jpg";
 
