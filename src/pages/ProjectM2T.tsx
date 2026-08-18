@@ -25,7 +25,7 @@ const details = [
   { label: "App name / Client", value: "DOCBOT" },
   { label: "My Role", value: "UI/UX Designer" },
   { label: "Industry", value: "Healthcare" },
-  { label: "Platform", value: "App design" },
+  { label: "Platform", value: "Mobile App design" },
 ];
 
 const galleryImages = [
@@ -90,8 +90,7 @@ const ProjectM2T = () => {
             DOCBOT- Mobile App Design
           </h1>
           <p className="text-muted-foreground leading-relaxed max-w-2xl">
-            Docbot is an innovative healthcare technology company that has developed a AI-powered
-            wearable device for smart monitoring of vitals.
+            Docbot is an innovative healthcare platform designed to make remote care more accessible for the people.
           </p>
         </motion.div>
 
