@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import heroImg from "@/assets/universus-hero-1.png.asset.json";
 import overviewImg from "@/assets/universus-overview.png.asset.json";
-import challengesImg from "@/assets/universus-challenges-1.png.asset.json";
+import challengesImg from "@/assets/universus-research-insights.png.asset.json";
 import img5 from "@/assets/universus-project/img5.jpg";
 import img6 from "@/assets/universus-project/img6.jpg";
 import img7 from "@/assets/universus-project/img7.jpg";
