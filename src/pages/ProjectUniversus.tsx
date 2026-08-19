@@ -23,7 +23,7 @@ const details = [
   { label: "Platform", value: "Web App" },
 ];
 
-const galleryImages = [heroImg.url, overviewImg.url, challengesImg.url, researchInsightsImg.url, researchInsights2Img.url, userJourneyImg.url, userFlowImg.url, wireframesImg.url, styleGuideImg.url, finalDesigns1Img.url, finalDesigns2Img.url, finalDesigns3Img.url];
+const galleryImages = [heroImg.url, overviewImg.url, challengesImg.url, researchInsightsImg.url, researchInsights2Img.url, userJourneyImg.url, userFlowImg.url, wireframesImg.url, styleGuideImg.url, finalDesigns1Img.url, finalDesigns2Img.url, finalDesigns3Img.url, finalDesigns4Img.url];
 
 const ProjectUniversus = () => {
   const navigate = useNavigate();
