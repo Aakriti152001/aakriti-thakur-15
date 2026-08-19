@@ -18,7 +18,7 @@ const details = [
   { label: "Platform", value: "Web App" },
 ];
 
-const galleryImages = [heroImg.url, overviewImg.url, challengesImg.url, researchInsightsImg.url, researchInsights2Img.url, userJourneyImg.url, userFlowImg.url];
+const galleryImages = [heroImg.url, overviewImg.url, challengesImg.url, researchInsightsImg.url, researchInsights2Img.url, userJourneyImg.url, userFlowImg.url, wireframesImg.url];
 
 const ProjectUniversus = () => {
   const navigate = useNavigate();
