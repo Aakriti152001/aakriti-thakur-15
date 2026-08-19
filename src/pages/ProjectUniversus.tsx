@@ -12,6 +12,7 @@ import userFlowImg from "@/assets/universus-user-flow.webp.asset.json";
 import wireframesImg from "@/assets/universus-wireframes.webp.asset.json";
 import styleGuideImg from "@/assets/universus-style-guide.webp.asset.json";
 import finalDesigns1Img from "@/assets/universus-final-designs-1.webp.asset.json";
+import finalDesigns2Img from "@/assets/universus-final-designs-2.png.asset.json";
 
 const details = [
   { label: "Client", value: "Universus" },
