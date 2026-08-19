@@ -11,6 +11,7 @@ import userJourneyImg from "@/assets/universus-user-journey.webp.asset.json";
 import userFlowImg from "@/assets/universus-user-flow.webp.asset.json";
 import wireframesImg from "@/assets/universus-wireframes.webp.asset.json";
 import styleGuideImg from "@/assets/universus-style-guide.webp.asset.json";
+import finalDesigns1Img from "@/assets/universus-final-designs-1.webp.asset.json";
 
 const details = [
   { label: "Client", value: "Universus" },
@@ -19,7 +20,7 @@ const details = [
   { label: "Platform", value: "Web App" },
 ];
 
-const galleryImages = [heroImg.url, overviewImg.url, challengesImg.url, researchInsightsImg.url, researchInsights2Img.url, userJourneyImg.url, userFlowImg.url, wireframesImg.url, styleGuideImg.url];
+const galleryImages = [heroImg.url, overviewImg.url, challengesImg.url, researchInsightsImg.url, researchInsights2Img.url, userJourneyImg.url, userFlowImg.url, wireframesImg.url, styleGuideImg.url, finalDesigns1Img.url];
 
 const ProjectUniversus = () => {
   const navigate = useNavigate();
