@@ -9,6 +9,7 @@ import researchInsightsImg from "@/assets/universus-research-insights-1.webp.ass
 import researchInsights2Img from "@/assets/universus-research-insights-2.webp.asset.json";
 import userJourneyImg from "@/assets/universus-user-journey.webp.asset.json";
 import userFlowImg from "@/assets/universus-user-flow.webp.asset.json";
+import wireframesImg from "@/assets/universus-wireframes.webp.asset.json";
 
 const details = [
   { label: "Client", value: "Universus" },
