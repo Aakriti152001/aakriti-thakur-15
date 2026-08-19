@@ -6,7 +6,7 @@ import heroImg from "@/assets/universus-hero-1.png.asset.json";
 import overviewImg from "@/assets/universus-overview.png.asset.json";
 import challengesImg from "@/assets/universus-research-insights.png.asset.json";
 import researchInsightsImg from "@/assets/universus-research-insights-1.webp.asset.json";
-import img6 from "@/assets/universus-project/img6.jpg";
+import researchInsights2Img from "@/assets/universus-research-insights-2.webp.asset.json";
 import img7 from "@/assets/universus-project/img7.jpg";
 import img8 from "@/assets/universus-project/img8.jpg";
 
@@ -17,7 +17,7 @@ const details = [
   { label: "Platform", value: "Web App" },
 ];
 
-const galleryImages = [heroImg.url, overviewImg.url, challengesImg.url, researchInsightsImg.url, img6, img7, img8];
+const galleryImages = [heroImg.url, overviewImg.url, challengesImg.url, researchInsightsImg.url, researchInsights2Img.url, img7, img8];
 
 const ProjectUniversus = () => {
   const navigate = useNavigate();
