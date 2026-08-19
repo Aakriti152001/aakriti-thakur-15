@@ -15,6 +15,7 @@ import finalDesigns1Img from "@/assets/universus-final-designs-1.webp.asset.json
 import finalDesigns2Img from "@/assets/universus-final-designs-2.png.asset.json";
 import finalDesigns3Img from "@/assets/universus-final-designs-3.webp.asset.json";
 import finalDesigns4Img from "@/assets/universus-final-designs-4.webp.asset.json";
+import finalDesigns5Img from "@/assets/universus-final-designs-5.png.asset.json";
 
 const details = [
   { label: "Client", value: "Universus" },
