@@ -18,6 +18,7 @@ import finalDesigns4Img from "@/assets/universus-final-designs-4.webp.asset.json
 import finalDesigns5Img from "@/assets/universus-final-designs-5.png.asset.json";
 import finalDesigns6Img from "@/assets/universus-final-designs-6.png.asset.json";
 import finalDesigns7Img from "@/assets/universus-final-designs-7.png.asset.json";
+import finalDesigns8Img from "@/assets/universus-final-designs-8.png.asset.json";
 
 const details = [
   { label: "Client", value: "Universus" },
@@ -26,7 +27,7 @@ const details = [
   { label: "Platform", value: "Web App" },
 ];
 
-const galleryImages = [heroImg.url, overviewImg.url, challengesImg.url, researchInsightsImg.url, researchInsights2Img.url, userJourneyImg.url, userFlowImg.url, wireframesImg.url, styleGuideImg.url, finalDesigns1Img.url, finalDesigns2Img.url, finalDesigns3Img.url, finalDesigns4Img.url, finalDesigns5Img.url, finalDesigns6Img.url, finalDesigns7Img.url];
+const galleryImages = [heroImg.url, overviewImg.url, challengesImg.url, researchInsightsImg.url, researchInsights2Img.url, userJourneyImg.url, userFlowImg.url, wireframesImg.url, styleGuideImg.url, finalDesigns1Img.url, finalDesigns2Img.url, finalDesigns3Img.url, finalDesigns4Img.url, finalDesigns5Img.url, finalDesigns6Img.url, finalDesigns7Img.url, finalDesigns8Img.url];
 
 const ProjectUniversus = () => {
   const navigate = useNavigate();
