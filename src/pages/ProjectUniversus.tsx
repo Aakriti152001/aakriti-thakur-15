@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-import heroImg from "@/assets/universus-hero-1.png.asset.json";
+import heroImg from "@/assets/universus-hero-2.png.asset.json";
 import overviewImg from "@/assets/universus-overview.png.asset.json";
 import challengesImg from "@/assets/universus-research-insights.png.asset.json";
 import researchInsightsImg from "@/assets/universus-research-insights-1.webp.asset.json";
