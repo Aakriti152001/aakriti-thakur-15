@@ -13,16 +13,16 @@ const projects = [
     link: "/project/docbot",
   },
   {
-    title: "Fundin Bharat – Trading Dashboard",
-    description: "Risk-free trading platform empowering growth without financial barriers",
-    image: project2,
-    link: "/product/fundin-bharat-dashboard",
-  },
-  {
     title: "Universus – Customer Service Dashboard",
     description: "Redesigning customer service workflows for faster, efficient support operations",
     image: universusCover.url,
     link: "/product/universus",
+  },
+  {
+    title: "Fundin Bharat – Trading Dashboard",
+    description: "Risk-free trading platform empowering growth without financial barriers",
+    image: project2,
+    link: "/product/fundin-bharat-dashboard",
   },
 ];
 const Work = () => {
