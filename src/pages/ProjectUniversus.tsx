@@ -23,7 +23,6 @@ import finalDesigns9Img from "@/assets/universus-final-designs-9.png.asset.json"
 import outcomeLearningsImg from "@/assets/universus-outcome-learnings.png.asset.json";
 
 const details = [
-  { label: "Client", value: "Universus" },
   { label: "My Role", value: "UI/UX Designer" },
   { label: "Industry", value: "Customer Care" },
   { label: "Platform", value: "Web App" },
