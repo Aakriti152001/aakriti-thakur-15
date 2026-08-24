@@ -14,12 +14,6 @@ const projects = [
     link: "/project/docbot",
   },
   {
-    title: "GIGPOT- Crypto Mobile Application",
-    description: "Secure, seamless crypto trading experience built for trust and clarity",
-    image: gigpotCover,
-    link: "/product/gigpot",
-  },
-  {
     title: "Universus – Customer Service Dashboard",
     description: "Redesigning customer service workflows for faster, efficient support operations",
     image: universusCover.url,
@@ -30,6 +24,12 @@ const projects = [
     description: "Risk-free trading platform empowering growth without financial barriers",
     image: project2,
     link: "/product/fundin-bharat-dashboard",
+  },
+  {
+    title: "GIGPOT- Crypto Mobile Application",
+    description: "Secure, seamless crypto trading experience built for trust and clarity",
+    image: gigpotCover,
+    link: "/product/gigpot",
   },
 ];
 const Work = () => {
