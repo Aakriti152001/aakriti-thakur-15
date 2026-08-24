@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import docbotCover from "@/assets/docbot-cover.png.asset.json";
 import universusCover from "@/assets/universus-cover.png.asset.json";
 import project2 from "@/assets/project-ai-job-matcher.png";
+import gigpotCover from "@/assets/project-4.png";
 
 const projects = [
   {
@@ -11,6 +12,12 @@ const projects = [
     description: "End-to-end UX for a healthcare platform enabling remote care and real-time vitals monitoring.",
     image: docbotCover.url,
     link: "/project/docbot",
+  },
+  {
+    title: "GIGPOT- Crypto Mobile Application",
+    description: "Secure, seamless crypto trading experience built for trust and clarity",
+    image: gigpotCover,
+    link: "/product/gigpot",
   },
   {
     title: "Universus – Customer Service Dashboard",
