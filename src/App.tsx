@@ -8,6 +8,7 @@ import ProjectM2T from "./pages/ProjectM2T.tsx";
 import ProjectFundinDashboard from "./pages/ProjectFundinDashboard.tsx";
 
 import ProjectChaiHatii from "./pages/ProjectChaiHatii.tsx";
+import ProjectGigpot from "./pages/ProjectGigpot.tsx";
 import ProjectUniversus from "./pages/ProjectUniversus.tsx";
 import ProjectUnlockIvy from "./pages/ProjectUnlockIvy.tsx";
 import NotFound from "./pages/NotFound.tsx";
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/project/docbot" element={<ProjectM2T />} />
           <Route path="/product/fundin-bharat-dashboard" element={<ProjectFundinDashboard />} />
           <Route path="/product/chaihatii" element={<ProjectChaiHatii />} />
+          <Route path="/product/gigpot" element={<ProjectGigpot />} />
           <Route path="/product/universus" element={<ProjectUniversus />} />
           <Route path="/product/unlockivy" element={<ProjectUnlockIvy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
