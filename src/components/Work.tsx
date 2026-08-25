@@ -5,6 +5,7 @@ import docbotCover from "@/assets/docbot-cover.png.asset.json";
 import universusCover from "@/assets/universus-cover.png.asset.json";
 import project2 from "@/assets/project-ai-job-matcher.png";
 import gigpotCover from "@/assets/project-4.png";
+import chaihatiiCover from "@/assets/chaihatii-project/hero.jpg";
 
 const projects = [
   {
@@ -30,6 +31,12 @@ const projects = [
     description: "Secure, seamless crypto trading experience built for trust and clarity",
     image: gigpotCover,
     link: "/product/gigpot",
+  },
+  {
+    title: "Chai Hatti - Logo Design",
+    description: "Brand identity and logo design for a tea shop serving signature teas and specialty drinks",
+    image: chaihatiiCover,
+    link: "/product/chaihatii",
   },
 ];
 const Work = () => {
