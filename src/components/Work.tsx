@@ -6,6 +6,7 @@ import universusCover from "@/assets/universus-cover.png.asset.json";
 import project2 from "@/assets/project-ai-job-matcher.png";
 import gigpotCover from "@/assets/project-4.png";
 import chaihatiiCover from "@/assets/chaihatii-project/hero.jpg";
+import unlockivyCover from "@/assets/unlockivy-project/hero.jpg";
 
 const projects = [
   {
@@ -37,6 +38,12 @@ const projects = [
     description: "Brand identity and logo design for a tea shop serving signature teas and specialty drinks",
     image: chaihatiiCover,
     link: "/product/chaihatii",
+  },
+  {
+    title: "Unlock Ivy - Logo Design",
+    description: "Brand identity and logo design for an admissions consultancy offering scholarships and interview support",
+    image: unlockivyCover,
+    link: "/product/unlockivy",
   },
 ];
 const Work = () => {
