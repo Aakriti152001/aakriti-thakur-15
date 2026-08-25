@@ -31,6 +31,12 @@ const projects = [
     image: gigpotCover,
     link: "/product/gigpot",
   },
+  {
+    title: "Chai Hatti - Logo Design",
+    description: "Brand identity and logo design for a tea shop serving signature teas and specialty drinks",
+    image: chaihatiiCover,
+    link: "/product/chaihatii",
+  },
 ];
 const Work = () => {
   const navigate = useNavigate();
