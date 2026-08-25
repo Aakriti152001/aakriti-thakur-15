@@ -18,7 +18,7 @@ const details = [
   { label: "Platform", value: "Canva" },
 ];
 
-const galleryImages = [heroImg, img2, img3, img4];
+const galleryImages = [heroImg, img2, img3, img4, img5];
 
 const ProjectUnlockIvy = () => {
   const navigate = useNavigate();
