@@ -39,6 +39,12 @@ const projects = [
     image: chaihatiiCover,
     link: "/product/chaihatii",
   },
+  {
+    title: "Unlock Ivy - Logo Design",
+    description: "Brand identity and logo design for an admissions consultancy offering scholarships and interview support",
+    image: unlockivyCover,
+    link: "/product/unlockivy",
+  },
 ];
 const Work = () => {
   const navigate = useNavigate();
