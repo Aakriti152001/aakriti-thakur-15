@@ -5,8 +5,10 @@ import { useNavigate } from "react-router-dom";
 import heroImg from "@/assets/unlockivy-project/hero.jpg";
 import img2Asset from "@/assets/unlockivy-project/img2.png.asset.json";
 import img3Asset from "@/assets/unlockivy-project/img3.png.asset.json";
+import img4Asset from "@/assets/unlockivy-project/img4.png.asset.json";
 const img2 = img2Asset.url;
 const img3 = img3Asset.url;
+const img4 = img4Asset.url;
 
 const details = [
   { label: "Client", value: "Unlock Ivy" },
@@ -14,7 +16,7 @@ const details = [
   { label: "Platform", value: "Canva" },
 ];
 
-const galleryImages = [heroImg, img2, img3];
+const galleryImages = [heroImg, img2, img3, img4];
 
 const ProjectUnlockIvy = () => {
   const navigate = useNavigate();
