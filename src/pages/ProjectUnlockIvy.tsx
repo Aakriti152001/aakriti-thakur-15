@@ -3,7 +3,8 @@ import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 import heroImg from "@/assets/unlockivy-project/hero.jpg";
-import img2 from "@/assets/unlockivy-project/img2.jpg";
+import img2Asset from "@/assets/unlockivy-project/img2.png.asset.json";
+const img2 = img2Asset.url;
 
 const details = [
   { label: "Client", value: "Unlock Ivy" },
