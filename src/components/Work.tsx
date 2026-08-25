@@ -6,6 +6,7 @@ import universusCover from "@/assets/universus-cover.png.asset.json";
 import project2 from "@/assets/project-ai-job-matcher.png";
 import gigpotCover from "@/assets/project-4.png";
 import chaihatiiCover from "@/assets/chaihatii-project/hero.jpg";
+import unlockivyCover from "@/assets/unlockivy-project/hero.jpg";
 
 const projects = [
   {
