@@ -3,7 +3,8 @@ import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 import heroImg from "@/assets/chaihatii-project/hero.jpg";
-import img2 from "@/assets/chaihatii-project/img2-updated.jpg";
+import img2Asset from "@/assets/chaihatii-project/img2.png.asset.json";
+const img2 = img2Asset.url;
 
 const details = [
   { label: "Client", value: "Chai Hatti" },
