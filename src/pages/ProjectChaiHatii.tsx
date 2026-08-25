@@ -6,9 +6,11 @@ import heroImg from "@/assets/chaihatii-project/hero.jpg";
 import img2Asset from "@/assets/chaihatii-project/img2.png.asset.json";
 import img3Asset from "@/assets/chaihatii-project/img3.png.asset.json";
 import img4Asset from "@/assets/chaihatii-project/img4.png.asset.json";
+import img5Asset from "@/assets/chaihatii-project/img5.png.asset.json";
 const img2 = img2Asset.url;
 const img3 = img3Asset.url;
 const img4 = img4Asset.url;
+const img5 = img5Asset.url;
 
 const details = [
   { label: "Client", value: "Chai Hatti" },
@@ -16,7 +18,7 @@ const details = [
   { label: "Platform", value: "Adobe Illustrator" },
 ];
 
-const galleryImages = [heroImg, img2, img3, img4];
+const galleryImages = [heroImg, img2, img3, img4, img5];
 
 const ProjectChaiHatii = () => {
   const navigate = useNavigate();
