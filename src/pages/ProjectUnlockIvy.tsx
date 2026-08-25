@@ -6,9 +6,11 @@ import heroImg from "@/assets/unlockivy-project/hero.jpg";
 import img2Asset from "@/assets/unlockivy-project/img2.png.asset.json";
 import img3Asset from "@/assets/unlockivy-project/img3.png.asset.json";
 import img4Asset from "@/assets/unlockivy-project/img4.png.asset.json";
+import img5Asset from "@/assets/unlockivy-project/img5.png.asset.json";
 const img2 = img2Asset.url;
 const img3 = img3Asset.url;
 const img4 = img4Asset.url;
+const img5 = img5Asset.url;
 
 const details = [
   { label: "Client", value: "Unlock Ivy" },
