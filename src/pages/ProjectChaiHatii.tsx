@@ -4,7 +4,9 @@ import { useNavigate } from "react-router-dom";
 
 import heroImg from "@/assets/chaihatii-project/hero.jpg";
 import img2Asset from "@/assets/chaihatii-project/img2.png.asset.json";
+import img3Asset from "@/assets/chaihatii-project/img3.png.asset.json";
 const img2 = img2Asset.url;
+const img3 = img3Asset.url;
 
 const details = [
   { label: "Client", value: "Chai Hatti" },
@@ -12,7 +14,7 @@ const details = [
   { label: "Platform", value: "Adobe Illustrator" },
 ];
 
-const galleryImages = [heroImg, img2];
+const galleryImages = [heroImg, img2, img3];
 
 const ProjectChaiHatii = () => {
   const navigate = useNavigate();
