@@ -61,7 +61,7 @@ const cardTransforms = [
 ];
 
 const Experience = () => (
-  <section id="experience" className="py-20 px-0 sm:px-6 overflow-hidden">
+  <section id="experience" className="py-20 px-6 overflow-hidden">
     <div className="container mx-auto max-w-6xl">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -76,7 +76,7 @@ const Experience = () => (
       </motion.div>
 
       {/* Mobile: stacked grid. Desktop: horizontal overlapping fan */}
-      <div className="md:hidden grid gap-4 px-4">
+      <div className="md:hidden grid gap-4">
         {items.map((item, i) => (
           <motion.div
             key={item.title + item.company}
