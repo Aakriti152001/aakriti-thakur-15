@@ -66,7 +66,7 @@ const ProjectM2T = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="max-w-4xl mx-auto px-4 py-12">
+      <div className="max-w-4xl mx-auto px-6 py-12">
         {/* Go Back */}
         <motion.button
           initial={{ opacity: 0, x: -10 }}
