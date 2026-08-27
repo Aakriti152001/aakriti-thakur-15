@@ -67,9 +67,9 @@ const Jellyfish = ({ item }: { item: JellyfishProps }) => (
         <svg viewBox="0 0 120 200" className="w-full h-auto" aria-hidden="true" focusable="false">
           <defs>
             <radialGradient id={`bell-${item.id}`} cx="50%" cy="62%" r="62%">
-              <stop offset="0%" stopColor="hsl(84 90% 88%)" stopOpacity="0.95" />
-              <stop offset="38%" stopColor="hsl(96 78% 72%)" stopOpacity="0.45" />
-              <stop offset="78%" stopColor="hsl(140 70% 52%)" stopOpacity="0.18" />
+              <stop offset="0%" stopColor="hsl(84 90% 88%)" stopOpacity="1" />
+              <stop offset="38%" stopColor="hsl(96 80% 74%)" stopOpacity="0.6" />
+              <stop offset="78%" stopColor="hsl(140 72% 54%)" stopOpacity="0.28" />
               <stop offset="100%" stopColor="hsl(150 60% 40%)" stopOpacity="0.05" />
             </radialGradient>
             <radialGradient id={`core-${item.id}`} cx="50%" cy="50%" r="50%">

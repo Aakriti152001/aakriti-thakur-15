@@ -176,8 +176,8 @@ html {
 /* ===== Bioluminescent jellyfish field (footer background) ===== */
 .jelly-field {
   --jelly-scale: 1;
-  mask-image: linear-gradient(to top, hsl(0 0% 0% / 1) 42%, hsl(0 0% 0% / 0.55) 68%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to top, hsl(0 0% 0% / 1) 42%, hsl(0 0% 0% / 0.55) 68%, transparent 100%);
+  mask-image: linear-gradient(to top, hsl(0 0% 0% / 1) 55%, hsl(0 0% 0% / 0.6) 78%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, hsl(0 0% 0% / 1) 55%, hsl(0 0% 0% / 0.6) 78%, transparent 100%);
 }
 
 .jelly-rise {
@@ -198,7 +198,7 @@ html {
 .jelly-body {
   transform-origin: 50% 30%;
   mix-blend-mode: screen;
-  filter: drop-shadow(0 0 18px hsla(120, 90%, 60%, 0.22));
+  filter: drop-shadow(0 0 26px hsla(110, 95%, 62%, 0.4));
 }
 
 .jelly-body > svg {
@@ -221,10 +221,10 @@ html {
 
 @keyframes jelly-rise {
   0% {
-    transform: translate3d(0, 30%, 0);
+    transform: translate3d(0, 90%, 0);
   }
   100% {
-    transform: translate3d(0, -120vh, 0);
+    transform: translate3d(0, -170%, 0);
   }
 }
 
