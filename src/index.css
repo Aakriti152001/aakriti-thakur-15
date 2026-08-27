@@ -198,7 +198,7 @@ html {
 .jelly-body {
   transform-origin: 50% 30%;
   mix-blend-mode: screen;
-  filter: drop-shadow(0 0 26px hsla(110, 95%, 62%, 0.4));
+  filter: drop-shadow(0 0 24px hsla(95, 90%, 70%, 0.28));
 }
 
 .jelly-body > svg {

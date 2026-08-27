@@ -17,12 +17,12 @@ interface JellyfishProps {
 }
 
 const JELLYFISH: JellyfishProps[] = [
-  { id: "j1", left: 6, size: 200, opacity: 0.85, blur: 0, rise: 34, riseDelay: -4, drift: 13, driftDelay: -2, driftX: 26, tilt: -6, scaleY: 1 },
-  { id: "j2", left: 24, size: 120, opacity: 0.55, blur: 1.6, rise: 46, riseDelay: -21, drift: 17, driftDelay: -9, driftX: -18, tilt: 7, scaleY: 0.94 },
-  { id: "j3", left: 42, size: 216, opacity: 0.8, blur: 0.4, rise: 29, riseDelay: -13, drift: 11, driftDelay: -5, driftX: 20, tilt: 4, scaleY: 1.04 },
-  { id: "j4", left: 58, size: 108, opacity: 0.5, blur: 2, rise: 52, riseDelay: -33, drift: 19, driftDelay: -14, driftX: -24, tilt: -9, scaleY: 0.9 },
-  { id: "j5", left: 76, size: 188, opacity: 0.78, blur: 0.6, rise: 38, riseDelay: -26, drift: 15, driftDelay: -11, driftX: 16, tilt: 8, scaleY: 1 },
-  { id: "j6", left: 91, size: 116, opacity: 0.52, blur: 1.8, rise: 43, riseDelay: -7, drift: 21, driftDelay: -17, driftX: -14, tilt: -5, scaleY: 0.96 },
+  { id: "j1", left: 6, size: 200, opacity: 0.6, blur: 0, rise: 34, riseDelay: -4, drift: 13, driftDelay: -2, driftX: 26, tilt: -6, scaleY: 1 },
+  { id: "j2", left: 24, size: 120, opacity: 0.4, blur: 1.6, rise: 46, riseDelay: -21, drift: 17, driftDelay: -9, driftX: -18, tilt: 7, scaleY: 0.94 },
+  { id: "j3", left: 42, size: 216, opacity: 0.55, blur: 0.4, rise: 29, riseDelay: -13, drift: 11, driftDelay: -5, driftX: 20, tilt: 4, scaleY: 1.04 },
+  { id: "j4", left: 58, size: 108, opacity: 0.36, blur: 2, rise: 52, riseDelay: -33, drift: 19, driftDelay: -14, driftX: -24, tilt: -9, scaleY: 0.9 },
+  { id: "j5", left: 76, size: 188, opacity: 0.55, blur: 0.6, rise: 38, riseDelay: -26, drift: 15, driftDelay: -11, driftX: 16, tilt: 8, scaleY: 1 },
+  { id: "j6", left: 91, size: 116, opacity: 0.38, blur: 1.8, rise: 43, riseDelay: -7, drift: 21, driftDelay: -17, driftX: -14, tilt: -5, scaleY: 0.96 },
 ];
 
 const PARTICLES = [
@@ -68,8 +68,8 @@ const Jellyfish = ({ item }: { item: JellyfishProps }) => (
           <defs>
             <radialGradient id={`bell-${item.id}`} cx="50%" cy="62%" r="62%">
               <stop offset="0%" stopColor="hsl(84 90% 88%)" stopOpacity="1" />
-              <stop offset="38%" stopColor="hsl(96 80% 74%)" stopOpacity="0.6" />
-              <stop offset="78%" stopColor="hsl(140 72% 54%)" stopOpacity="0.28" />
+              <stop offset="38%" stopColor="hsl(80 70% 80%)" stopOpacity="0.42" />
+              <stop offset="78%" stopColor="hsl(110 55% 62%)" stopOpacity="0.16" />
               <stop offset="100%" stopColor="hsl(150 60% 40%)" stopOpacity="0.05" />
             </radialGradient>
             <radialGradient id={`core-${item.id}`} cx="50%" cy="50%" r="50%">
