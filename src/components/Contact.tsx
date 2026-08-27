@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Mail, Linkedin, FileText } from "lucide-react";
+import JellyfishField from "./JellyfishField";
 
 const EMAIL = "aakritithakur930@gmail.com";
 const LINKEDIN_URL = "https://www.linkedin.com/in/aakriti-thakur-9b75071a9/";
@@ -8,8 +9,9 @@ const RESUME_URL = "/Aakriti_Thakur_Resume.pdf";
 const Contact = () => {
 
   return (
-    <section id="contact" className="py-24 px-0 sm:px-6 pb-32">
-      <div className="container mx-auto max-w-4xl text-center">
+    <section id="contact" className="relative isolate py-24 px-0 sm:px-6 pb-32">
+      <JellyfishField />
+      <div className="container relative z-10 mx-auto max-w-4xl text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
