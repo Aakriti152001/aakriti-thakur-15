@@ -41,7 +41,7 @@ const Hero = () => {
             </span>
           </h1>
 
-          <p className="text-muted-foreground max-w-md leading-relaxed text-sm sm:text-base">
+          <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
             Designing AI-powered products and data-driven experiences that turn complexity into clarity.
           </p>
 
