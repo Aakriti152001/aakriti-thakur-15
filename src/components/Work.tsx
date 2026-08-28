@@ -49,8 +49,8 @@ const projects = [
 const Work = () => {
   const navigate = useNavigate();
   return (
-  <section id="work" className="py-16 px-6">
-    <div className="container mx-auto max-w-6xl">
+  <section id="work" className="py-16 px-0">
+    <div className="container mx-auto max-w-6xl px-6 sm:px-6">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
