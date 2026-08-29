@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import portraitAsset from "@/assets/portrait.jpg.asset.json";
-const portraitImg = portraitAsset.url;
+import aboutPortraitAsset from "@/assets/about-portrait.png.asset.json";
+const aboutPortraitImg = aboutPortraitAsset.url;
 
 const skills = [
   "Product Design", "UX Design", "UI Design", "Figma", "Branding", "Design Systems",
@@ -29,15 +29,15 @@ const About = () => (
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="rounded-2xl overflow-hidden border border-border/30 relative aspect-[4/5] md:aspect-auto md:h-full"
+          className="rounded-2xl overflow-hidden border border-border/30 relative aspect-square md:aspect-square md:h-full w-[calc(100%-36px)] bg-background"
         >
           <img
-            src={portraitImg}
+            src={aboutPortraitImg}
             alt="Aakriti Thakur"
-            className="absolute inset-0 w-full h-full object-cover object-center"
+            className="absolute inset-0 w-full h-full object-contain object-center"
             loading="lazy"
-            width={640}
-            height={800}
+            width={1254}
+            height={1254}
           />
         </motion.div>
 
