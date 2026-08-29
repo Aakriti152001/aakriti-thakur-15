@@ -4,7 +4,7 @@ import portraitImg from "@/assets/portrait.jpg";
 
 const Hero = () => {
   return (
-    <section className="min-h-[90vh] flex items-center relative overflow-hidden pt-12 pb-6">
+    <section className="min-h-[90vh] flex items-start md:items-center relative overflow-hidden pt-[124px] pb-6 md:pt-12">
       {/* Background glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-primary/5 blur-[120px]" />
