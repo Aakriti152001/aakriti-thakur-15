@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import portraitImg from "@/assets/portrait.jpg";
+import portraitAsset from "@/assets/portrait.jpg.asset.json";
+const portraitImg = portraitAsset.url;
 
 const skills = [
   "Product Design", "UX Design", "UI Design", "Figma", "Branding", "Design Systems",
