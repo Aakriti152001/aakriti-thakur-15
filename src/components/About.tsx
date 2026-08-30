@@ -29,7 +29,7 @@ const About = () => (
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="rounded-2xl overflow-hidden border border-border/30 relative aspect-square md:aspect-square md:h-full w-[calc(100%-36px)] bg-background"
+          className="rounded-2xl overflow-hidden border border-border/30 relative aspect-square md:aspect-square md:h-full w-[calc(100%-76px)] bg-background"
         >
           <img
             src={aboutPortraitImg}
