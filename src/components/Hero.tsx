@@ -72,6 +72,12 @@ const Hero = () => {
               className="absolute -inset-5 rounded-[500px] border border-white/50 bg-transparent pointer-events-none"
               aria-hidden="true"
             />
+
+            {/* Floating jellyfish — left border */}
+            <MiniJelly side="left" />
+            {/* Floating jellyfish — right border */}
+            <MiniJelly side="right" />
+
             <motion.div
               initial={{ rotateY: 180 }}
               animate={{ rotateY: 0 }}
