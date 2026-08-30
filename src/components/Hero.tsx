@@ -35,6 +35,7 @@ const MiniJelly = ({ side }: { side: "left" | "right" }) => {
             className="jelly-body"
             style={{
               ["--jelly-w" as string]: "40px",
+              ["--jelly-scale" as string]: "1",
               opacity: 0.65,
             }}
           >
