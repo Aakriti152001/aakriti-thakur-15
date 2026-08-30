@@ -7,19 +7,22 @@ const MiniJelly = ({ side }: { side: "left" | "right" }) => {
   const id = `hero-jelly-${side}`;
   const isLeft = side === "left";
   return (
-    <div
+     <div
       aria-hidden="true"
       className="absolute top-0 bottom-0 pointer-events-none"
       style={{
-        [isLeft ? "left" : "right"]: "-18px",
-        width: "40px",
+        [isLeft ? "left" : "right"]: "-28px",
+        width: "70px",
       }}
     >
       <div
-        className="jelly-rise absolute bottom-0"
+        className="hero-jelly-float absolute left-0"
         style={{
-          animationDuration: "12s",
-          animationDelay: isLeft ? "-2s" : "-6s",
+          animationName: "hero-jelly-float",
+          animationDuration: "14s",
+          animationTimingFunction: "linear",
+          animationIterationCount: "infinite",
+          animationDelay: isLeft ? "-3s" : "-8s",
         }}
       >
         <div
@@ -34,7 +37,7 @@ const MiniJelly = ({ side }: { side: "left" | "right" }) => {
           <div
             className="jelly-body"
             style={{
-              ["--jelly-w" as string]: "40px",
+              ["--jelly-w" as string]: "70px",
               ["--jelly-scale" as string]: "1",
               opacity: 0.65,
             }}
