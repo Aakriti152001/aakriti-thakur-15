@@ -228,6 +228,24 @@ html {
   }
 }
 
+/* ===== Hero portrait jellyfish — float full height of the portrait ===== */
+@keyframes hero-jelly-float {
+  0% {
+    top: 102%;
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.65;
+  }
+  92% {
+    opacity: 0.65;
+  }
+  100% {
+    top: -30%;
+    opacity: 0;
+  }
+}
+
 @keyframes jelly-drift {
   0% {
     transform: translate3d(calc(var(--jelly-drift-x) * -1), 0, 0) rotate(calc(var(--jelly-tilt) * -1));
