@@ -112,7 +112,7 @@ const Hero = () => {
             <span className="text-muted-foreground">UX Manager & Product Designer</span>
           </motion.div>
 
-          <h1 className="text-[2.75rem] sm:text-6xl md:text-7xl font-bold tracking-tight leading-[1.05] md:leading-none">
+          <h1 className="text-[3.25rem] sm:text-[4.25rem] md:text-[5rem] font-bold tracking-tight leading-[1.08] md:leading-[1.02]">
             Aakriti
             <br />
             <span className="text-muted-foreground/60">Thakur</span>
