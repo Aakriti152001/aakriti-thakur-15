@@ -297,11 +297,16 @@ html {
   .jelly-rise,
   .jelly-drift,
   .jelly-tentacles,
-  .jelly-particle {
+  .jelly-particle,
+  .hero-jelly-float {
     animation: none !important;
   }
   .jelly-rise {
     transform: translate3d(0, -10%, 0);
+  }
+  .hero-jelly-float {
+    top: 30%;
+    opacity: 0.5;
   }
   .jelly-particle {
     opacity: 0.35;
