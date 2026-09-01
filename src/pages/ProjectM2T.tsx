@@ -29,7 +29,7 @@ const details = [
 ];
 
 const galleryImages = [
-  slide1Asset.url, slide2Asset.url, slide3Asset.url, slide4Asset.url, slide5Asset.url, slide6Asset.url, slide7Asset.url, slide8Asset.url, slide9Asset.url, slide10Asset.url, slide11Asset.url, slide12Asset.url, slide13Asset.url, slide14Asset.url, slide15Asset.url,
+  slide1Asset.url, slide2Asset.url, slide3Asset.url, slide4Asset.url, slide5Asset.url, slide6Asset.url, slide7Asset.url, slide8Asset.url, slide9Asset.url, slide10Asset.url, slide11Asset.url, slide12Asset.url, slide13Asset.url, slide14Asset.url, slide15Asset.url, slide16Asset.url,
 ];
 
 const ProjectM2T = () => {
