@@ -26,6 +26,7 @@ const projects = [
     description: "Risk-free trading platform empowering growth without financial barriers",
     image: project2,
     link: "/product/fundin-bharat-dashboard",
+    objectPosition: "center 80%",
   },
   {
     title: "GIGPOT- Crypto Mobile Application",
@@ -81,6 +82,7 @@ const Work = () => {
                 src={p.image}
                 alt={p.title}
                 className="w-full h-[calc(100%-40px)] object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                style={p.objectPosition ? { objectPosition: p.objectPosition } : undefined}
                 loading="lazy"
                 width={960}
                 height={600}
