@@ -20,7 +20,6 @@ import slide12Asset from "@/assets/docbot-slide12.png.asset.json";
 import slide13Asset from "@/assets/docbot-slide13.png.asset.json";
 import slide14Asset from "@/assets/docbot-slide14.png.asset.json";
 import slide15Asset from "@/assets/docbot-slide15.png.asset.json";
-import slide16Asset from "@/assets/docbot-slide16.png.asset.json";
 
 const details = [
   { label: "My Role", value: "UI/UX Designer" },
