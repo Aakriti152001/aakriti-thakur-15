@@ -82,6 +82,7 @@ const Work = () => {
                 src={p.image}
                 alt={p.title}
                 className="w-full h-[calc(100%-40px)] object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                style={p.objectPosition ? { objectPosition: p.objectPosition } : undefined}
                 loading="lazy"
                 width={960}
                 height={600}
