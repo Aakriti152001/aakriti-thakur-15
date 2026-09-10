@@ -13,6 +13,7 @@ import img8 from "@/assets/fundin-dashboard-project/img8.jpg";
 import img9 from "@/assets/fundin-dashboard-project/img9.jpg";
 import img10 from "@/assets/fundin-dashboard-project/img10.jpg";
 import img11 from "@/assets/fundin-dashboard-project/img11.jpg";
+import img12 from "@/assets/fundin-dashboard-project/img12.jpg";
 
 const details = [
   { label: "App name / Client", value: "Fundin Bharat" },
@@ -24,7 +25,7 @@ const details = [
 const sections = [
   { title: null, images: [heroImg, img2] },
   { title: "LOW-FIDELITY WIREFRAMES", images: [img3, img4, img5, img6, img7] },
-  { title: "VISUAL DESIGNS", images: [img8, img9, img10, img11] },
+  { title: "VISUAL DESIGNS", images: [img8, img9, img10, img11, img12] },
 ];
 
 const ProjectFundinDashboard = () => {
