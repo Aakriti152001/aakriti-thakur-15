@@ -1,13 +1,10 @@
-import { AnimatePresence, motion } from "framer-motion";
-import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
-import { useCallback, useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 import slide1Asset from "@/assets/docbot-slide1.png.asset.json";
 import slide2Asset from "@/assets/docbot-slide2.png.asset.json";
 import slide3Asset from "@/assets/docbot-slide3.png.asset.json";
-
-
 import slide4Asset from "@/assets/docbot-slide4.png.asset.json";
 import slide5Asset from "@/assets/docbot-slide5.png.asset.json";
 import slide6Asset from "@/assets/docbot-slide6.png.asset.json";
@@ -33,40 +30,10 @@ const galleryImages = [
 
 const ProjectM2T = () => {
   const navigate = useNavigate();
-  const [index, setIndex] = useState(0);
-  const [direction, setDirection] = useState(0);
-  const total = galleryImages.length;
-
-  const goTo = useCallback(
-    (next: number) => {
-      const wrapped = (next + total) % total;
-      setDirection(next > index ? 1 : -1);
-      setIndex(wrapped);
-    },
-    [index, total]
-  );
-
-  const next = useCallback(() => goTo(index + 1), [goTo, index]);
-  const prev = useCallback(() => goTo(index - 1), [goTo, index]);
-
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "ArrowRight") next();
-      else if (e.key === "ArrowLeft") prev();
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [next, prev]);
-
-  const slideVariants = {
-    enter: (dir: number) => ({ x: dir > 0 ? 60 : -60, opacity: 0 }),
-    center: { x: 0, opacity: 1 },
-    exit: (dir: number) => ({ x: dir > 0 ? -60 : 60, opacity: 0 }),
-  };
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="max-w-4xl mx-auto px-6 py-12">
+      <div className="max-w-4xl mx-auto px-0 sm:px-6 py-12">
         {/* Go Back */}
         <motion.button
           initial={{ opacity: 0, x: -10 }}
@@ -108,90 +75,26 @@ const ProjectM2T = () => {
           ))}
         </motion.div>
 
-        {/* Image Slideshow */}
-        <div className="relative">
-          <div
-            className="relative rounded-2xl overflow-hidden border border-border/30 bg-card/30 select-none"
-            tabIndex={0}
-            role="region"
-            aria-roledescription="carousel"
-            aria-label="Project screenshots"
-          >
-            <div className="relative aspect-[4/3] sm:aspect-[16/10] w-full">
-              <AnimatePresence custom={direction} mode="wait" initial={false}>
-                <motion.img
-                  key={index}
-                  src={galleryImages[index]}
-                  alt={`DOCBOT project screenshot ${index + 1}`}
-                  custom={direction}
-                  variants={slideVariants}
-                  initial="enter"
-                  animate="center"
-                  exit="exit"
-                  transition={{ duration: 0.4, ease: "easeInOut" }}
-                  drag="x"
-                  dragConstraints={{ left: 0, right: 0 }}
-                  dragElastic={0.2}
-                  onDragEnd={(_, info) => {
-                    if (info.offset.x < -60) next();
-                    else if (info.offset.x > 60) prev();
-                  }}
-                  className="absolute inset-0 w-full h-full object-contain bg-background"
-                  loading={index === 0 ? "eager" : "lazy"}
-                  draggable={false}
-                />
-              </AnimatePresence>
-            </div>
-
-            {/* Arrows */}
-            <button
-              type="button"
-              onClick={prev}
-              aria-label="Previous slide"
-              className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-background/70 hover:bg-background border border-border/50 backdrop-blur flex items-center justify-center text-foreground transition-all hover:scale-105"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-            <button
-              type="button"
-              onClick={next}
-              aria-label="Next slide"
-              className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-background/70 hover:bg-background border border-border/50 backdrop-blur flex items-center justify-center text-foreground transition-all hover:scale-105"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
-
-            {/* Counter */}
-            <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full text-xs bg-background/70 border border-border/50 backdrop-blur text-muted-foreground">
-              {index + 1} / {total}
-            </div>
-          </div>
-
-          {/* Progress bar */}
-          <div className="mt-4 h-1 w-full rounded-full bg-border/40 overflow-hidden">
+        {/* Vertical Slides */}
+        <div className="flex flex-col gap-6">
+          {galleryImages.map((src, i) => (
             <motion.div
-              className="h-full bg-primary"
-              initial={false}
-              animate={{ width: `${((index + 1) / total) * 100}%` }}
-              transition={{ duration: 0.4, ease: "easeInOut" }}
-            />
-          </div>
-
-          {/* Dots */}
-          <div className="mt-4 flex flex-wrap justify-center gap-2">
-            {galleryImages.map((_, i) => (
-              <button
-                key={i}
-                type="button"
-                onClick={() => goTo(i)}
-                aria-label={`Go to slide ${i + 1}`}
-                aria-current={i === index}
-                className={`h-2 rounded-full transition-all ${
-                  i === index ? "w-6 bg-primary" : "w-2 bg-border hover:bg-muted-foreground/50"
-                }`}
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="rounded-2xl overflow-hidden border border-border/30 bg-card/30"
+            >
+              <img
+                src={src}
+                alt={`DOCBOT project screenshot ${i + 1}`}
+                className="w-full h-auto object-contain bg-background"
+                loading="lazy"
+                draggable={false}
               />
-            ))}
-          </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </div>
