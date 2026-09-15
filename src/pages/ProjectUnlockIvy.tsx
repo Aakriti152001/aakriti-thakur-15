@@ -46,7 +46,7 @@ const ProjectUnlockIvy = () => {
             Unlock Ivy - Logo Design
           </h1>
           <p className="text-muted-foreground leading-relaxed max-w-2xl">
-            Scholarships, and interview support from top consultants & ex-admissions staff.
+            Platform where scholarships and interview support are provided from top consultants & ex-admissions staff.
           </p>
         </motion.div>
 
