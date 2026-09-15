@@ -13,6 +13,7 @@ import slide8Asset from "@/assets/docbot-slide8.png.asset.json";
 import slide9Asset from "@/assets/docbot-slide9.png.asset.json";
 import slide10Asset from "@/assets/docbot-slide10.png.asset.json";
 import slide10bAsset from "@/assets/docbot-slide16.png.asset.json";
+import slide10cAsset from "@/assets/docbot-slide17.png.asset.json";
 import slide11Asset from "@/assets/docbot-slide11.png.asset.json";
 import slide12Asset from "@/assets/docbot-slide12.png.asset.json";
 import slide13Asset from "@/assets/docbot-slide13.png.asset.json";
@@ -26,7 +27,7 @@ const details = [
 ];
 
 const galleryImages = [
-  slide1Asset.url, slide2Asset.url, slide3Asset.url, slide4Asset.url, slide5Asset.url, slide6Asset.url, slide7Asset.url, slide8Asset.url, slide9Asset.url, slide10Asset.url, slide10bAsset.url, slide11Asset.url, slide12Asset.url, slide13Asset.url, slide14Asset.url, slide15Asset.url,
+  slide1Asset.url, slide2Asset.url, slide3Asset.url, slide4Asset.url, slide5Asset.url, slide6Asset.url, slide7Asset.url, slide8Asset.url, slide9Asset.url, slide10Asset.url, slide10bAsset.url, slide10cAsset.url, slide11Asset.url, slide12Asset.url, slide13Asset.url, slide14Asset.url, slide15Asset.url,
 ];
 
 const ProjectM2T = () => {
