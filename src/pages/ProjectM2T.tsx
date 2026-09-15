@@ -76,9 +76,11 @@ const ProjectM2T = () => {
             </div>
           ))}
         </motion.div>
+      </div>
 
-        {/* Vertical Slides */}
-        <div className="flex flex-col gap-6">
+      {/* Vertical Slides — full width, no black side space */}
+      <div className="w-full px-0 sm:px-6 pb-12">
+        <div className="flex flex-col gap-6 max-w-4xl mx-auto w-full sm:w-auto">
           {galleryImages.map((src, i) => (
             <motion.div
               key={i}
@@ -91,7 +93,7 @@ const ProjectM2T = () => {
               <img
                 src={src}
                 alt={`DOCBOT project screenshot ${i + 1}`}
-                className="w-full h-auto object-contain bg-background"
+                className="block w-full h-auto object-cover"
                 loading="lazy"
                 draggable={false}
               />
