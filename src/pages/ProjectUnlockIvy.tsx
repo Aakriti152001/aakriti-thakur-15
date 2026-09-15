@@ -14,7 +14,7 @@ const img5 = img5Asset.url;
 
 const details = [
   { label: "Timeline", value: "1 week" },
-  { label: "My Role", value: "Logo Designer" },
+  { label: "My Role", value: "Logo & Brand Designer" },
   { label: "Platform", value: "Canva" },
 ];
 
