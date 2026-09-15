@@ -13,7 +13,7 @@ const img4 = img4Asset.url;
 const img5 = img5Asset.url;
 
 const details = [
-  { label: "Client", value: "Unlock Ivy" },
+  { label: "Timeline", value: "1 week" },
   { label: "My Role", value: "Logo Designer" },
   { label: "Platform", value: "Canva" },
 ];
