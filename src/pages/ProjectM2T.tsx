@@ -76,9 +76,11 @@ const ProjectM2T = () => {
             </div>
           ))}
         </motion.div>
+      </div>
 
-        {/* Vertical Slides */}
-        <div className="flex flex-col gap-6">
+      {/* Vertical Slides — stretched to full width, no black side space */}
+      <div className="w-full px-0 pb-12">
+        <div className="flex flex-col gap-6 w-full">
           {galleryImages.map((src, i) => (
             <motion.div
               key={i}
@@ -86,12 +88,12 @@ const ProjectM2T = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="rounded-2xl overflow-hidden border border-border/30 bg-card/30"
+              className="w-full overflow-hidden"
             >
               <img
                 src={src}
                 alt={`DOCBOT project screenshot ${i + 1}`}
-                className="w-full h-auto object-contain bg-background"
+                className="block w-full h-auto"
                 loading="lazy"
                 draggable={false}
               />
