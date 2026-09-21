@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import rotationClip from "@/assets/micro-rotation-1.mov.asset.json";
+import orderClip from "@/assets/micro-interactive-order-1.mp4.asset.json";
 
 interface MicroAnimation {
   video: string;
@@ -7,7 +8,7 @@ interface MicroAnimation {
 
 const animations: MicroAnimation[] = [
   { video: rotationClip.url },
-  { video: "" },
+  { video: orderClip.url },
   { video: "" },
   { video: "" },
   { video: "" },
