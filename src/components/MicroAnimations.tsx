@@ -25,7 +25,7 @@ const animations: MicroAnimation[] = [
   { video: fruitJuiceClip1.url, landscape: true },
   { video: downloadClip.url, landscape: true, aspect: "12/9" },
   { video: animatedCardClip.url, landscape: true, aspect: "10/9" },
-  { video: interactiveMenuClip.url, portrait: true, aspect: "12/16" },
+  { video: interactiveMenuClip.url, portrait: true, aspect: "16/16" },
 ];
 
 
