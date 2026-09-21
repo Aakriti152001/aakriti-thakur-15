@@ -15,6 +15,7 @@ interface MicroAnimation {
   landscape?: boolean;
   stretch?: boolean;
   aspect?: string;
+  portrait?: boolean;
 }
 
 const animations: MicroAnimation[] = [
