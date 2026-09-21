@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
+import rotationClip from "@/assets/micro-rotation-1.mov.asset.json";
 
 interface MicroAnimation {
   video: string;
 }
 
 const animations: MicroAnimation[] = [
-  { video: "" },
+  { video: rotationClip.url },
   { video: "" },
   { video: "" },
   { video: "" },
