@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Skills from "@/components/Skills";
 import Work from "@/components/Work";
+import MicroAnimations from "@/components/MicroAnimations";
 import About from "@/components/About";
 import Tools from "@/components/Tools";
 
@@ -16,6 +17,7 @@ const Index = () => (
     <Hero />
     <Skills />
     <Work />
+    <MicroAnimations />
     <About />
     <Tools />
     <Experience />
