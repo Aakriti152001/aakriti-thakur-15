@@ -16,8 +16,8 @@ interface MicroAnimation {
 }
 
 const animations: MicroAnimation[] = [
-  { video: keyboardClip.url },
   { video: coffeeClip.url },
+  { video: keyboardClip.url },
   { video: orderClip.url },
   { video: fruitJuiceClip1.url, landscape: true },
   { video: downloadClip.url, landscape: true, aspect: "12/9" },
