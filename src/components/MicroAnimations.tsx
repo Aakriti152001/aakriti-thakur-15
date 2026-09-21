@@ -4,7 +4,7 @@ import orderClip from "@/assets/micro-interactive-order-1.mp4.asset.json";
 import coffeeClip from "@/assets/micro-coffee-shop-1.mp4.asset.json";
 import keyboardClip from "@/assets/micro-3d-keyboard-1.mp4.asset.json";
 import fruitJuiceClip1 from "@/assets/micro-fruit-juice-1.mp4.asset.json";
-import fruitJuiceClip2 from "@/assets/micro-fruit-juice-2.mp4.asset.json";
+import dayNightClip from "@/assets/micro-day-night-1.mp4.asset.json";
 
 interface MicroAnimation {
   video: string;
@@ -16,7 +16,7 @@ const animations: MicroAnimation[] = [
   { video: coffeeClip.url },
   { video: orderClip.url },
   { video: fruitJuiceClip1.url, landscape: true },
-  { video: fruitJuiceClip2.url, landscape: true },
+  { video: dayNightClip.url },
   { video: "" },
 ];
 
