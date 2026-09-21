@@ -9,6 +9,7 @@ import dayNightClip from "@/assets/micro-day-night-1.mp4.asset.json";
 interface MicroAnimation {
   video: string;
   landscape?: boolean;
+  stretch?: boolean;
 }
 
 const animations: MicroAnimation[] = [
@@ -16,7 +17,7 @@ const animations: MicroAnimation[] = [
   { video: coffeeClip.url },
   { video: orderClip.url },
   { video: fruitJuiceClip1.url, landscape: true },
-  { video: dayNightClip.url },
+  { video: dayNightClip.url, landscape: true, stretch: true },
   { video: "" },
 ];
 
@@ -64,7 +65,7 @@ const MicroAnimations = () => {
                   loop
                   muted
                   playsInline
-                  className={`w-full h-full ${a.landscape ? "object-contain" : "object-cover"}`}
+                  className={`w-full h-full ${a.stretch ? "object-fill" : a.landscape ? "object-contain" : "object-cover"}`}
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center">
