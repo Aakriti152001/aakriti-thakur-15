@@ -3,7 +3,7 @@ import rotationClip from "@/assets/micro-rotation-1.mov.asset.json";
 import orderClip from "@/assets/micro-interactive-order-1.mp4.asset.json";
 import coffeeClip from "@/assets/micro-coffee-shop-1.mp4.asset.json";
 import keyboardClip from "@/assets/micro-3d-keyboard-1.mp4.asset.json";
-import download2Clip from "@/assets/micro-download-2.mp4.asset.json";
+import download3Clip from "@/assets/micro-download-3.mp4.asset.json";
 import fruitJuiceClip1 from "@/assets/micro-fruit-juice-1.mp4.asset.json";
 import dayNightClip from "@/assets/micro-day-night-1.mp4.asset.json";
 import downloadClip from "@/assets/micro-download-1.mp4.asset.json";
