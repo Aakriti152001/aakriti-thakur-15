@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import rotationClip from "@/assets/micro-rotation-1.mov.asset.json";
 import orderClip from "@/assets/micro-interactive-order-1.mp4.asset.json";
 import keyboardClip from "@/assets/micro-3d-keyboard-1.mp4.asset.json";
+import fruitJuiceClip1 from "@/assets/micro-fruit-juice-1.mp4.asset.json";
+import fruitJuiceClip2 from "@/assets/micro-fruit-juice-2.mp4.asset.json";
 
 interface MicroAnimation {
   video: string;
@@ -11,8 +13,8 @@ const animations: MicroAnimation[] = [
   { video: keyboardClip.url },
   { video: rotationClip.url },
   { video: orderClip.url },
-  { video: "" },
-  { video: "" },
+  { video: fruitJuiceClip1.url },
+  { video: fruitJuiceClip2.url },
   { video: "" },
 ];
 
@@ -51,7 +53,7 @@ const MicroAnimations = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className="group relative shrink-0 w-[calc((100vw-48px)/4.5)] sm:w-[calc((100vw-64px)/4.2)] md:w-[calc((100vw-96px)/4.15)] aspect-[3/4] rounded-2xl overflow-hidden border border-border/30 bg-card/40 transition-all duration-300 hover:border-primary/50 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10"
+              className="group relative shrink-0 w-[calc((100vw-48px)/4.5)] sm:w-[calc((100vw-64px)/4.2)] md:w-[calc((100vw-96px)/4.15)] aspect-video rounded-2xl overflow-hidden border border-border/30 bg-card/40 transition-all duration-300 hover:border-primary/50 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10"
             >
               {a.video ? (
                 <video
@@ -60,7 +62,7 @@ const MicroAnimations = () => {
                   loop
                   muted
                   playsInline
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center">
