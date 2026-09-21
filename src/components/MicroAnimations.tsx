@@ -53,7 +53,7 @@ const MicroAnimations = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className="group relative shrink-0 w-[calc((100vw-48px)/2.4)] sm:w-[calc((100vw-64px)/2.3)] md:w-[calc((100vw-96px)/2.25)] aspect-video rounded-2xl overflow-hidden border border-border/30 bg-card/40 transition-all duration-300 hover:border-primary/50 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10"
+              className="group relative shrink-0 w-[calc((100vw-48px)/4.5)] sm:w-[calc((100vw-64px)/4.2)] md:w-[calc((100vw-96px)/4.15)] aspect-video rounded-2xl overflow-hidden border border-border/30 bg-card/40 transition-all duration-300 hover:border-primary/50 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10"
             >
               {a.video ? (
                 <video
