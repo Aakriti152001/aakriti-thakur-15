@@ -17,7 +17,7 @@ const animations: MicroAnimation[] = [
   { video: coffeeClip.url },
   { video: orderClip.url },
   { video: fruitJuiceClip1.url, landscape: true },
-  { video: dayNightClip.url, landscape: true, stretch: true },
+  { video: dayNightClip.url, landscape: true },
   { video: "" },
 ];
 
