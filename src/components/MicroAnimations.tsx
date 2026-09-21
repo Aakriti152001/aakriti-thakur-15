@@ -8,11 +8,11 @@ interface MicroAnimation {
 }
 
 const animations: MicroAnimation[] = [
+  { video: keyboardClip.url },
   { video: rotationClip.url },
   { video: orderClip.url },
   { video: "" },
   { video: "" },
-  { video: keyboardClip.url },
   { video: "" },
 ];
 
