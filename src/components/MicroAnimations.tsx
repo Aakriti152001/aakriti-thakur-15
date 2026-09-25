@@ -50,10 +50,11 @@ const MicroAnimations = () => {
       {/* Horizontal scroll row — extends full width, 4 cards visible + 5th peeking */}
       <div className="relative">
         <div
-          className="flex gap-3 sm:gap-4 overflow-x-auto scroll-smooth px-4 sm:px-6 md:px-[max(24px,calc((100vw-1152px)/2))] pb-4"
+          className="flex gap-3 sm:gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory px-4 sm:px-6 md:px-[max(24px,calc((100vw-1152px)/2))] pb-4"
           style={{
             scrollbarWidth: "none",
             msOverflowStyle: "none",
+            WebkitOverflowScrolling: "touch",
           }}
         >
           {animations.map((a, i) => (
@@ -63,7 +64,7 @@ const MicroAnimations = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className={`group relative shrink-0 ${a.portrait ? "w-[calc((100vw-48px)/4.5)] sm:w-[calc((100vw-64px)/4.2)] md:w-[calc((100vw-96px)/4.15)]" : a.aspect || a.landscape ? "w-[calc((100vw-48px)/2.4)] sm:w-[calc((100vw-64px)/2.3)] md:w-[calc((100vw-96px)/2.25)]" : "w-[calc((100vw-48px)/4.5)] sm:w-[calc((100vw-64px)/4.2)] md:w-[calc((100vw-96px)/4.15)] aspect-[3/4]"} ${a.portrait || (!a.aspect && !a.landscape) ? "" : a.aspect ? "" : "aspect-video"} rounded-2xl overflow-hidden border border-border/30 bg-card/40 transition-all duration-300 hover:border-primary/50 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10`}
+              className={`group relative shrink-0 snap-start ${a.portrait ? "w-[calc((100vw-32px)*0.78)] sm:w-[calc((100vw-64px)/4.2)] md:w-[calc((100vw-96px)/4.15)]" : a.aspect || a.landscape ? "w-[calc((100vw-32px)*0.78)] sm:w-[calc((100vw-64px)/2.3)] md:w-[calc((100vw-96px)/2.25)]" : "w-[calc((100vw-32px)*0.78)] sm:w-[calc((100vw-64px)/4.2)] md:w-[calc((100vw-96px)/4.15)] aspect-[3/4]"} ${a.portrait || (!a.aspect && !a.landscape) ? "" : a.aspect ? "" : "aspect-video"} rounded-2xl overflow-hidden border border-border/30 bg-card/40 transition-all duration-300 hover:border-primary/50 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10`}
               style={a.aspect ? { aspectRatio: a.aspect.replace("/", " / ") } : undefined}
             >
               {a.video ? (
