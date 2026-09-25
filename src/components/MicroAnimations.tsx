@@ -50,7 +50,7 @@ const MicroAnimations = () => {
       {/* Horizontal scroll row — extends full width, 4 cards visible + 5th peeking */}
       <div className="relative">
         <div
-          className="flex gap-3 sm:gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory px-4 sm:px-6 md:px-[max(24px,calc((100vw-1152px)/2))] pb-4"
+          className="flex gap-3 sm:gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory pl-6 pr-4 sm:pl-6 sm:pr-6 md:pl-[max(24px,calc((100vw-1152px)/2))] md:pr-[max(24px,calc((100vw-1152px)/2))] pb-4"
           style={{
             scrollbarWidth: "none",
             msOverflowStyle: "none",
