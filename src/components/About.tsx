@@ -54,7 +54,7 @@ const About = () => (
               Hi, I'm Aakriti Thakur.<span className="ml-2">👋</span>
             </p>
             <p className="text-muted-foreground leading-relaxed text-base">
-              A Product Designer with 4+ years of experience in AI-powered SaaS, dashboards, and web/mobile applications, focused on simplifying complex workflows and turning AI-driven insights into intuitive user experiences.
+              A Product Designer with 5 years of experience in AI-powered SaaS, dashboards, and web/mobile applications, focused on simplifying complex workflows and turning AI-driven insights into intuitive user experiences.
               <br />
               <br />
               Currently, I lead UX & Design at Mantras2Transform, driving product direction, building scalable design systems for multiple AI products, and collaborating closely with development & marketing teams.
