@@ -59,7 +59,7 @@ const MicroAnimations = () => {
             scrollbarWidth: "none",
             msOverflowStyle: "none",
             WebkitOverflowScrolling: "touch",
-          } as React.CSSProperties}
+          } as CSSProperties}
         >
           {animations.map((a, i) => (
             <motion.div
