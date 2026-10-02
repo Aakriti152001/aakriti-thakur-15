@@ -52,11 +52,13 @@ const MicroAnimations = () => {
         <div
           className="flex gap-3 sm:gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4"
           style={{
-            paddingInline: "max(32px, calc((100% - 1152px) / 2 + 32px))",
+            "--row-pad": "max(32px, calc((100% - 1152px) / 2 + 32px))",
+            paddingInline: "var(--row-pad)",
+            scrollPaddingInline: "var(--row-pad)",
             scrollbarWidth: "none",
             msOverflowStyle: "none",
             WebkitOverflowScrolling: "touch",
-          }}
+          } as React.CSSProperties}
         >
           {animations.map((a, i) => (
             <motion.div
