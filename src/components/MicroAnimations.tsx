@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { motion } from "framer-motion";
 import rotationClip from "@/assets/micro-rotation-1.mov.asset.json";
 import orderClip from "@/assets/micro-interactive-order-1.mp4.asset.json";
