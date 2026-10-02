@@ -61,7 +61,7 @@ const cardTransforms = [
 ];
 
 const Experience = () => (
-  <section id="experience" className="py-20 px-0 overflow-hidden">
+  <section id="experience" className="py-[92px] px-0 overflow-hidden">
     <div className="container mx-auto max-w-6xl">
       <motion.div
         initial={{ opacity: 0, y: 20 }}

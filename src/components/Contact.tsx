@@ -9,7 +9,7 @@ const RESUME_URL = "/Aakriti_Thakur_Resume.pdf";
 const Contact = () => {
 
   return (
-    <section id="contact" className="relative isolate py-20 pb-28">
+    <section id="contact" className="relative isolate py-[92px] pb-[112px]">
       <JellyfishField />
       <div className="container relative z-10 mx-auto max-w-4xl text-center">
         <motion.h2

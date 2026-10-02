@@ -32,7 +32,7 @@ const animations: MicroAnimation[] = [
 
 const MicroAnimations = () => {
   return (
-    <section id="micro-animations" className="py-16 px-0 overflow-hidden">
+    <section id="micro-animations" className="py-[76px] px-0 overflow-hidden">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
