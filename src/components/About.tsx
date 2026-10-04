@@ -1,6 +1,10 @@
-import { motion } from "framer-motion";
+import { motion, useInView, useReducedMotion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import aboutPortraitAsset from "@/assets/about-portrait.png.asset.json";
 const aboutPortraitImg = aboutPortraitAsset.url;
+
+const introText = "Hi, I'm Aakriti Thakur. 👋";
+const aboutText = "A Product Designer with 5 years of experience in AI-powered SaaS, dashboards, and web/mobile applications, focused on simplifying complex workflows and turning AI-driven insights into intuitive user experiences.\n\nCurrently, I lead UX & Design at Mantras2Transform, driving product direction, building scalable design systems for multiple AI products, and collaborating closely with development & marketing teams.";
 
 const skills = [
   "Product Design", "UX Design", "UI Design", "Figma", "Branding", "Design Systems",
@@ -8,7 +12,39 @@ const skills = [
 
 const experience: { company: string; year: string; role: string }[] = [];
 
-const About = () => (
+const About = () => {
+  const textRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(textRef, { once: true, amount: 0.35 });
+  const reduceMotion = useReducedMotion();
+  const fullText = `${introText}\n${aboutText}`;
+  const [characterCount, setCharacterCount] = useState(0);
+
+  useEffect(() => {
+    if (!isInView) return;
+
+    if (reduceMotion) {
+      setCharacterCount(fullText.length);
+      return;
+    }
+
+    const timer = window.setInterval(() => {
+      setCharacterCount((current) => {
+        if (current >= fullText.length) {
+          window.clearInterval(timer);
+          return current;
+        }
+        return current + 1;
+      });
+    }, 12);
+
+    return () => window.clearInterval(timer);
+  }, [fullText.length, isInView, reduceMotion]);
+
+  const typedIntro = fullText.slice(0, Math.min(characterCount, introText.length));
+  const typedAbout = fullText.slice(introText.length + 1, characterCount);
+  const isTyping = isInView && characterCount < fullText.length;
+
+  return (
   <section id="about" className="py-[76px] px-0">
     <div className="container mx-auto max-w-6xl">
       <motion.div
@@ -49,16 +85,23 @@ const About = () => (
           className="flex flex-col gap-6"
         >
 
-          <div className="glass-card px-4 py-5 sm:p-6 rounded-2xl">
-            <p className="text-foreground text-base font-semibold mb-3 sm:text-xl">
-              Hi, I'm Aakriti Thakur.<span className="ml-2">👋</span>
-            </p>
-            <p className="text-muted-foreground leading-relaxed text-base">
-              A Product Designer with 5 years of experience in AI-powered SaaS, dashboards, and web/mobile applications, focused on simplifying complex workflows and turning AI-driven insights into intuitive user experiences.
-              <br />
-              <br />
-              Currently, I lead UX & Design at Mantras2Transform, driving product direction, building scalable design systems for multiple AI products, and collaborating closely with development & marketing teams.
-            </p>
+          <div ref={textRef} className="glass-card px-4 py-5 sm:p-6 rounded-2xl">
+            <div className="relative">
+              <div aria-hidden="true" className="invisible">
+                <p className="text-base font-semibold mb-3 sm:text-xl">{introText}</p>
+                <p className="leading-relaxed text-base whitespace-pre-line">{aboutText}</p>
+              </div>
+              <div className="absolute inset-0" aria-live="polite">
+                <p className="text-foreground text-base font-semibold mb-3 sm:text-xl min-h-[1.75rem]">
+                  {typedIntro}
+                  {isTyping && characterCount <= introText.length && <span className="text-primary animate-pulse">|</span>}
+                </p>
+                <p className="text-muted-foreground leading-relaxed text-base whitespace-pre-line">
+                  {typedAbout}
+                  {isTyping && characterCount > introText.length && <span className="text-primary animate-pulse">|</span>}
+                </p>
+              </div>
+            </div>
           </div>
 
           <a
@@ -83,6 +126,7 @@ const About = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default About;
