@@ -213,7 +213,7 @@ const Hero = () => {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="flex justify-center md:justify-end"
         >
-          <div className="relative" style={{ perspective: "1200px" }}>
+          <div className="relative pt-4" style={{ perspective: "1200px" }}>
             {/* Decorative capsule outline behind image */}
             <div
               className="absolute -inset-5 rounded-[500px] border border-white/50 bg-transparent pointer-events-none"
