@@ -1,11 +1,6 @@
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 
-const stats = [
-  { value: "20+", label: "Happy clients" },
-  { value: "4+", label: "Years experience" },
-  { value: "4.9", label: "Average Rating" },
-];
 
 const testimonials = [
   {
@@ -60,21 +55,6 @@ const Testimonials = () => (
         </div>
       </motion.div>
 
-      {/* Stats */}
-      <div className="grid grid-cols-3 gap-3 sm:gap-5 mb-10">
-        {stats.map((s) => (
-          <motion.div
-            key={s.label}
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="glass-card px-2 py-4 sm:p-6 rounded-2xl text-center"
-          >
-            <p className="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text">{s.value}</p>
-            <p className="text-xs sm:text-sm text-muted-foreground mt-1">{s.label}</p>
-          </motion.div>
-        ))}
-      </div>
 
       {/* Testimonial cards */}
       <div className="grid md:grid-cols-2 gap-5">
