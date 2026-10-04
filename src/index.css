@@ -312,3 +312,26 @@ html {
     opacity: 0.35;
   }
 }
+
+/* Hero typing caret */
+@keyframes hero-caret-blink {
+  0%, 45% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.hero-caret {
+  display: inline-block;
+  width: 0.07em;
+  height: 0.78em;
+  margin-left: 0.08em;
+  background: hsl(var(--primary));
+  border-radius: 1px;
+  transform: translateY(-0.04em);
+  animation: hero-caret-blink 0.9s steps(1, end) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-caret {
+    animation: none;
+  }
+}
