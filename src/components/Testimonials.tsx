@@ -72,7 +72,7 @@ const Testimonials = () => (
                 {t.initials}
               </div>
               <div className="flex-1">
-                <p className="text-[22px] font-bold">{t.name}</p>
+                <p className="text-lg font-bold">{t.name}</p>
                 <p className="text-sm text-muted-foreground">{t.company}</p>
               </div>
               <div className="flex items-center gap-1 text-primary">
