@@ -136,7 +136,7 @@ const Hero = () => {
         <div className="absolute bottom-1/4 right-1/4 w-72 h-72 rounded-full bg-accent/5 blur-[100px]" />
       </div>
 
-      <div className="container mx-auto max-w-6xl grid md:grid-cols-2 gap-10 md:gap-12 items-center relative z-10">
+      <div className="container mx-auto max-w-6xl grid md:grid-cols-2 gap-10 md:gap-12 items-center relative z-10 pt-[24px]">
         {/* Left */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
