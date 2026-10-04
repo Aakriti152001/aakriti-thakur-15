@@ -113,6 +113,8 @@ const Hero = () => {
           </motion.div>
 
           <h1 className="text-[3.25rem] sm:text-[4.25rem] md:text-[5rem] font-bold tracking-tight leading-[1.08] md:leading-[1.02]">
+            hi i'm,
+            <br />
             Aakriti
             <br />
             <span className="text-muted-foreground/60">Thakur</span>
