@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import portraitAsset from "@/assets/portrait.jpg.asset.json";
@@ -85,7 +86,48 @@ const MiniJelly = ({ side }: { side: "left" | "right" }) => {
   );
 };
 
+const HERO_LINES = ["hi i'm,", "Aakriti", "Thakur"];
+
 const Hero = () => {
+  const [typed, setTyped] = useState<string[]>(["", "", ""]);
+  const [activeLine, setActiveLine] = useState(0);
+  const [typingDone, setTypingDone] = useState(false);
+
+  useEffect(() => {
+    if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) {
+      setTyped(HERO_LINES);
+      setActiveLine(-1);
+      setTypingDone(true);
+      return;
+    }
+    let cancelled = false;
+    const timers: number[] = [];
+    const wait = (ms: number) =>
+      new Promise<void>((resolve) => {
+        timers.push(window.setTimeout(resolve, ms));
+      });
+    (async () => {
+      await wait(400);
+      for (let li = 0; li < HERO_LINES.length; li++) {
+        if (cancelled) return;
+        setActiveLine(li);
+        for (let ci = 1; ci <= HERO_LINES[li].length; ci++) {
+          if (cancelled) return;
+          await wait(58);
+          setTyped((prev) => prev.map((v, i) => (i === li ? HERO_LINES[li].slice(0, ci) : v)));
+        }
+        await wait(140);
+      }
+      if (cancelled) return;
+      setActiveLine(-1);
+      setTypingDone(true);
+    })();
+    return () => {
+      cancelled = true;
+      timers.forEach((t) => window.clearTimeout(t));
+    };
+  }, []);
+
   return (
     <section className="min-h-[90vh] flex items-start md:items-center relative overflow-hidden pt-[112px] pb-[36px] md:pt-12">
       {/* Background glow */}
@@ -113,12 +155,33 @@ const Hero = () => {
           </motion.div>
 
           <h1 className="text-[3.25rem] sm:text-[4.25rem] md:text-[5rem] font-bold tracking-tight leading-[1.08] md:leading-[1.02]">
-            hi i'm,
-            <br />
-            Aakriti
-            <br />
-            <span className="text-muted-foreground/60">Thakur</span>
-            <span className="inline-flex items-center ml-2 md:ml-3 align-middle gap-2 md:gap-3">
+            <span className="sr-only">hi i'm, Aakriti Thakur</span>
+            <span aria-hidden="true">
+              <span className="relative inline-block">
+                <span className="invisible">hi i'm,</span>
+                <span className="absolute left-0 top-0 whitespace-nowrap">
+                  {typed[0]}
+                  {activeLine === 0 && <span className="hero-caret" />}
+                </span>
+              </span>
+              <br />
+              <span className="relative inline-block">
+                <span className="invisible">Aakriti</span>
+                <span className="absolute left-0 top-0 whitespace-nowrap">
+                  {typed[1]}
+                  {activeLine === 1 && <span className="hero-caret" />}
+                </span>
+              </span>
+              <br />
+              <span className="relative inline-block text-muted-foreground/60">
+                <span className="invisible">Thakur</span>
+                <span className="absolute left-0 top-0 whitespace-nowrap">
+                  {typed[2]}
+                  {activeLine === 2 && <span className="hero-caret" />}
+                </span>
+              </span>
+            </span>
+            <span className={`inline-flex items-center ml-2 md:ml-3 align-middle gap-2 md:gap-3 transition-opacity duration-500 ${typingDone ? "opacity-100" : "opacity-0"}`}>
               <span className="text-3xl sm:text-4xl md:text-5xl wave-hand" role="img" aria-label="waving hand">👋</span>
               <a href="#about" aria-label="Go to More About Me section" className="inline-block">
                 <ArrowUpRight className="inline-block w-7 h-7 md:w-10 md:h-10 text-muted-foreground/40 hover:text-foreground transition-colors cursor-pointer" />
