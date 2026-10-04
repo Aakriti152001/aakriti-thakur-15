@@ -16,7 +16,7 @@ const items = [
   {
     title: "UI/UX Consultant",
     company: "Mantras2Transform Pvt. Ltd.",
-    meta: "Oct 2025 – Dec 2025",
+    meta: "Oct  – Dec 2025",
     description:
       "Founded the design function from the ground up. Defined UX strategy for the M2T website and redesigned the AI Talent Acquisition Platform.",
     highlights: [
