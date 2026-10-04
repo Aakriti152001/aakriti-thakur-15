@@ -4,7 +4,7 @@ const items = [
   {
     title: "General Manager – UX & Design",
     company: "Mantras2Transform Pvt. Ltd.",
-    meta: "Jan 2026 – Present",
+    meta: "Jan – Sept 2026",
     description:
       "Leading UX strategy across multiple AI platforms while mentoring the design team and establishing scalable design systems.",
     highlights: [
@@ -28,7 +28,7 @@ const items = [
   {
     title: "UI Designer",
     company: "Net Solutions",
-    meta: "Apr 2025 – Sept 2025",
+    meta: "Apr– Sept 2025",
     description:
       "Designed marketing and social media assets while ensuring visual consistency across the brand identity.",
     highlights: [
