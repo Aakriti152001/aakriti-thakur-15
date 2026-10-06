@@ -3,7 +3,19 @@ import { useEffect, useRef, useState } from "react";
 import aboutPortraitAsset from "@/assets/about-portrait.png.asset.json";
 const aboutPortraitImg = aboutPortraitAsset.url;
 
-const aboutText = "A Product Designer with 5 years of experience in AI-powered SaaS, dashboards, and web/mobile applications, focused on simplifying complex workflows and turning AI-driven insights into intuitive user experiences.\n\nCurrently, I lead UX & Design at Mantras2Transform, driving product direction, building scalable design systems for multiple AI products, and collaborating closely with development & marketing teams.";
+type Segment = { text: string; bold?: boolean };
+
+const aboutSegments: Segment[] = [
+  { text: "A " },
+  { text: "Product Designer", bold: true },
+  { text: " with " },
+  { text: "5 years", bold: true },
+  {
+    text: " of experience in AI-powered SaaS, dashboards, and web/mobile applications, focused on simplifying complex workflows and turning AI-driven insights into intuitive user experiences.\n\nCurrently, I lead UX & Design at Mantras2Transform, driving product direction, building scalable design systems for multiple AI products, and collaborating closely with development & marketing teams.",
+  },
+];
+
+const aboutText = aboutSegments.map((s) => s.text).join("");
 
 const skills = [
   "Product Design", "UX Design", "UI Design", "Figma", "Branding", "Design Systems",
@@ -39,8 +51,23 @@ const About = () => {
     return () => window.clearInterval(timer);
   }, [fullText.length, isInView, reduceMotion]);
 
-  const typed = fullText.slice(0, characterCount);
   const isTyping = isInView && characterCount < fullText.length;
+
+  const renderSegments = (visibleChars: number) => {
+    let remaining = visibleChars;
+    return aboutSegments.map((seg, i) => {
+      const slice = seg.text.slice(0, Math.max(0, remaining));
+      remaining -= seg.text.length;
+      if (!slice) return null;
+      return seg.bold ? (
+        <span key={i} className="font-bold">
+          {slice}
+        </span>
+      ) : (
+        <span key={i}>{slice}</span>
+      );
+    });
+  };
 
   return (
   <section id="about" className="py-[76px] px-0">
@@ -86,11 +113,13 @@ const About = () => {
           <div ref={textRef} className="glass-card px-4 py-5 sm:p-6 rounded-2xl">
             <div className="relative">
               <div aria-hidden="true" className="invisible">
-                <p className="leading-relaxed text-base whitespace-pre-line">{aboutText}</p>
+                <p className="leading-relaxed text-base whitespace-pre-line">
+                  {renderSegments(fullText.length)}
+                </p>
               </div>
               <div className="absolute inset-0" aria-live="polite">
-                <p className="text-muted-foreground leading-relaxed text-base whitespace-pre-line">
-                  {typed}
+                <p className="text-foreground leading-relaxed text-base whitespace-pre-line">
+                  {renderSegments(characterCount)}
                   {isTyping && <span className="text-primary animate-pulse">|</span>}
                 </p>
               </div>
