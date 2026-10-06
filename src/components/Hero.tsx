@@ -86,7 +86,7 @@ const MiniJelly = ({ side }: { side: "left" | "right" }) => {
   );
 };
 
-const HERO_LINES = ["hi i'm,", "Aakriti", "Thakur"];
+const HERO_LINES = ["hello i'm,", "Aakriti", "Thakur"];
 
 const Hero = () => {
   const [typed, setTyped] = useState<string[]>(["", "", ""]);
@@ -155,10 +155,10 @@ const Hero = () => {
           </motion.div>
 
           <h1 className="text-[3.25rem] sm:text-[4.25rem] md:text-[5rem] font-bold tracking-tight leading-[1.08] md:leading-[1.02]">
-            <span className="sr-only">hi i'm, Aakriti Thakur</span>
+            <span className="sr-only">hello i'm, Aakriti Thakur</span>
             <span aria-hidden="true">
               <span className="relative inline-block">
-                <span className="invisible">hi i'm,</span>
+                <span className="invisible">hello i'm,</span>
                 <span className="absolute left-0 top-0 whitespace-nowrap">
                   {typed[0]}
                   {activeLine === 0 && <span className="hero-caret" />}
