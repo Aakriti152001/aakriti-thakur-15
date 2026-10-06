@@ -54,18 +54,42 @@ const About = () => {
 
   const isTyping = isInView && characterCount < fullText.length;
 
-  const renderSegments = (visibleChars: number) => {
+  const renderParagraphs = (visibleChars: number, withCaret = false) => {
     let remaining = visibleChars;
-    return aboutSegments.map((seg, i) => {
-      const slice = seg.text.slice(0, Math.max(0, remaining));
-      remaining -= seg.text.length;
-      if (!slice) return null;
-      return seg.bold ? (
-        <span key={i} className="font-bold">
-          {slice}
-        </span>
-      ) : (
-        <span key={i} className="text-foreground/[0.72]">{slice}</span>
+    const counts = aboutParagraphs.map((segments) =>
+      segments.reduce((n, s) => n + s.text.length, 0)
+    );
+    let lastVisibleIndex = -1;
+    let check = visibleChars;
+    counts.forEach((len, idx) => {
+      if (check > 0) lastVisibleIndex = idx;
+      check -= len;
+    });
+    remaining = visibleChars;
+    return aboutParagraphs.map((segments, pIndex) => {
+      const paraLen = counts[pIndex];
+      const shown = Math.min(Math.max(remaining, 0), paraLen);
+      remaining -= paraLen;
+      if (shown <= 0) return null;
+      let used = 0;
+      const showCaret = withCaret && pIndex === lastVisibleIndex;
+      return (
+        <p key={pIndex} className={pIndex === 0 ? undefined : "mt-11"}>
+          {segments.map((seg, i) => {
+            const start = used;
+            used += seg.text.length;
+            const slice = seg.text.slice(0, Math.max(0, shown - start));
+            if (!slice) return null;
+            return seg.bold ? (
+              <span key={i} className="font-bold">
+                {slice}
+              </span>
+            ) : (
+              <span key={i} className="text-foreground/[0.72]">{slice}</span>
+            );
+          })}
+          {showCaret && <span className="text-primary animate-pulse">|</span>}
+        </p>
       );
     });
   };
@@ -113,16 +137,13 @@ const About = () => {
 
           <div ref={textRef} className="glass-card px-4 py-5 sm:p-6 rounded-2xl">
             <div className="relative">
-              <div aria-hidden="true" className="invisible">
-                <p className="leading-relaxed text-base whitespace-pre-line">
-                  {renderSegments(fullText.length)}
-                </p>
+              <div aria-hidden="true" className="invisible leading-relaxed text-base">
+                {renderParagraphs(fullText.length)}
               </div>
               <div className="absolute inset-0" aria-live="polite">
-                <p className="text-foreground leading-relaxed text-base whitespace-pre-line">
-                  {renderSegments(characterCount)}
-                  {isTyping && <span className="text-primary animate-pulse">|</span>}
-                </p>
+                <div className="text-foreground leading-relaxed text-base">
+                  {renderParagraphs(characterCount, isTyping)}
+                </div>
               </div>
             </div>
           </div>
