@@ -157,7 +157,7 @@ const Hero = () => {
           <h1 className="text-[3.25rem] sm:text-[4.25rem] md:text-[5rem] font-bold tracking-tight leading-[56.66px] sm:leading-[73.94px] md:leading-[82.1px]">
             <span className="sr-only">hello i'm, Aakriti Thakur</span>
             <span aria-hidden="true">
-              <span className="relative inline-block">
+              <span className="relative inline-block text-[44px] sm:text-[60px] md:text-[72px]">
                 <span className="invisible">hello i'm,</span>
                 <span className="absolute left-0 top-0 whitespace-nowrap">
                   {typed[0]}
