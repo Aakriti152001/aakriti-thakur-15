@@ -60,7 +60,7 @@ const Contact = () => {
             className="inline-flex items-center gap-2 border border-border rounded-full px-6 py-3 text-sm font-medium text-foreground hover:bg-secondary/80 transition-all"
           >
             <FileText className="w-4 h-4" />
-            View Resume
+            Download Resume
           </a>
         </motion.div>
       </div>
