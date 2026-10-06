@@ -335,3 +335,34 @@ html {
     animation: none;
   }
 }
+
+/* Custom cursor (fine pointers only) */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+  will-change: transform;
+  transition: opacity 200ms ease-out;
+}
+.custom-cursor-dot {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: hsl(var(--primary));
+  transition: transform 220ms ease-out, opacity 220ms ease-out;
+}
+.custom-cursor.is-hover .custom-cursor-dot {
+  transform: scale(2.5);
+  opacity: 0.85;
+}
+@media (hover: hover) and (pointer: fine) {
+  html.custom-cursor-active,
+  html.custom-cursor-active a,
+  html.custom-cursor-active button,
+  html.custom-cursor-active [role="button"] {
+    cursor: none;
+  }
+}
