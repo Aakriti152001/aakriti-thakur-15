@@ -64,7 +64,7 @@ const About = () => {
           {slice}
         </span>
       ) : (
-        <span key={i}>{slice}</span>
+        <span key={i} className="text-foreground/[0.84]">{slice}</span>
       );
     });
   };
