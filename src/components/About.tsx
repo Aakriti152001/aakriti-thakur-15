@@ -5,18 +5,23 @@ const aboutPortraitImg = aboutPortraitAsset.url;
 
 type Segment = { text: string; bold?: boolean };
 
-const aboutSegments: Segment[] = [
-  { text: "I\u2019m a " },
-  { text: "product designer", bold: true },
-  { text: " with " },
-  { text: "5 years", bold: true },
-  {
-    text: " of experience, working across AI, SaaS, healthcare, and fintech. I enjoy making complex things feel simple and intuitive.\n\n\nI\u2019m curious by nature\u2014I like understanding how things work, asking questions, and turning ideas into experiences that feel right.\n\n\nAway from the screen, you\u2019ll usually find me sketching, making something with my hands, or trekking\u00a0 that keep me\u00a0 creative.",
-  },
+const aboutParagraphs: Segment[][] = [
+  [
+    { text: "I\u2019m a " },
+    { text: "product designer", bold: true },
+    { text: " with " },
+    { text: "5 years", bold: true },
+    { text: " of experience, working across AI, SaaS, healthcare, and fintech. I enjoy making complex things feel simple and intuitive." },
+  ],
+  [
+    { text: "I\u2019m curious by nature\u2014I like understanding how things work, asking questions, and turning ideas into experiences that feel right." },
+  ],
+  [
+    { text: "Away from the screen, you\u2019ll usually find me sketching, making something with my hands, or trekking\u00a0 that keep me\u00a0 creative." },
+  ],
 ];
 
-
-const aboutText = aboutSegments.map((s) => s.text).join("");
+const aboutText = aboutParagraphs.map((p) => p.map((s) => s.text).join("")).join("");
 
 const skills = [
   "Product Design", "UX Design", "UI Design", "Figma", "Branding", "Design Systems",
