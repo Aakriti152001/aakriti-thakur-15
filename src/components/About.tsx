@@ -6,14 +6,15 @@ const aboutPortraitImg = aboutPortraitAsset.url;
 type Segment = { text: string; bold?: boolean };
 
 const aboutSegments: Segment[] = [
-  { text: "A " },
-  { text: "Product Designer", bold: true },
+  { text: "I\u2019m a " },
+  { text: "product designer", bold: true },
   { text: " with " },
   { text: "5 years", bold: true },
   {
-    text: " of experience in AI-powered SaaS, dashboards, and web/mobile applications, focused on simplifying complex workflows and turning AI-driven insights into intuitive user experiences.\n\nCurrently, I lead UX & Design at Mantras2Transform, driving product direction, building scalable design systems for multiple AI products, and collaborating closely with development & marketing teams.",
+    text: " of experience, working across AI, SaaS, healthcare, and fintech. I enjoy making complex things feel simple and intuitive.\n\n\nI\u2019m curious by nature\u2014I like understanding how things work, asking questions, and turning ideas into experiences that feel right.\n\n\nAway from the screen, you\u2019ll usually find me sketching, making something with my hands, or tracking little things that keep me organised.",
   },
 ];
+
 
 const aboutText = aboutSegments.map((s) => s.text).join("");
 
