@@ -51,7 +51,7 @@ const MicroAnimations = () => {
       {/* Horizontal scroll row — extends full width, 4 cards visible + 5th peeking */}
       <div className="relative">
         <div
-          className="flex gap-6 sm:gap-7 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4"
+          className="flex gap-8 sm:gap-9 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4"
           style={{
             "--row-pad": "max(32px, calc((100% - 1152px) / 2 + 32px))",
             paddingInline: "var(--row-pad)",
