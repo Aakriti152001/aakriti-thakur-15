@@ -198,10 +198,11 @@ const Hero = () => {
               See All Projects
             </a>
             <a
-              href="#contact"
+              href="/Aakriti_Thakur_Resume.pdf"
+              download="Aakriti_Thakur_Resume.pdf"
               className="bg-foreground text-background rounded-full px-5 sm:px-6 py-3 hover:bg-foreground/90 transition-all duration-300 text-sm font-medium"
             >
-              Contact Now
+              Download Resume
             </a>
           </div>
         </motion.div>
