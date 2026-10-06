@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import headerPortrait from "@/assets/header-portrait.png.asset.json";
 
 const navItems = [
   { label: "Projects", link: "#work" },
@@ -27,8 +28,8 @@ const Navbar = () => {
       }`}
     >
       <div className="glass-card px-3 sm:px-6 py-2 sm:py-2.5 flex items-center gap-3 sm:gap-6 rounded-full max-w-full">
-        <a href="#" className="text-foreground font-bold text-base sm:text-lg tracking-tight shrink-0">
-          Aakriti
+        <a href="#" aria-label="Aakriti Thakur — Home" className="shrink-0">
+          <img src={headerPortrait.url} alt="Aakriti Thakur" width={44} height={44} className="h-10 w-10 sm:h-11 sm:w-11 object-contain" />
         </a>
 
         <div className="hidden md:flex items-center gap-5">
