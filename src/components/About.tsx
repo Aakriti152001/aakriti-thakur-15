@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from "react";
 import aboutPortraitAsset from "@/assets/about-portrait.png.asset.json";
 const aboutPortraitImg = aboutPortraitAsset.url;
 
-const introText = "Hi, I'm Aakriti Thakur. 👋";
 const aboutText = "A Product Designer with 5 years of experience in AI-powered SaaS, dashboards, and web/mobile applications, focused on simplifying complex workflows and turning AI-driven insights into intuitive user experiences.\n\nCurrently, I lead UX & Design at Mantras2Transform, driving product direction, building scalable design systems for multiple AI products, and collaborating closely with development & marketing teams.";
 
 const skills = [
@@ -16,7 +15,7 @@ const About = () => {
   const textRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(textRef, { once: true, amount: 0.35 });
   const reduceMotion = useReducedMotion();
-  const fullText = `${introText}\n${aboutText}`;
+  const fullText = aboutText;
   const [characterCount, setCharacterCount] = useState(0);
 
   useEffect(() => {
@@ -40,8 +39,7 @@ const About = () => {
     return () => window.clearInterval(timer);
   }, [fullText.length, isInView, reduceMotion]);
 
-  const typedIntro = fullText.slice(0, Math.min(characterCount, introText.length));
-  const typedAbout = fullText.slice(introText.length + 1, characterCount);
+  const typed = fullText.slice(0, characterCount);
   const isTyping = isInView && characterCount < fullText.length;
 
   return (
@@ -88,17 +86,12 @@ const About = () => {
           <div ref={textRef} className="glass-card px-4 py-5 sm:p-6 rounded-2xl">
             <div className="relative">
               <div aria-hidden="true" className="invisible">
-                <p className="text-base font-semibold mb-3 sm:text-xl">{introText}</p>
                 <p className="leading-relaxed text-base whitespace-pre-line">{aboutText}</p>
               </div>
               <div className="absolute inset-0" aria-live="polite">
-                <p className="text-foreground text-base font-semibold mb-3 sm:text-xl min-h-[1.75rem]">
-                  {typedIntro}
-                  {isTyping && characterCount <= introText.length && <span className="text-primary animate-pulse">|</span>}
-                </p>
                 <p className="text-muted-foreground leading-relaxed text-base whitespace-pre-line">
-                  {typedAbout}
-                  {isTyping && characterCount > introText.length && <span className="text-primary animate-pulse">|</span>}
+                  {typed}
+                  {isTyping && <span className="text-primary animate-pulse">|</span>}
                 </p>
               </div>
             </div>
