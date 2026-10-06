@@ -202,7 +202,7 @@ const Hero = () => {
               download="Aakriti_Thakur_Resume.pdf"
               className="bg-foreground text-background rounded-full px-5 sm:px-6 py-3 hover:bg-foreground/90 transition-all duration-300 text-sm font-medium"
             >
-              Download Resume
+              View Resume
             </a>
           </div>
         </motion.div>
