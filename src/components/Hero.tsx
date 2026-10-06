@@ -154,7 +154,7 @@ const Hero = () => {
             <span className="text-muted-foreground">Product Designer</span>
           </motion.div>
 
-          <h1 className="text-[3.25rem] sm:text-[4.25rem] md:text-[5rem] font-bold tracking-tight leading-[1.08] md:leading-[1.02]">
+          <h1 className="text-[3.25rem] sm:text-[4.25rem] md:text-[5rem] font-bold tracking-tight leading-[56.66px] sm:leading-[73.94px] md:leading-[82.1px]">
             <span className="sr-only">hello i'm, Aakriti Thakur</span>
             <span aria-hidden="true">
               <span className="relative inline-block">
