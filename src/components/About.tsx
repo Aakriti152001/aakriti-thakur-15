@@ -11,7 +11,7 @@ const aboutSegments: Segment[] = [
   { text: " with " },
   { text: "5 years", bold: true },
   {
-    text: " of experience, working across AI, SaaS, healthcare, and fintech. I enjoy making complex things feel simple and intuitive.\n\n\nI\u2019m curious by nature\u2014I like understanding how things work, asking questions, and turning ideas into experiences that feel right.\n\n\nAway from the screen, you\u2019ll usually find me sketching, making something with my hands, or tracking little things that keep me organised.",
+    text: " of experience, working across AI, SaaS, healthcare, and fintech. I enjoy making complex things feel simple and intuitive.\n\n\nI\u2019m curious by nature\u2014I like understanding how things work, asking questions, and turning ideas into experiences that feel right.\n\n\nAway from the screen, you\u2019ll usually find me sketching, making something with my hands, or trekking\u00a0 that keep me\u00a0 creative.",
   },
 ];
 
