@@ -8,4 +8,4 @@
 - [x] Orvaa page: replace case-study section 2 with Slide-2.pdf
 - [x] Orvaa page: swap the section-2 PDF viewer for the uploaded Slide-2.png
 - [x] Orvaa page: add Slide-12_1.png (Your Wellness screens) below the last slide
-- [ ] Orvaa page: add Slide-12_2.png below the last slide
+- [x] Orvaa page: add Slide-12_2.png below the last slide
