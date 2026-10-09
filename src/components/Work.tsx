@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import orvaaCover from "@/assets/orvaa-cover.png.asset.json";
 import docbotCover from "@/assets/docbot-cover.png.asset.json";
 import universusCover from "@/assets/universus-cover.png.asset.json";
 import project2 from "@/assets/project-ai-job-matcher.png";
@@ -12,7 +13,7 @@ const projects = [
   {
     title: "Orvaa – AI-Powered Healthcare & Wellness",
     description: "An AI-powered platform connecting clinical care, wellness, and medical research.",
-    image: "",
+    image: orvaaCover.url,
   },
   {
     title: "Docbot - Healthcare Mobile App",
