@@ -3,7 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 import orvaaCover from "@/assets/orvaa-cover.png.asset.json";
-import orvaa1 from "@/assets/orvaa-project/img1.jpg";
+import orvaaSlide1 from "@/assets/orvaa-project/orvaa-slide-1.png.asset.json";
 import orvaaSlide2 from "@/assets/orvaa-project/orvaa-slide-2.png.asset.json";
 
 import orvaa3 from "@/assets/orvaa-project/img3.jpg";
@@ -19,7 +19,6 @@ import orvaa12 from "@/assets/orvaa-project/img12.jpg";
 import orvaa13 from "@/assets/orvaa-project/img13.jpg";
 
 const caseStudyImages = [
-  orvaa1,
   orvaa3,
   orvaa4,
   orvaa5,
@@ -101,7 +100,7 @@ const ProjectOrvaa = () => {
         <div>
           <div className="overflow-hidden">
             <img
-              src={caseStudyImages[0]}
+              src={orvaaSlide1.url}
               alt="Orvaa case study section 1"
               className="w-full h-auto block"
               loading="lazy"
@@ -115,7 +114,7 @@ const ProjectOrvaa = () => {
               loading="lazy"
             />
           </div>
-          {caseStudyImages.slice(1).map((src, i) => (
+          {caseStudyImages.map((src, i) => (
             <div
               key={src}
               className="overflow-hidden"
