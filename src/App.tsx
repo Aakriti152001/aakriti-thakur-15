@@ -11,6 +11,7 @@ import ProjectChaiHatii from "./pages/ProjectChaiHatii.tsx";
 import ProjectGigpot from "./pages/ProjectGigpot.tsx";
 import ProjectUniversus from "./pages/ProjectUniversus.tsx";
 import ProjectUnlockIvy from "./pages/ProjectUnlockIvy.tsx";
+import ProjectOrvaa from "./pages/ProjectOrvaa.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import CustomCursor from "./components/CustomCursor";
 
