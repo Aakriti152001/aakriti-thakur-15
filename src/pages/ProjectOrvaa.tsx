@@ -6,7 +6,7 @@ import orvaaCover from "@/assets/orvaa-cover.png.asset.json";
 import orvaaSlide1 from "@/assets/orvaa-project/orvaa-slide-1.png.asset.json";
 import orvaaSlide2 from "@/assets/orvaa-project/orvaa-slide-2.png.asset.json";
 import orvaaSlide3 from "@/assets/orvaa-project/orvaa-slide-3.png.asset.json";
-import orvaa4 from "@/assets/orvaa-project/img4.jpg";
+import orvaaSlide4 from "@/assets/orvaa-project/orvaa-slide-4.png.asset.json";
 import orvaa5 from "@/assets/orvaa-project/img5.jpg";
 import orvaa6 from "@/assets/orvaa-project/img6.jpg";
 import orvaa7 from "@/assets/orvaa-project/img7.jpg";
@@ -18,7 +18,7 @@ import orvaa12 from "@/assets/orvaa-project/img12.jpg";
 import orvaa13 from "@/assets/orvaa-project/img13.jpg";
 
 const caseStudyImages = [
-  orvaa4,
+  orvaaSlide4.url,
   orvaa5,
   orvaa6,
   orvaa7,
