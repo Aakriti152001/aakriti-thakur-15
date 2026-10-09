@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import docbotCover from "@/assets/docbot-cover.png.asset.json";
+import orvaaCover from "@/assets/orvaa-cover.png.asset.json";
 import universusCover from "@/assets/universus-cover.png.asset.json";
 import project2 from "@/assets/project-ai-job-matcher.png";
 import gigpotCover from "@/assets/project-4.png";
