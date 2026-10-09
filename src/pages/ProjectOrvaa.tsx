@@ -5,8 +5,7 @@ import { useNavigate } from "react-router-dom";
 import orvaaCover from "@/assets/orvaa-cover.png.asset.json";
 import orvaaSlide1 from "@/assets/orvaa-project/orvaa-slide-1.png.asset.json";
 import orvaaSlide2 from "@/assets/orvaa-project/orvaa-slide-2.png.asset.json";
-
-import orvaa3 from "@/assets/orvaa-project/img3.jpg";
+import orvaaSlide3 from "@/assets/orvaa-project/orvaa-slide-3.png.asset.json";
 import orvaa4 from "@/assets/orvaa-project/img4.jpg";
 import orvaa5 from "@/assets/orvaa-project/img5.jpg";
 import orvaa6 from "@/assets/orvaa-project/img6.jpg";
@@ -19,7 +18,6 @@ import orvaa12 from "@/assets/orvaa-project/img12.jpg";
 import orvaa13 from "@/assets/orvaa-project/img13.jpg";
 
 const caseStudyImages = [
-  orvaa3,
   orvaa4,
   orvaa5,
   orvaa6,
@@ -114,6 +112,14 @@ const ProjectOrvaa = () => {
               loading="lazy"
             />
           </div>
+          <div className="overflow-hidden">
+            <img
+              src={orvaaSlide3.url}
+              alt="Orvaa case study section 3"
+              className="w-full h-auto block"
+              loading="lazy"
+            />
+          </div>
           {caseStudyImages.map((src, i) => (
             <div
               key={src}
@@ -121,7 +127,7 @@ const ProjectOrvaa = () => {
             >
               <img
                 src={src}
-                alt={`Orvaa case study section ${i + 3}`}
+                alt={`Orvaa case study section ${i + 4}`}
                 className="w-full h-auto block"
                 loading="lazy"
               />
