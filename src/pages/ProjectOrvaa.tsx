@@ -6,6 +6,7 @@ import orvaaCover from "@/assets/orvaa-cover.png.asset.json";
 import orvaaSlide1 from "@/assets/orvaa-project/orvaa-slide-1.png.asset.json";
 import orvaaSlide2 from "@/assets/orvaa-project/orvaa-slide-2.png.asset.json";
 import orvaaSlide3 from "@/assets/orvaa-project/orvaa-slide-3.png.asset.json";
+import orvaaSlide3b from "@/assets/orvaa-project/orvaa-slide-3-2.png.asset.json";
 import orvaaSlide4 from "@/assets/orvaa-project/orvaa-slide-4.png.asset.json";
 import orvaa5 from "@/assets/orvaa-project/img5.jpg";
 import orvaa6 from "@/assets/orvaa-project/img6.jpg";
@@ -120,6 +121,14 @@ const ProjectOrvaa = () => {
               loading="lazy"
             />
           </div>
+          <div className="overflow-hidden">
+            <img
+              src={orvaaSlide3b.url}
+              alt="Orvaa case study section 4"
+              className="w-full h-auto block"
+              loading="lazy"
+            />
+          </div>
           {caseStudyImages.map((src, i) => (
             <div
               key={src}
@@ -127,7 +136,7 @@ const ProjectOrvaa = () => {
             >
               <img
                 src={src}
-                alt={`Orvaa case study section ${i + 4}`}
+                alt={`Orvaa case study section ${i + 5}`}
                 className="w-full h-auto block"
                 loading="lazy"
               />
