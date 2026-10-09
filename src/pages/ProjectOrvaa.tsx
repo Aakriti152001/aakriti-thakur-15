@@ -19,7 +19,6 @@ import orvaa13 from "@/assets/orvaa-project/img13.jpg";
 
 const caseStudyImages = [
   orvaa1,
-  orvaa2,
   orvaa3,
   orvaa4,
   orvaa5,
@@ -32,6 +31,7 @@ const caseStudyImages = [
   orvaa12,
   orvaa13,
 ];
+
 
 const details = [
   { label: "My Role", value: "Product Designer" },
