@@ -32,6 +32,7 @@ const App = () => (
           <Route path="/product/gigpot" element={<ProjectGigpot />} />
           <Route path="/product/universus" element={<ProjectUniversus />} />
           <Route path="/product/unlockivy" element={<ProjectUnlockIvy />} />
+          <Route path="/product/orvaa" element={<ProjectOrvaa />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

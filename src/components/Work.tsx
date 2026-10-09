@@ -14,6 +14,7 @@ const projects = [
     title: "Orvaa – AI-Powered Healthcare & Wellness",
     description: "An AI-powered platform connecting clinical care, wellness, and medical research.",
     image: orvaaCover.url,
+    link: "/product/orvaa",
   },
   {
     title: "Docbot - Healthcare Mobile App",
