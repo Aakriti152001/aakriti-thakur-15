@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import orvaaCover from "@/assets/orvaa-cover.png.asset.json";
 import orvaa1 from "@/assets/orvaa-project/img1.jpg";
+import orvaaSlide2 from "@/assets/orvaa-project/orvaa-slide-2.png.asset.json";
 
 import orvaa3 from "@/assets/orvaa-project/img3.jpg";
 import orvaa4 from "@/assets/orvaa-project/img4.jpg";
@@ -107,10 +108,11 @@ const ProjectOrvaa = () => {
             />
           </div>
           <div className="overflow-hidden">
-            <iframe
-              src="/orvaa-2.pdf#view=FitH"
-              title="Orvaa case study PDF"
-              className="w-full h-[85vh] block border-0 bg-background"
+            <img
+              src={orvaaSlide2.url}
+              alt="Orvaa case study section 2"
+              className="w-full h-auto block"
+              loading="lazy"
             />
           </div>
           {caseStudyImages.slice(1).map((src, i) => (
