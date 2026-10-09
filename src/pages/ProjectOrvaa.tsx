@@ -118,12 +118,12 @@ const ProjectOrvaa = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="rounded-2xl overflow-hidden border border-border/30"
+          className="overflow-hidden"
         >
           <img
             src={orvaaCover.url}
             alt="Orvaa project cover"
-            className="w-full h-auto"
+            className="w-full h-auto block"
             loading="eager"
           />
         </motion.div>
