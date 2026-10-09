@@ -85,22 +85,19 @@ const ProjectOrvaa = () => {
           />
         </motion.div>
 
-        <div className="mt-8 space-y-8">
+        <div>
           {caseStudyImages.map((src, i) => (
-            <motion.div
+            <div
               key={src}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="rounded-2xl overflow-hidden border border-border/30"
+              className="overflow-hidden"
             >
               <img
                 src={src}
                 alt={`Orvaa case study section ${i + 1}`}
-                className="w-full h-auto"
+                className="w-full h-auto block"
                 loading="lazy"
               />
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
