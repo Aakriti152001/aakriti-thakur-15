@@ -6,3 +6,4 @@
 - [x] Work.tsx: Orvaa cover image uploaded and wired into the first card
 - [x] Orvaa page: replace case-study section 1 with Slide-1.pdf
 - [x] Orvaa page: replace case-study section 2 with Slide-2.pdf
+- [x] Orvaa page: swap the section-2 PDF viewer for the uploaded Slide-2.png
