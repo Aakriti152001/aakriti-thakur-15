@@ -24,6 +24,7 @@ import orvaaSlide18 from "@/assets/orvaa-project/orvaa-slide-18.png.asset.json";
 import orvaaSlide19 from "@/assets/orvaa-project/orvaa-slide-19.png.asset.json";
 import orvaaSlide20 from "@/assets/orvaa-project/orvaa-slide-20.png.asset.json";
 import orvaaSlide21 from "@/assets/orvaa-project/orvaa-slide-21.png.asset.json";
+import orvaaSlide22 from "@/assets/orvaa-project/orvaa-slide-22.png.asset.json";
 
 const caseStudyImages = [
   orvaaSlide4.url,
@@ -43,6 +44,7 @@ const caseStudyImages = [
   orvaaSlide19.url,
   orvaaSlide20.url,
   orvaaSlide21.url,
+  orvaaSlide22.url,
 ];
 
 
