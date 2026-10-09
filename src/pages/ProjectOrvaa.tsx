@@ -3,6 +3,23 @@ import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 import orvaaCover from "@/assets/orvaa-cover.png.asset.json";
+import orvaa1 from "@/assets/orvaa-project/img1.jpg";
+import orvaa2 from "@/assets/orvaa-project/img2.jpg";
+import orvaa3 from "@/assets/orvaa-project/img3.jpg";
+import orvaa4 from "@/assets/orvaa-project/img4.jpg";
+import orvaa5 from "@/assets/orvaa-project/img5.jpg";
+import orvaa6 from "@/assets/orvaa-project/img6.jpg";
+import orvaa7 from "@/assets/orvaa-project/img7.jpg";
+
+const caseStudyImages = [
+  orvaa1,
+  orvaa2,
+  orvaa3,
+  orvaa4,
+  orvaa5,
+  orvaa6,
+  orvaa7,
+];
 
 const details = [
   { label: "My Role", value: "Product Designer" },
@@ -67,6 +84,25 @@ const ProjectOrvaa = () => {
             loading="eager"
           />
         </motion.div>
+
+        <div className="mt-8 space-y-8">
+          {caseStudyImages.map((src, i) => (
+            <motion.div
+              key={src}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="rounded-2xl overflow-hidden border border-border/30"
+            >
+              <img
+                src={src}
+                alt={`Orvaa case study section ${i + 1}`}
+                className="w-full h-auto"
+                loading="lazy"
+              />
+            </motion.div>
+          ))}
+        </div>
       </div>
     </div>
   );
