@@ -11,3 +11,4 @@
 - [x] Orvaa page: add Slide-12_2.png below the last slide
 - [x] Orvaa page: add Slide-11_1-2.png below the last slide
 - [x] Orvaa page: add Slide-13.png below the last slide
+- [ ] Orvaa page: add Slide-13_2.png below the last slide
