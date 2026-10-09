@@ -17,16 +17,22 @@ const projects = [
     link: "/product/orvaa",
   },
   {
-    title: "Docbot - Healthcare Mobile App",
-    description: "End-to-end UX for a healthcare platform enabling remote care and real-time vitals monitoring.",
-    image: docbotCover.url,
-    link: "/project/docbot",
-  },
-  {
     title: "Universus – Customer Service Dashboard",
     description: "Redesigning customer service workflows for faster, efficient support operations",
     image: universusCover.url,
     link: "/product/universus",
+  },
+  {
+    title: "GIGPOT- Crypto Mobile Application",
+    description: "Secure, seamless crypto trading experience built for trust and clarity",
+    image: gigpotCover,
+    link: "/product/gigpot",
+  },
+  {
+    title: "Docbot - Healthcare Mobile App",
+    description: "End-to-end UX for a healthcare platform enabling remote care and real-time vitals monitoring.",
+    image: docbotCover.url,
+    link: "/project/docbot",
   },
   {
     title: "Fundin Bharat – Trading Dashboard",
@@ -34,12 +40,6 @@ const projects = [
     image: project2,
     link: "/product/fundin-bharat-dashboard",
     objectPosition: "center 35%",
-  },
-  {
-    title: "GIGPOT- Crypto Mobile Application",
-    description: "Secure, seamless crypto trading experience built for trust and clarity",
-    image: gigpotCover,
-    link: "/product/gigpot",
   },
   {
     title: "Chai Hatti - Logo Design",

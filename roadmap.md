@@ -17,3 +17,4 @@
 - [x] Orvaa page: add Slide-14_2.png below the last slide
 - [x] Orvaa page: remove case study section 26 (duplicate Final Designs slide)
 - [x] Orvaa cover image: remove corner radius and space below
+- [x] Featured Designs: reorder cards — Universus 2nd, GIGPOT 3rd, Docbot 4th, Fundin Bharat 5th
