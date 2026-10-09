@@ -10,6 +10,12 @@ import orvaa4 from "@/assets/orvaa-project/img4.jpg";
 import orvaa5 from "@/assets/orvaa-project/img5.jpg";
 import orvaa6 from "@/assets/orvaa-project/img6.jpg";
 import orvaa7 from "@/assets/orvaa-project/img7.jpg";
+import orvaa8 from "@/assets/orvaa-project/img8.jpg";
+import orvaa9 from "@/assets/orvaa-project/img9.jpg";
+import orvaa10 from "@/assets/orvaa-project/img10.jpg";
+import orvaa11 from "@/assets/orvaa-project/img11.jpg";
+import orvaa12 from "@/assets/orvaa-project/img12.jpg";
+import orvaa13 from "@/assets/orvaa-project/img13.jpg";
 
 const caseStudyImages = [
   orvaa1,
@@ -19,6 +25,12 @@ const caseStudyImages = [
   orvaa5,
   orvaa6,
   orvaa7,
+  orvaa8,
+  orvaa9,
+  orvaa10,
+  orvaa11,
+  orvaa12,
+  orvaa13,
 ];
 
 const details = [
