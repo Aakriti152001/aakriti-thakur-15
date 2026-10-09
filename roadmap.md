@@ -16,3 +16,4 @@
 - [x] Orvaa page: add Slide-14_1.png below the last slide
 - [x] Orvaa page: add Slide-14_2.png below the last slide
 - [x] Orvaa page: remove case study section 26 (duplicate Final Designs slide)
+- [x] Orvaa cover image: remove corner radius and space below
