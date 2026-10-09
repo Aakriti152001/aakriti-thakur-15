@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import orvaaCover from "@/assets/orvaa-cover.png.asset.json";
 import orvaa1 from "@/assets/orvaa-project/img1.jpg";
-import orvaa2 from "@/assets/orvaa-project/img2.jpg";
+
 import orvaa3 from "@/assets/orvaa-project/img3.jpg";
 import orvaa4 from "@/assets/orvaa-project/img4.jpg";
 import orvaa5 from "@/assets/orvaa-project/img5.jpg";
