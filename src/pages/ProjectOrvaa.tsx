@@ -7,7 +7,7 @@ import orvaaCover from "@/assets/orvaa-cover.png.asset.json";
 const details = [
   { label: "My Role", value: "Product Designer" },
   { label: "Timeline", value: "4 months" },
-  { label: "Platform", value: "Web & Mobile" },
+  { label: "Platform", value: "Mobile Application" },
 ];
 
 const ProjectOrvaa = () => {
