@@ -98,20 +98,36 @@ const ProjectOrvaa = () => {
         </motion.div>
 
         <div>
-          {caseStudyImages.map((src, i) => (
+          <div className="overflow-hidden">
+            <img
+              src={caseStudyImages[0]}
+              alt="Orvaa case study section 1"
+              className="w-full h-auto block"
+              loading="lazy"
+            />
+          </div>
+          <div className="overflow-hidden">
+            <iframe
+              src="/orvaa-2.pdf#view=FitH"
+              title="Orvaa case study PDF"
+              className="w-full h-[85vh] block border-0 bg-background"
+            />
+          </div>
+          {caseStudyImages.slice(1).map((src, i) => (
             <div
               key={src}
               className="overflow-hidden"
             >
               <img
                 src={src}
-                alt={`Orvaa case study section ${i + 1}`}
+                alt={`Orvaa case study section ${i + 3}`}
                 className="w-full h-auto block"
                 loading="lazy"
               />
             </div>
           ))}
         </div>
+
       </div>
     </div>
   );
