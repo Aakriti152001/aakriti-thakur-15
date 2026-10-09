@@ -10,6 +10,11 @@ import unlockivyCover from "@/assets/unlockivy-project/hero.jpg";
 
 const projects = [
   {
+    title: "Orvaa – AI-Powered Healthcare & Wellness",
+    description: "An AI-powered platform connecting clinical care, wellness, and medical research.",
+    image: "",
+  },
+  {
     title: "Docbot - Healthcare Mobile App",
     description: "End-to-end UX for a healthcare platform enabling remote care and real-time vitals monitoring.",
     image: docbotCover.url,
@@ -78,15 +83,17 @@ const Work = () => {
             {...(p.link ? { onClick: () => navigate(p.link!) } : {})}
           >
             <div className="aspect-[16/10] w-full overflow-hidden -mb-[40px]">
-              <img
-                src={p.image}
-                alt={p.title}
-                className="w-full h-[calc(100%-40px)] object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                style={p.objectPosition ? { objectPosition: p.objectPosition } : undefined}
-                loading="lazy"
-                width={960}
-                height={600}
-              />
+              {p.image && (
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  className="w-full h-[calc(100%-40px)] object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  style={p.objectPosition ? { objectPosition: p.objectPosition } : undefined}
+                  loading="lazy"
+                  width={960}
+                  height={600}
+                />
+              )}
             </div>
             <div className="px-4 py-5 sm:p-6 md:p-8 flex flex-col gap-2 sm:gap-3">
               <div className="flex items-start justify-between gap-3 sm:gap-4">
