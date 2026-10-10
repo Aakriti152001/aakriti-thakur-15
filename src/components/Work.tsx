@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import orvaaCover from "@/assets/orvaa-cover.png.asset.json";
+import zipteamsCover from "@/assets/zipteams-cover.png.asset.json";
 import docbotCover from "@/assets/docbot-cover.png.asset.json";
 import universusCover from "@/assets/universus-cover.png.asset.json";
 import project2 from "@/assets/project-ai-job-matcher.png";
@@ -19,6 +20,7 @@ const projects = [
   {
     title: "Zipteams – AI-Powered Customer Communication Platform",
     description: "Simplifying call analytics and customer communication through intuitive dashboards and workflows.",
+    image: zipteamsCover.url,
     link: "https://aicrm.zipteams.com/",
   },
   {
