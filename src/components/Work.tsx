@@ -17,6 +17,10 @@ const projects = [
     link: "/product/orvaa",
   },
   {
+    title: "Zipteams – AI-Powered Customer Communication Platform",
+    description: "Simplifying call analytics and customer communication through intuitive dashboards and workflows.",
+  },
+  {
     title: "Universus – Customer Service Dashboard",
     description: "Redesigning customer service workflows for faster, efficient support operations",
     image: universusCover.url,
