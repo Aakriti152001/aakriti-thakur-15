@@ -1,3 +1,4 @@
 # Architecture rules
 - Import uploaded header and share images through Lovable Assets pointers; keep the derived favicon as a small real file in public so browsers can load it directly.
 - Keep site-wide cursor and pointer glow behavior in the shared CustomCursor, using global CSS tokens and fine-pointer detection so every page behaves consistently without affecting touch input.
+- Write Lovable Assets pointer JSON to a temporary file and move it into place atomically; never redirect the CLI straight onto an existing pointer, because an in-place overwrite briefly leaves an empty file that the bundler parses as invalid JSON and blanks the preview.
