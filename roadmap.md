@@ -21,3 +21,4 @@
 - [x] Work.tsx: Zipteams card opens https://aicrm.zipteams.com/ in a new tab
 - [x] Work.tsx: Zipteams card thumbnail (uploaded image, Lovable Assets)
 - [x] Work.tsx: Orvaa card thumbnail replaced with the new uploaded cover
+- [x] Orvaa page: case-study section 22 replaced with the uploaded Slide-11-2.png
