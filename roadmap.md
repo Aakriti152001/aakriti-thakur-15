@@ -22,3 +22,4 @@
 - [x] Work.tsx: Zipteams card thumbnail (uploaded image, Lovable Assets)
 - [x] Work.tsx: Orvaa card thumbnail replaced with the new uploaded cover
 - [x] Orvaa page: case-study section 22 replaced with the uploaded Slide-11-2.png
+- [x] Orvaa page: case-study section 21 replaced with the uploaded Slide-11_1-3.png
