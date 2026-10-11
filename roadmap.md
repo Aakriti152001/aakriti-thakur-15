@@ -20,3 +20,4 @@
 - [x] Featured Designs: reorder cards — Universus 2nd, GIGPOT 3rd, Docbot 4th, Fundin Bharat 5th
 - [x] Work.tsx: Zipteams card opens https://aicrm.zipteams.com/ in a new tab
 - [x] Work.tsx: Zipteams card thumbnail (uploaded image, Lovable Assets)
+- [x] Work.tsx: Orvaa card thumbnail replaced with the new uploaded cover
