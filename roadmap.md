@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Remove backgrounds from remaining review stickers and display Shivam's cutout
+- [x] Remove backgrounds from remaining review stickers and display Shivam's cutout
 
 - [x] Link thumbnail: remove subtext, center title horizontally
 - [x] Point og:image/twitter:image at the updated thumbnail
