@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { motion, useAnimationControls, useReducedMotion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import portraitAsset from "@/assets/portrait.jpg.asset.json";
 const portraitImg = portraitAsset.url;
@@ -92,7 +92,30 @@ const Hero = () => {
   const [typed, setTyped] = useState<string[]>(["", "", ""]);
   const [activeLine, setActiveLine] = useState(0);
   const [typingDone, setTypingDone] = useState(false);
-  const [portraitHovered, setPortraitHovered] = useState(false);
+  const portraitControls = useAnimationControls();
+  const twisting = useRef(false);
+  const prefersReducedMotion = useReducedMotion();
+
+  const twistPortrait = useCallback(() => {
+    if (prefersReducedMotion || twisting.current) return;
+    twisting.current = true;
+    const done = () => {
+      twisting.current = false;
+    };
+    portraitControls
+      .start({
+        rotateY: [0, 180, 0],
+        transition: { duration: 1.4, ease: [0.22, 1, 0.36, 1] },
+      })
+      .then(done, done);
+  }, [portraitControls, prefersReducedMotion]);
+
+  useEffect(() => {
+    portraitControls.start({
+      rotateY: 0,
+      transition: { duration: 1.4, ease: [0.22, 1, 0.36, 1], delay: 0.35 },
+    });
+  }, [portraitControls]);
 
   useEffect(() => {
     if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) {
@@ -229,10 +252,8 @@ const Hero = () => {
 
             <motion.div
               initial={{ rotateY: 180 }}
-              animate={portraitHovered ? { rotateY: [0, 180, 0] } : { rotateY: 0 }}
-              transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1], delay: portraitHovered ? 0 : 0.35 }}
-              onHoverStart={() => setPortraitHovered(true)}
-              onHoverEnd={() => setPortraitHovered(false)}
+              animate={portraitControls}
+              onHoverStart={twistPortrait}
               style={{ transformStyle: "preserve-3d" }}
               className="relative w-full max-w-[334px] md:w-[270px] lg:w-[334px] aspect-[3/4] rounded-[500px] overflow-hidden border border-border/50 shadow-[var(--shadow-glow)]"
             >
