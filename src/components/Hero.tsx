@@ -97,6 +97,7 @@ const Hero = () => {
   const prefersReducedMotion = useReducedMotion();
 
   const twistPortrait = useCallback(() => {
+    console.log("[hero] twist called", { prefersReducedMotion, twisting: twisting.current });
     if (prefersReducedMotion || twisting.current) return;
     twisting.current = true;
     const done = () => {
