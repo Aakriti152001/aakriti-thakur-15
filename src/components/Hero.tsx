@@ -230,7 +230,12 @@ const Hero = () => {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="flex justify-center md:justify-end"
         >
-          <div className="relative" style={{ perspective: "1200px" }}>
+          <div
+            className="relative"
+            style={{ perspective: "1200px" }}
+            onPointerEnter={twistPortrait}
+            onPointerLeave={resetTwist}
+          >
             {/* Decorative capsule outline behind image */}
             <div
               className="absolute -inset-5 rounded-[500px] border border-white/50 bg-transparent pointer-events-none"
@@ -246,8 +251,6 @@ const Hero = () => {
               initial={{ rotateY: 180 }}
               animate={twist ? PORTRAIT_TWIST : PORTRAIT_REST}
               transition={twist ? TWIST_TRANSITION : LOAD_TRANSITION}
-              onHoverStart={twistPortrait}
-              onHoverEnd={resetTwist}
               style={{ transformStyle: "preserve-3d" }}
               className="relative w-full max-w-[334px] md:w-[270px] lg:w-[334px] aspect-[3/4] rounded-[500px] overflow-hidden border border-border/50 shadow-[var(--shadow-glow)]"
             >
