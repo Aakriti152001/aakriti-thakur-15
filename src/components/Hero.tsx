@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { useCallback, useEffect, useState } from "react";
+import { motion, useReducedMotion, type Transition } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import portraitAsset from "@/assets/portrait.jpg.asset.json";
 const portraitImg = portraitAsset.url;
@@ -88,11 +88,26 @@ const MiniJelly = ({ side }: { side: "left" | "right" }) => {
 
 const HERO_LINES = ["hello i'm,", "Aakriti", "Thakur"];
 
+// Flip targets live at module level so their identity never changes: a fresh
+// inline keyframe array on every render restarts the animation mid-flight.
+const PORTRAIT_EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+const PORTRAIT_REST: { rotateY: number } = { rotateY: 0 };
+const PORTRAIT_TWIST: { rotateY: number[] } = { rotateY: [0, 180, 0] };
+const LOAD_TRANSITION: Transition = { duration: 1.4, ease: PORTRAIT_EASE, delay: 0.35 };
+const TWIST_TRANSITION: Transition = { duration: 1.4, ease: PORTRAIT_EASE };
+
 const Hero = () => {
   const [typed, setTyped] = useState<string[]>(["", "", ""]);
   const [activeLine, setActiveLine] = useState(0);
   const [typingDone, setTypingDone] = useState(false);
-  const [portraitHovered, setPortraitHovered] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
+  const [twist, setTwist] = useState(false);
+
+  const twistPortrait = useCallback(() => {
+    if (!prefersReducedMotion) setTwist(true);
+  }, [prefersReducedMotion]);
+
+  const resetTwist = useCallback(() => setTwist(false), []);
 
   useEffect(() => {
     if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) {
@@ -215,7 +230,12 @@ const Hero = () => {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="flex justify-center md:justify-end"
         >
-          <div className="relative" style={{ perspective: "1200px" }}>
+          <div
+            className="relative"
+            style={{ perspective: "1200px" }}
+            onPointerEnter={twistPortrait}
+            onPointerLeave={resetTwist}
+          >
             {/* Decorative capsule outline behind image */}
             <div
               className="absolute -inset-5 rounded-[500px] border border-white/50 bg-transparent pointer-events-none"
@@ -229,10 +249,8 @@ const Hero = () => {
 
             <motion.div
               initial={{ rotateY: 180 }}
-              animate={portraitHovered ? { rotateY: [0, 180, 0] } : { rotateY: 0 }}
-              transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1], delay: portraitHovered ? 0 : 0.35 }}
-              onHoverStart={() => setPortraitHovered(true)}
-              onHoverEnd={() => setPortraitHovered(false)}
+              animate={twist ? PORTRAIT_TWIST : PORTRAIT_REST}
+              transition={twist ? TWIST_TRANSITION : LOAD_TRANSITION}
               style={{ transformStyle: "preserve-3d" }}
               className="relative w-full max-w-[334px] md:w-[270px] lg:w-[334px] aspect-[3/4] rounded-[500px] overflow-hidden border border-border/50 shadow-[var(--shadow-glow)]"
             >
