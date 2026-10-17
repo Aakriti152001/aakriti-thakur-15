@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import headerPortrait from "@/assets/header-portrait.png.asset.json";
 
 const navItems = [
