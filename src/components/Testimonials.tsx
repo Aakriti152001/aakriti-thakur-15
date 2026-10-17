@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 import pratik from "@/assets/testimonials/pratik.png";
-import ravi from "@/assets/testimonials/ravi.png";
-import shivam from "@/assets/testimonials/shivam.png";
-import prishiv from "@/assets/testimonials/prishiv.png";
+import ravi from "@/assets/testimonials/ravi.png.asset.json";
+import shivam from "@/assets/testimonials/shivam.png.asset.json";
+import prishiv from "@/assets/testimonials/prishiv.png.asset.json";
 
 const testimonials = [
   {
@@ -18,21 +18,21 @@ const testimonials = [
     name: "Ravi Baid",
     company: "Alliance Infotech",
     rating: 4.8,
-    avatar: ravi,
+    avatar: ravi.url,
   },
   {
     text: "Collaborating with Aakriti was an excellent experience. Her professionalism and attention to clean, user-friendly design helped realise our app vision.",
     name: "Shivam Tiwari",
     company: "Cynayd Solutions",
     rating: 5,
-    avatar: shivam,
+    avatar: shivam.url,
   },
   {
     text: "A very good UI/UX designer with a strong eye for detail and a user-centric approach. Her creativity and precision result in intuitive designs.",
     name: "Prishiv",
     company: "Freelance Web Developer",
     rating: 5,
-    avatar: prishiv,
+    avatar: prishiv.url,
   },
 ];
 
