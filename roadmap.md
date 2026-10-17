@@ -28,3 +28,4 @@
 - [x] Navbar: header sticker tilts left/right on hover and settles back (reduced-motion safe)
 - [x] About: paragraph letter spacing increased by 0.5px
 - [x] Testimonials: Shivam note background set to the same colour as Prishiv
+- [x] Testimonials: Ravi note background set to the same colour as Prishiv
