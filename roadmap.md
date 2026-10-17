@@ -29,3 +29,4 @@
 - [x] About: paragraph letter spacing increased by 0.5px
 - [x] Testimonials: Shivam note background set to the same colour as Prishiv
 - [x] Testimonials: Ravi note background set to the same colour as Prishiv
+- [x] Testimonials: Prishiv note background set to the same colour as Pratik
