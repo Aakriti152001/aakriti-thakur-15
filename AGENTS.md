@@ -2,3 +2,4 @@
 - Import uploaded header and share images through Lovable Assets pointers; keep the derived favicon as a small real file in public so browsers can load it directly.
 - Keep site-wide cursor and pointer glow behavior in the shared CustomCursor, using global CSS tokens and fine-pointer detection so every page behaves consistently without affecting touch input.
 - Write Lovable Assets pointer JSON to a temporary file and move it into place atomically; never redirect the CLI straight onto an existing pointer, because an in-place overwrite briefly leaves an empty file that the bundler parses as invalid JSON and blanks the preview.
+- Run one-shot hover animations from a non-rotating wrapper's pointer enter/leave handlers, with animation targets and transitions defined once at module level; hover gestures bound to the rotating element itself and inline keyframe arrays restart the animation, because the flip shrinks its own hit area and re-renders re-trigger it.
