@@ -40,7 +40,7 @@ const noteStyles = [
   { rotate: -3, offset: "", card: "note-dark", company: "text-muted-foreground", tape: "tape-green", tapeLeft: "50%", tapeRotate: -4 },
   { rotate: -2, offset: "md:-mt-2", card: "note-green", company: "text-muted-foreground", tape: "tape-green", tapeLeft: "50%", tapeRotate: 3 },
   { rotate: -1.5, offset: "md:ml-10", card: "note-dark", company: "text-muted-foreground", tape: "tape-grey", tapeLeft: "32%", tapeRotate: 2 },
-  { rotate: 2.5, offset: "", card: "note-teal", company: "text-accent/80", tape: "tape-green", tapeLeft: "50%", tapeRotate: 3 },
+  { rotate: 2.5, offset: "", card: "note-teal", company: "text-muted-foreground", tape: "tape-green", tapeLeft: "50%", tapeRotate: 3 },
 ];
 
 const Testimonials = () => (
