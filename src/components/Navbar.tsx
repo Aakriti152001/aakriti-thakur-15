@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import headerPortrait from "@/assets/header-portrait.png.asset.json";
 
 const navItems = [
-  { label: "Projects", link: "#work" },
+  { label: "Designs", link: "#work" },
   { label: "About Me", link: "#about" },
   { label: "Experience", link: "#experience" },
-  { label: "Client Stories", link: "#testimonials" },
+  { label: "Stories", link: "#testimonials" },
 ];
 
 const Navbar = () => {
