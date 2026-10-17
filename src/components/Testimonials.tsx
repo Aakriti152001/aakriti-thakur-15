@@ -1,36 +1,46 @@
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
-
+import pratik from "@/assets/testimonials/pratik.png";
+import ravi from "@/assets/testimonials/ravi.png";
+import shivam from "@/assets/testimonials/shivam.png";
+import prishiv from "@/assets/testimonials/prishiv.png";
 
 const testimonials = [
   {
     text: "Working with Aakriti has been a fantastic experience. She consistently delivered high-quality designs that aligned perfectly with our vision and brand.",
     name: "Pratik Baid",
     company: "Hustle Creatives",
-    rating: 5.0,
-    initials: "PB",
+    rating: 5,
+    avatar: pratik,
   },
   {
     text: "I've been working with Aakriti across multiple projects. She has been a great communicator and diligent worker who takes efforts to understand requirements.",
     name: "Ravi Baid",
     company: "Alliance Infotech",
     rating: 4.8,
-    initials: "RB",
+    avatar: ravi,
   },
   {
     text: "Collaborating with Aakriti was an excellent experience. Her professionalism and attention to clean, user-friendly design helped realise our app vision.",
     name: "Shivam Tiwari",
     company: "Cynayd Solutions",
-    rating: 5.0,
-    initials: "ST",
+    rating: 5,
+    avatar: shivam,
   },
   {
     text: "A very good UI/UX designer with a strong eye for detail and a user-centric approach. Her creativity and precision result in intuitive designs.",
     name: "Prishiv",
     company: "Freelance Web Developer",
-    rating: 5.0,
-    initials: "P",
+    rating: 5,
+    avatar: prishiv,
   },
+];
+
+const noteStyles = [
+  { rotate: -3, offset: "", card: "note-dark", company: "text-muted-foreground", tape: "tape-green", tapeLeft: "50%", tapeRotate: -4 },
+  { rotate: -2, offset: "md:-mt-2", card: "note-green", company: "text-muted-foreground", tape: "tape-green", tapeLeft: "50%", tapeRotate: 3 },
+  { rotate: -1.5, offset: "md:ml-10", card: "note-dark", company: "text-muted-foreground", tape: "tape-grey", tapeLeft: "32%", tapeRotate: 2 },
+  { rotate: 2.5, offset: "", card: "note-teal", company: "text-accent/80", tape: "tape-green", tapeLeft: "50%", tapeRotate: 3 },
 ];
 
 const Testimonials = () => (
@@ -56,35 +66,38 @@ const Testimonials = () => (
       </motion.div>
 
 
-      {/* Testimonial cards */}
-      <div className="grid md:grid-cols-2 gap-5">
-        {testimonials.map((t, i) => (
-          <motion.div
-            key={t.name}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.08 }}
-            className="glass-card-hover px-4 py-5 sm:p-6 rounded-2xl flex flex-col gap-4"
-          >
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-xs font-bold text-foreground">
-                {t.initials}
+      {/* Testimonial cards — taped notes */}
+      <div className="grid md:grid-cols-2 gap-x-10 gap-y-14 pt-6">
+        {testimonials.map((t, i) => {
+          const s = noteStyles[i];
+          return (
+            <motion.div
+              key={t.name}
+              initial={{ opacity: 0, y: 20, rotate: 0 }}
+              whileInView={{ opacity: 1, y: 0, rotate: s.rotate }}
+              whileHover={{ rotate: 0, y: -4 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.08 }}
+              className={`relative ${s.offset}`}
+            >
+              <span className={`tape ${s.tape}`} style={{ left: s.tapeLeft, transform: `translateX(-50%) rotate(${s.tapeRotate}deg)` }} />
+              <div className={`note-card ${s.card} px-6 pt-8 pb-10 sm:px-8`}>
+                <div className="flex items-start gap-4">
+                  <img src={t.avatar} alt={t.name} className="w-16 h-16 sm:w-20 sm:h-20 object-contain shrink-0" loading="lazy" />
+                  <div className="flex-1 pt-3">
+                    <p className="text-lg sm:text-xl font-bold">{t.name}</p>
+                    <p className={`text-sm sm:text-base ${s.company}`}>{t.company}</p>
+                  </div>
+                  <div className="flex items-center gap-1.5 pt-1">
+                    <Star className="w-5 h-5 fill-primary text-primary" />
+                    <span className="text-base font-medium">{t.rating}</span>
+                  </div>
+                </div>
+                <p className="mt-4 text-foreground/85 leading-relaxed text-base sm:text-lg">“{t.text}”</p>
               </div>
-              <div className="flex-1">
-                <p className="text-lg font-bold">{t.name}</p>
-                <p className="text-sm text-muted-foreground">{t.company}</p>
-              </div>
-              <div className="flex items-center gap-1 text-primary">
-                <Star className="w-3.5 h-3.5 fill-primary" />
-                <span className="text-xs font-medium">{t.rating}</span>
-              </div>
-            </div>
-            <p className="text-muted-foreground leading-relaxed text-base">
-              {t.text}
-            </p>
-          </motion.div>
-        ))}
+            </motion.div>
+          );
+        })}
       </div>
     </div>
   </section>
