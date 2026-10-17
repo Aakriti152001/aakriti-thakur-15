@@ -142,11 +142,11 @@ const About = () => {
 
           <div ref={textRef} className="glass-card px-4 py-5 sm:p-6 rounded-2xl">
             <div className="relative">
-              <div aria-hidden="true" className="invisible leading-relaxed text-base">
+              <div aria-hidden="true" className="invisible leading-relaxed text-base tracking-[0.5px]">
                 {renderParagraphs(fullText.length)}
               </div>
               <div className="absolute inset-0" aria-live="polite">
-                <div className="text-foreground leading-relaxed text-base">
+                <div className="text-foreground leading-relaxed text-base tracking-[0.5px]">
                   {renderParagraphs(characterCount, isTyping)}
                 </div>
               </div>
