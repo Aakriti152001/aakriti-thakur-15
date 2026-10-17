@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useRef, useState } from "react";
-import { motion, useAnimationControls, useReducedMotion } from "framer-motion";
+import { useCallback, useEffect, useState } from "react";
+import { motion, useReducedMotion, type Transition } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import portraitAsset from "@/assets/portrait.jpg.asset.json";
 const portraitImg = portraitAsset.url;
@@ -88,35 +88,26 @@ const MiniJelly = ({ side }: { side: "left" | "right" }) => {
 
 const HERO_LINES = ["hello i'm,", "Aakriti", "Thakur"];
 
+// Flip targets live at module level so their identity never changes: a fresh
+// inline keyframe array on every render restarts the animation mid-flight.
+const PORTRAIT_EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+const PORTRAIT_REST: { rotateY: number } = { rotateY: 0 };
+const PORTRAIT_TWIST: { rotateY: number[] } = { rotateY: [0, 180, 0] };
+const LOAD_TRANSITION: Transition = { duration: 1.4, ease: PORTRAIT_EASE, delay: 0.35 };
+const TWIST_TRANSITION: Transition = { duration: 1.4, ease: PORTRAIT_EASE };
+
 const Hero = () => {
   const [typed, setTyped] = useState<string[]>(["", "", ""]);
   const [activeLine, setActiveLine] = useState(0);
   const [typingDone, setTypingDone] = useState(false);
-  const portraitControls = useAnimationControls();
-  const twisting = useRef(false);
   const prefersReducedMotion = useReducedMotion();
+  const [twist, setTwist] = useState(false);
 
   const twistPortrait = useCallback(() => {
-    console.log("[hero] twist called", { prefersReducedMotion, twisting: twisting.current });
-    if (prefersReducedMotion || twisting.current) return;
-    twisting.current = true;
-    const done = () => {
-      twisting.current = false;
-    };
-    portraitControls
-      .start({
-        rotateY: [0, 180, 0],
-        transition: { duration: 1.4, ease: [0.22, 1, 0.36, 1] },
-      })
-      .then(done, done);
-  }, [portraitControls, prefersReducedMotion]);
+    if (!prefersReducedMotion) setTwist(true);
+  }, [prefersReducedMotion]);
 
-  useEffect(() => {
-    portraitControls.start({
-      rotateY: 0,
-      transition: { duration: 1.4, ease: [0.22, 1, 0.36, 1], delay: 0.35 },
-    });
-  }, [portraitControls]);
+  const resetTwist = useCallback(() => setTwist(false), []);
 
   useEffect(() => {
     if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) {
@@ -253,8 +244,10 @@ const Hero = () => {
 
             <motion.div
               initial={{ rotateY: 180 }}
-              animate={portraitControls}
+              animate={twist ? PORTRAIT_TWIST : PORTRAIT_REST}
+              transition={twist ? TWIST_TRANSITION : LOAD_TRANSITION}
               onHoverStart={twistPortrait}
+              onHoverEnd={resetTwist}
               style={{ transformStyle: "preserve-3d" }}
               className="relative w-full max-w-[334px] md:w-[270px] lg:w-[334px] aspect-[3/4] rounded-[500px] overflow-hidden border border-border/50 shadow-[var(--shadow-glow)]"
             >
