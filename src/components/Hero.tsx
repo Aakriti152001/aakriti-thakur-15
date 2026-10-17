@@ -92,6 +92,7 @@ const Hero = () => {
   const [typed, setTyped] = useState<string[]>(["", "", ""]);
   const [activeLine, setActiveLine] = useState(0);
   const [typingDone, setTypingDone] = useState(false);
+  const [portraitHovered, setPortraitHovered] = useState(false);
 
   useEffect(() => {
     if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) {
