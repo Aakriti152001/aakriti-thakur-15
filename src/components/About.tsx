@@ -11,7 +11,7 @@ const aboutParagraphs: Segment[][] = [
     { text: "product designer", bold: true },
     { text: " with " },
     { text: "5 years", bold: true },
-    { text: " of experience, working across AI, SaaS, healthcare, and fintech. I enjoy making complex things feel simple and intuitive." },
+    { text: " of experience, working across B2B SaaS and AI platform particularly in, healthcare, customer conversation, talent acquisition. I enjoy making complex things feel simple and intuitive for user exeperience." },
   ],
   [
     { text: "I\u2019m curious by nature\u2014I like understanding how things work, asking questions, and turning ideas into experiences that feel right." },
