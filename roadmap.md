@@ -23,3 +23,4 @@
 - [x] Work.tsx: Orvaa card thumbnail replaced with the new uploaded cover
 - [x] Orvaa page: case-study section 22 replaced with the uploaded Slide-11-2.png
 - [x] Orvaa page: case-study section 21 replaced with the uploaded Slide-11_1-3.png
+- [x] Navbar: header sticker tilts left/right on hover and settles back (reduced-motion safe)
