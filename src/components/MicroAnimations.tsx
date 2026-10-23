@@ -1,4 +1,4 @@
-import type { CSSProperties } from "react";
+import { useEffect, useRef, type CSSProperties } from "react";
 import { motion } from "framer-motion";
 import rotationClip from "@/assets/micro-rotation-1.mov.asset.json";
 import orderClip from "@/assets/micro-interactive-order-1.mp4.asset.json";
@@ -31,6 +31,26 @@ const animations: MicroAnimation[] = [
 
 
 const MicroAnimations = () => {
+  const rowRef = useRef<HTMLDivElement>(null);
+
+  // Vertical wheel scrolls the row horizontally while it can still move;
+  // at either end the page scrolls normally again.
+  useEffect(() => {
+    const el = rowRef.current;
+    if (!el) return;
+    const onWheel = (e: WheelEvent) => {
+      if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+      const max = el.scrollWidth - el.clientWidth;
+      if (max <= 0) return;
+      const next = Math.max(0, Math.min(max, el.scrollLeft + e.deltaY));
+      if (Math.abs(next - el.scrollLeft) < 0.5) return;
+      e.preventDefault();
+      el.scrollLeft = next;
+    };
+    el.addEventListener("wheel", onWheel, { passive: false });
+    return () => el.removeEventListener("wheel", onWheel);
+  }, []);
+
   return (
     <section id="micro-animations" className="py-[76px] px-0 overflow-hidden">
       <div className="container mx-auto max-w-6xl">
@@ -51,7 +71,8 @@ const MicroAnimations = () => {
       {/* Horizontal scroll row — extends full width, 4 cards visible + 5th peeking */}
       <div className="relative">
         <div
-          className="flex gap-8 sm:gap-9 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4"
+          ref={rowRef}
+          className="flex gap-8 sm:gap-9 overflow-x-auto snap-x snap-mandatory pb-4"
           style={{
             "--row-pad": "max(32px, calc((100% - 1152px) / 2 + 32px))",
             paddingInline: "var(--row-pad)",
