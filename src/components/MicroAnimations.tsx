@@ -31,6 +31,26 @@ const animations: MicroAnimation[] = [
 
 
 const MicroAnimations = () => {
+  const rowRef = useRef<HTMLDivElement>(null);
+
+  // Vertical wheel scrolls the row horizontally while it can still move;
+  // at either end the page scrolls normally again.
+  useEffect(() => {
+    const el = rowRef.current;
+    if (!el) return;
+    const onWheel = (e: WheelEvent) => {
+      if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+      const max = el.scrollWidth - el.clientWidth;
+      if (max <= 0) return;
+      const next = Math.max(0, Math.min(max, el.scrollLeft + e.deltaY));
+      if (Math.abs(next - el.scrollLeft) < 0.5) return;
+      e.preventDefault();
+      el.scrollLeft = next;
+    };
+    el.addEventListener("wheel", onWheel, { passive: false });
+    return () => el.removeEventListener("wheel", onWheel);
+  }, []);
+
   return (
     <section id="micro-animations" className="py-[76px] px-0 overflow-hidden">
       <div className="container mx-auto max-w-6xl">
