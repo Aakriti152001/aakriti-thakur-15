@@ -206,12 +206,12 @@ const Hero = () => {
           </h1>
 
           <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
-            Designing AI-powered products and data-driven experiences that turn complexity into clarity.
+            Designing AI-powered SaaS and data-driven B2B & B2C experiences that turn complexity into clarity.
           </p>
 
           <div className="flex flex-wrap gap-3 sm:gap-4 mt-2">
             <a href="#work" className="border border-border rounded-full px-5 sm:px-6 py-3 text-foreground hover:bg-secondary/80 transition-all duration-300 text-sm font-medium">
-              See My Designs
+              See my Work
             </a>
             <a
               href="/Aakriti_Thakur_Resume.pdf"
