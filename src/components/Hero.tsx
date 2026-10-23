@@ -211,7 +211,7 @@ const Hero = () => {
 
           <div className="flex flex-wrap gap-3 sm:gap-4 mt-2">
             <a href="#work" className="border border-border rounded-full px-5 sm:px-6 py-3 text-foreground hover:bg-secondary/80 transition-all duration-300 text-sm font-medium">
-              See All Projects
+              See My Designs
             </a>
             <a
               href="/Aakriti_Thakur_Resume.pdf"
