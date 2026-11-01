@@ -1,5 +1,5 @@
 import { motion, useInView, useReducedMotion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import aboutPortraitAsset from "@/assets/about-portrait-2.png.asset.json";
 const aboutPortraitImg = aboutPortraitAsset.url;
 
