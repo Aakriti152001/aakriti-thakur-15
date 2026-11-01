@@ -1,7 +1,12 @@
 import { motion, useInView, useReducedMotion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import aboutPortraitAsset from "@/assets/about-portrait-2.png.asset.json";
 const aboutPortraitImg = aboutPortraitAsset.url;
+
+// One-shot hover tilt targets, defined once at module level (per AGENTS.md rule).
+const PORTRAIT_REST = { rotate: 0 };
+const PORTRAIT_TILT = { rotate: [0, -10, 9, -5, 0] };
+const PORTRAIT_TILT_TRANSITION = { duration: 0.75, ease: "easeInOut" as const };
 
 type Segment = { text: string; bold?: boolean };
 
@@ -35,6 +40,11 @@ const About = () => {
   const reduceMotion = useReducedMotion();
   const fullText = aboutText;
   const [characterCount, setCharacterCount] = useState(0);
+  const [portraitTilt, setPortraitTilt] = useState(false);
+  const tiltPortrait = useCallback(() => {
+    if (!reduceMotion) setPortraitTilt(true);
+  }, [reduceMotion]);
+  const resetPortraitTilt = useCallback(() => setPortraitTilt(false), []);
 
   useEffect(() => {
     if (!isInView) return;
@@ -120,15 +130,19 @@ const About = () => {
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
+          onPointerEnter={tiltPortrait}
+          onPointerLeave={resetPortraitTilt}
           className="rounded-2xl overflow-hidden border border-border/30 relative aspect-square md:aspect-square md:h-full w-[calc(100%-100px)] bg-background"
         >
-          <img
+          <motion.img
             src={aboutPortraitImg}
             alt="Aakriti Thakur"
             className="absolute inset-0 w-full h-full object-contain object-center"
             loading="lazy"
             width={1254}
             height={1254}
+            animate={portraitTilt ? PORTRAIT_TILT : PORTRAIT_REST}
+            transition={portraitTilt ? PORTRAIT_TILT_TRANSITION : { duration: 0 }}
           />
         </motion.div>
 
