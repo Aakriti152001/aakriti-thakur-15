@@ -3,6 +3,11 @@ import { useEffect, useRef, useState } from "react";
 import aboutPortraitAsset from "@/assets/about-portrait-2.png.asset.json";
 const aboutPortraitImg = aboutPortraitAsset.url;
 
+// One-shot hover tilt targets, defined once at module level (per AGENTS.md rule).
+const PORTRAIT_REST = { rotate: 0 };
+const PORTRAIT_TILT = { rotate: [0, -10, 9, -5, 0] };
+const PORTRAIT_TILT_TRANSITION = { duration: 0.75, ease: "easeInOut" as const };
+
 type Segment = { text: string; bold?: boolean };
 
 const aboutParagraphs: Segment[][] = [
