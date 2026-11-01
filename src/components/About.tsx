@@ -1,6 +1,6 @@
 import { motion, useInView, useReducedMotion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import aboutPortraitAsset from "@/assets/about-portrait.png.asset.json";
+import aboutPortraitAsset from "@/assets/about-portrait-2.png.asset.json";
 const aboutPortraitImg = aboutPortraitAsset.url;
 
 type Segment = { text: string; bold?: boolean };
