@@ -3,10 +3,10 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import aboutPortraitAsset from "@/assets/about-portrait-2.png.asset.json";
 const aboutPortraitImg = aboutPortraitAsset.url;
 
-// One-shot hover tilt targets, defined once at module level (per AGENTS.md rule).
+// One-shot hover pendulum: image top stays fixed, bottom swings left and settles back to centre.
 const PORTRAIT_REST = { rotate: 0 };
-const PORTRAIT_TILT = { rotate: [0, -10, 9, -5, 0] };
-const PORTRAIT_TILT_TRANSITION = { duration: 0.75, ease: "easeInOut" as const };
+const PORTRAIT_TILT = { rotate: [0, -8, 0] };
+const PORTRAIT_TILT_TRANSITION = { duration: 1.2, ease: [0.25, 0.1, 0.25, 1] as const };
 
 type Segment = { text: string; bold?: boolean };
 
@@ -132,12 +132,13 @@ const About = () => {
           viewport={{ once: true }}
           onPointerEnter={tiltPortrait}
           onPointerLeave={resetPortraitTilt}
-          className="rounded-2xl overflow-hidden border border-border/30 relative aspect-square md:aspect-square md:h-full w-[calc(100%-100px)] bg-background"
+          className="rounded-2xl overflow-hidden relative aspect-square md:aspect-square md:h-full w-[calc(100%-100px)] bg-background"
         >
           <motion.img
             src={aboutPortraitImg}
             alt="Aakriti Thakur"
             className="absolute inset-0 w-full h-full object-contain object-center"
+            style={{ transformOrigin: "50% 0%" }}
             loading="lazy"
             width={1254}
             height={1254}
