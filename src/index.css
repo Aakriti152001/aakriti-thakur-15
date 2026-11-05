@@ -311,6 +311,60 @@ html {
   }
 }
 
+/* First-visit underwater intro: reuse the portfolio's existing jellyfish tones. */
+.underwater-intro {
+  animation: underwater-intro-exit 1.8s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+  will-change: transform, opacity;
+}
+
+.underwater-intro-overlay {
+  animation: underwater-overlay-lift 1.8s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+  will-change: transform, opacity;
+}
+
+.underwater-intro-rise {
+  animation: underwater-jelly-rise 1.7s cubic-bezier(0.35, 0, 0.2, 1) both;
+  will-change: transform;
+}
+
+.underwater-intro-drift {
+  animation: underwater-jelly-drift 1.5s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.underwater-intro-particle {
+  opacity: 0;
+  animation: underwater-particle-rise 1.6s ease-out both;
+}
+
+@keyframes underwater-intro-exit {
+  0% { transform: translate3d(0, 0, 0); opacity: 1; }
+  58% { opacity: 1; }
+  100% { transform: translate3d(0, -100%, 0); opacity: 0; }
+}
+
+@keyframes underwater-overlay-lift {
+  0% { transform: translate3d(0, 0, 0); opacity: 1; }
+  55% { opacity: 0.96; }
+  100% { transform: translate3d(0, -100%, 0); opacity: 0; }
+}
+
+@keyframes underwater-jelly-rise {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(0, -145vh, 0); }
+}
+
+@keyframes underwater-jelly-drift {
+  0% { transform: translate3d(calc(var(--intro-drift) * -0.45), 0, 0) rotate(-4deg); }
+  100% { transform: translate3d(var(--intro-drift), -8px, 0) rotate(4deg); }
+}
+
+@keyframes underwater-particle-rise {
+  0% { transform: translate3d(0, 0, 0); opacity: 0; }
+  20% { opacity: 0.55; }
+  100% { transform: translate3d(10px, -45vh, 0); opacity: 0; }
+}
+
 @media (max-width: 1024px) {
   .jelly-field {
     --jelly-scale: 0.7;

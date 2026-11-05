@@ -10,9 +10,11 @@ import Experience from "@/components/Experience";
 import Testimonials from "@/components/Testimonials";
 
 import Contact from "@/components/Contact";
+import UnderwaterIntro from "@/components/UnderwaterIntro";
 
 const Index = () => (
   <div className="min-h-screen">
+    <UnderwaterIntro />
     <Navbar />
     <Hero />
     <Skills />
