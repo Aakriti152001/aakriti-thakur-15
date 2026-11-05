@@ -323,7 +323,7 @@ html {
 }
 
 .underwater-intro-rise {
-  animation: underwater-jelly-rise 1.7s cubic-bezier(0.35, 0, 0.2, 1) both;
+  animation: underwater-jelly-rise 1.8s cubic-bezier(0.35, 0, 0.2, 1) both;
   will-change: transform;
 }
 
@@ -350,13 +350,13 @@ html {
 }
 
 @keyframes underwater-jelly-rise {
-  0% { transform: translate3d(0, 0, 0); }
-  100% { transform: translate3d(0, -110vh, 0); }
+  0% { transform: translate3d(0, 30vh, 0); }
+  100% { transform: translate3d(0, -90vh, 0); }
 }
 
 @keyframes underwater-jelly-drift {
-  0% { transform: translate3d(calc(var(--intro-drift) * -0.45), 0, 0) rotate(-4deg); }
-  100% { transform: translate3d(var(--intro-drift), -8px, 0) rotate(4deg); }
+  0% { transform: translate3d(calc(var(--intro-drift) * -0.45), var(--intro-drift-y), 0) rotate(-4deg); }
+  100% { transform: translate3d(var(--intro-drift), calc(var(--intro-drift-y) - 18px), 0) rotate(4deg); }
 }
 
 @keyframes underwater-particle-rise {

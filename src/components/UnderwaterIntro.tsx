@@ -4,12 +4,12 @@ import JellyfishArtwork from "@/components/JellyfishArtwork";
 const INTRO_KEY = "aakriti-underwater-intro-seen";
 
 const JELLIES = [
-  { left: "7%", size: 34, opacity: 0.28, blur: 1.2, duration: "1550ms", delay: "80ms", drift: "-18px" },
-  { left: "22%", size: 46, opacity: 0.4, blur: 0.4, duration: "1700ms", delay: "0ms", drift: "16px" },
-  { left: "40%", size: 30, opacity: 0.24, blur: 1.8, duration: "1450ms", delay: "140ms", drift: "-12px" },
-  { left: "58%", size: 48, opacity: 0.38, blur: 0, duration: "1750ms", delay: "40ms", drift: "20px" },
-  { left: "77%", size: 36, opacity: 0.3, blur: 1.2, duration: "1500ms", delay: "110ms", drift: "-16px" },
-  { left: "91%", size: 28, opacity: 0.22, blur: 2, duration: "1650ms", delay: "60ms", drift: "12px" },
+  { left: "5%", bottom: "-5%", size: 46, opacity: 0.32, blur: 0.8, duration: "1900ms", delay: "70ms", drift: "-18px" },
+  { left: "21%", bottom: "13%", size: 64, opacity: 0.44, blur: 0.2, duration: "1750ms", delay: "0ms", drift: "16px" },
+  { left: "39%", bottom: "-3%", size: 40, opacity: 0.28, blur: 1.4, duration: "1850ms", delay: "130ms", drift: "-12px" },
+  { left: "57%", bottom: "16%", size: 68, opacity: 0.42, blur: 0, duration: "1800ms", delay: "40ms", drift: "20px" },
+  { left: "76%", bottom: "-1%", size: 50, opacity: 0.34, blur: 0.8, duration: "1900ms", delay: "100ms", drift: "-16px" },
+  { left: "91%", bottom: "11%", size: 38, opacity: 0.25, blur: 1.5, duration: "1700ms", delay: "60ms", drift: "12px" },
 ];
 
 const PARTICLES = [
@@ -79,10 +79,10 @@ const UnderwaterIntro = () => {
       {JELLIES.map((jelly, index) => (
         <div
           key={`jelly-${index}`}
-          className="underwater-intro-rise absolute bottom-[-5%]"
+          className="underwater-intro-rise absolute"
           style={{ left: jelly.left, animationDuration: jelly.duration, animationDelay: jelly.delay }}
         >
-          <div className="underwater-intro-drift" style={{ ["--intro-drift" as string]: jelly.drift }}>
+          <div className="underwater-intro-drift" style={{ ["--intro-drift" as string]: jelly.drift, ["--intro-drift-y" as string]: jelly.bottom }}>
             <div
               className="jelly-body"
               style={{
