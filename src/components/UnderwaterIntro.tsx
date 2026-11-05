@@ -79,7 +79,7 @@ const UnderwaterIntro = () => {
       {JELLIES.map((jelly, index) => (
         <div
           key={`jelly-${index}`}
-          className="underwater-intro-rise absolute bottom-[-24%]"
+          className="underwater-intro-rise absolute bottom-[-5%]"
           style={{ left: jelly.left, animationDuration: jelly.duration, animationDelay: jelly.delay }}
         >
           <div className="underwater-intro-drift" style={{ ["--intro-drift" as string]: jelly.drift }}>
