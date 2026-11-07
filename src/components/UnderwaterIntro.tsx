@@ -4,12 +4,12 @@ import JellyfishArtwork from "@/components/JellyfishArtwork";
 const INTRO_KEY = "aakriti-underwater-intro-seen";
 
 const JELLIES = [
-  { left: "5%", bottom: "-5%", size: 46, opacity: 0.32, blur: 0.8, duration: "1900ms", delay: "70ms", drift: "-18px" },
-  { left: "21%", bottom: "13%", size: 64, opacity: 0.44, blur: 0.2, duration: "1750ms", delay: "0ms", drift: "16px" },
-  { left: "39%", bottom: "-3%", size: 40, opacity: 0.28, blur: 1.4, duration: "1850ms", delay: "130ms", drift: "-12px" },
-  { left: "57%", bottom: "16%", size: 68, opacity: 0.42, blur: 0, duration: "1800ms", delay: "40ms", drift: "20px" },
-  { left: "76%", bottom: "-1%", size: 50, opacity: 0.34, blur: 0.8, duration: "1900ms", delay: "100ms", drift: "-16px" },
-  { left: "91%", bottom: "11%", size: 38, opacity: 0.25, blur: 1.5, duration: "1700ms", delay: "60ms", drift: "12px" },
+  { left: "5%", bottom: "-5%", size: 46, opacity: 0.32, blur: 0.8, duration: "2300ms", delay: "70ms", drift: "-18px" },
+  { left: "21%", bottom: "13%", size: 64, opacity: 0.44, blur: 0.2, duration: "2200ms", delay: "0ms", drift: "16px" },
+  { left: "39%", bottom: "-3%", size: 40, opacity: 0.28, blur: 1.4, duration: "2350ms", delay: "130ms", drift: "-12px" },
+  { left: "57%", bottom: "16%", size: 68, opacity: 0.42, blur: 0, duration: "2250ms", delay: "40ms", drift: "20px" },
+  { left: "76%", bottom: "-1%", size: 50, opacity: 0.34, blur: 0.8, duration: "2300ms", delay: "100ms", drift: "-16px" },
+  { left: "91%", bottom: "11%", size: 38, opacity: 0.25, blur: 1.5, duration: "2200ms", delay: "60ms", drift: "12px" },
 ];
 
 const PARTICLES = [
@@ -51,7 +51,7 @@ const UnderwaterIntro = () => {
         // The intro still completes if browser storage is unavailable.
       }
       setVisible(false);
-    }, 1850);
+    }, 2500);
 
     return () => window.clearTimeout(timeout);
   }, [visible]);
