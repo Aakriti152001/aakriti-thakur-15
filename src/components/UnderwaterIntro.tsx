@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import JellyfishArtwork from "@/components/JellyfishArtwork";
 
 const JELLIES = [
-  { left: "5%", size: 30, opacity: 0.32, blur: 0.8, drift: "-18px" },
-  { left: "21%", size: 58, opacity: 0.44, blur: 0.2, drift: "16px" },
-  { left: "39%", size: 38, opacity: 0.28, blur: 1.4, drift: "-12px" },
-  { left: "57%", size: 86, opacity: 0.42, blur: 0, drift: "20px" },
-  { left: "76%", size: 48, opacity: 0.34, blur: 0.8, drift: "-16px" },
-  { left: "91%", size: 66, opacity: 0.25, blur: 1.5, drift: "12px" },
+  { left: "5%", size: 30, opacity: 0.32, blur: 0.8, duration: "2300ms", delay: "70ms", drift: "-18px" },
+  { left: "21%", size: 58, opacity: 0.44, blur: 0.2, duration: "2200ms", delay: "0ms", drift: "16px" },
+  { left: "39%", size: 38, opacity: 0.28, blur: 1.4, duration: "2350ms", delay: "130ms", drift: "-12px" },
+  { left: "57%", size: 86, opacity: 0.42, blur: 0, duration: "2250ms", delay: "40ms", drift: "20px" },
+  { left: "76%", size: 48, opacity: 0.34, blur: 0.8, duration: "2300ms", delay: "100ms", drift: "-16px" },
+  { left: "91%", size: 66, opacity: 0.25, blur: 1.5, duration: "2200ms", delay: "60ms", drift: "12px" },
 ];
 
 const PARTICLES = [
@@ -39,7 +39,7 @@ const UnderwaterIntro = () => {
 
     const timeout = window.setTimeout(() => {
       setVisible(false);
-    }, 2500);
+    }, 2800);
 
     return () => window.clearTimeout(timeout);
   }, [visible]);
@@ -68,7 +68,7 @@ const UnderwaterIntro = () => {
         <div
           key={`jelly-${index}`}
           className="underwater-intro-rise absolute"
-          style={{ left: jelly.left, bottom: `-${Math.ceil(jelly.size * 1.7)}px` }}
+          style={{ left: jelly.left, animationDuration: jelly.duration, animationDelay: jelly.delay }}
         >
           <div className="underwater-intro-drift" style={{ ["--intro-drift" as string]: jelly.drift }}>
             <div
