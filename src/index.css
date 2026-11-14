@@ -313,17 +313,17 @@ html {
 
 /* First-visit underwater intro: reuse the portfolio's existing jellyfish tones. */
 .underwater-intro {
-  animation: underwater-intro-exit 2.5s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+  animation: underwater-intro-exit 2.8s cubic-bezier(0.76, 0, 0.24, 1) forwards;
   will-change: transform, opacity;
 }
 
 .underwater-intro-overlay {
-  animation: underwater-overlay-lift 2.5s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+  animation: underwater-overlay-lift 2.8s cubic-bezier(0.76, 0, 0.24, 1) forwards;
   will-change: transform, opacity;
 }
 
 .underwater-intro-rise {
-  animation: underwater-jelly-rise 2.5s cubic-bezier(0.35, 0, 0.2, 1) both;
+  animation: underwater-jelly-rise 2.3s cubic-bezier(0.35, 0, 0.2, 1) both;
   will-change: transform;
 }
 
@@ -338,25 +338,23 @@ html {
 }
 
 @keyframes underwater-intro-exit {
-  0% { transform: translate3d(0, 0, 0); opacity: 1; }
-  58% { opacity: 1; }
+  0%, 88.5% { transform: translate3d(0, 0, 0); opacity: 1; }
   100% { transform: translate3d(0, -100%, 0); opacity: 0; }
 }
 
 @keyframes underwater-overlay-lift {
-  0% { transform: translate3d(0, 0, 0); opacity: 1; }
-  55% { opacity: 0.96; }
+  0%, 88.5% { transform: translate3d(0, 0, 0); opacity: 1; }
   100% { transform: translate3d(0, -100%, 0); opacity: 0; }
 }
 
 @keyframes underwater-jelly-rise {
-  0% { transform: translate3d(0, 30vh, 0); }
-  100% { transform: translate3d(0, -90vh, 0); }
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(0, calc(-100vh - 100%), 0); }
 }
 
 @keyframes underwater-jelly-drift {
-  0% { transform: translate3d(calc(var(--intro-drift) * -0.45), var(--intro-drift-y), 0) rotate(-4deg); }
-  100% { transform: translate3d(var(--intro-drift), calc(var(--intro-drift-y) - 18px), 0) rotate(4deg); }
+  0% { transform: translate3d(calc(var(--intro-drift) * -0.45), 0, 0) rotate(-4deg); }
+  100% { transform: translate3d(var(--intro-drift), -18px, 0) rotate(4deg); }
 }
 
 @keyframes underwater-particle-rise {
