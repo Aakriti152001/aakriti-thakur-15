@@ -348,7 +348,7 @@ html {
 }
 
 @keyframes underwater-jelly-rise {
-  0% { transform: translate3d(0, 0, 0); }
+  0% { transform: translate3d(0, 100%, 0); }
   100% { transform: translate3d(0, calc(-100vh - 100%), 0); }
 }
 
