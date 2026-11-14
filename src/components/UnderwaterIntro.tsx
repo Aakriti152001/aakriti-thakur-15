@@ -68,12 +68,7 @@ const UnderwaterIntro = () => {
         <div
           key={`jelly-${index}`}
           className="underwater-intro-rise absolute"
-          style={{
-            left: jelly.left,
-            bottom: `-${Math.ceil(jelly.size * 1.7)}px`,
-            animationDuration: jelly.duration,
-            animationDelay: jelly.delay,
-          }}
+          style={{ left: jelly.left, animationDuration: jelly.duration, animationDelay: jelly.delay }}
         >
           <div className="underwater-intro-drift" style={{ ["--intro-drift" as string]: jelly.drift }}>
             <div
