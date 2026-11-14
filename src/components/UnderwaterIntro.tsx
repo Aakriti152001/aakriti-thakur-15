@@ -39,7 +39,7 @@ const UnderwaterIntro = () => {
 
     const timeout = window.setTimeout(() => {
       setVisible(false);
-    }, 2480);
+    }, 2800);
 
     return () => window.clearTimeout(timeout);
   }, [visible]);
