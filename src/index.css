@@ -323,6 +323,7 @@ html {
 }
 
 .underwater-intro-rise {
+  bottom: 0;
   animation: underwater-jelly-rise 2.3s cubic-bezier(0.35, 0, 0.2, 1) both;
   will-change: transform;
 }
@@ -348,7 +349,7 @@ html {
 }
 
 @keyframes underwater-jelly-rise {
-  0% { transform: translate3d(0, 100%, 0); }
+  0% { transform: translate3d(0, 0, 0); }
   100% { transform: translate3d(0, calc(-100vh - 100%), 0); }
 }
 
