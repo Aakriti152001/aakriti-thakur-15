@@ -31,3 +31,4 @@
 - [x] Testimonials: Ravi note background set to the same colour as Prishiv
 - [x] Testimonials: Prishiv note background set to the same colour as Pratik
 - [x] Homepage: add a brief first-visit underwater reveal using the existing jellyfish artwork and colors
+- [ ] Homepage intro: synchronize the dark cover exit with the last jellyfish and start Hero typing/portrait flip on reveal
