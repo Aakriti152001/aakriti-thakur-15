@@ -224,7 +224,7 @@ const Hero = () => {
               initial={PORTRAIT_HIDDEN}
               animate={twist ? PORTRAIT_TWIST : heroRevealed ? PORTRAIT_REST : PORTRAIT_HIDDEN}
               transition={twist ? TWIST_TRANSITION : LOAD_TRANSITION}
-              style={{ transformStyle: "preserve-3d" }}
+              style={{ transformStyle: "preserve-3d", backfaceVisibility: "hidden" }}
               className="relative w-full max-w-[334px] md:w-[270px] lg:w-[334px] aspect-[3/4] rounded-[500px] overflow-hidden border border-border/50 shadow-[var(--shadow-glow)]"
             >
               <img
