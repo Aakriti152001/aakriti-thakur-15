@@ -87,26 +87,26 @@ const Hero = () => {
     }
     let cancelled = false;
     const timers: number[] = [];
-    const wait = (ms: number) =>
-      new Promise<void>((resolve) => {
-        timers.push(window.setTimeout(resolve, ms));
-      });
     const startTyping = () => {
       setHeroRevealed(true);
       void (async () => {
-      for (let li = 0; li < HERO_LINES.length; li++) {
-        if (cancelled) return;
-        setActiveLine(li);
-        for (let ci = 1; ci <= HERO_LINES[li].length; ci++) {
+        for (let li = 0; li < HERO_LINES.length; li++) {
           if (cancelled) return;
-          await wait(58);
-          setTyped((prev) => prev.map((v, i) => (i === li ? HERO_LINES[li].slice(0, ci) : v)));
+          setActiveLine(li);
+          for (let ci = 1; ci <= HERO_LINES[li].length; ci++) {
+            if (cancelled) return;
+            await new Promise<void>((resolve) => {
+              timers.push(window.setTimeout(resolve, 58));
+            });
+            setTyped((prev) => prev.map((v, i) => (i === li ? HERO_LINES[li].slice(0, ci) : v)));
+          }
+          await new Promise<void>((resolve) => {
+            timers.push(window.setTimeout(resolve, 140));
+          });
         }
-        await wait(140);
-      }
-      if (cancelled) return;
-      setActiveLine(-1);
-      setTypingDone(true);
+        if (cancelled) return;
+        setActiveLine(-1);
+        setTypingDone(true);
       })();
     };
     window.addEventListener("underwater-intro-reveal", startTyping);
@@ -200,7 +200,7 @@ const Hero = () => {
         <motion.div
           initial={false}
           animate={heroRevealed ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
+          transition={{ duration: 0.7 }}
           className="flex justify-center md:justify-end"
         >
           <div
