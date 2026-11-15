@@ -57,15 +57,17 @@ const HERO_LINES = ["hello i'm,", "Aakriti", "Thakur"];
 // Flip targets live at module level so their identity never changes: a fresh
 // inline keyframe array on every render restarts the animation mid-flight.
 const PORTRAIT_EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
-const PORTRAIT_REST: { rotateY: number } = { rotateY: 0 };
+const PORTRAIT_HIDDEN = { rotateY: 180, opacity: 0, scale: 0.9 };
+const PORTRAIT_REST = { rotateY: 0, opacity: 1, scale: 1 };
 const PORTRAIT_TWIST: { rotateY: number[] } = { rotateY: [0, 180, 0] };
-const LOAD_TRANSITION: Transition = { duration: 1.4, ease: PORTRAIT_EASE, delay: 0.35 };
+const LOAD_TRANSITION: Transition = { duration: 1.4, ease: PORTRAIT_EASE };
 const TWIST_TRANSITION: Transition = { duration: 1.4, ease: PORTRAIT_EASE };
 
 const Hero = () => {
   const [typed, setTyped] = useState<string[]>(["", "", ""]);
   const [activeLine, setActiveLine] = useState(0);
   const [typingDone, setTypingDone] = useState(false);
+  const [heroRevealed, setHeroRevealed] = useState(false);
   const prefersReducedMotion = useReducedMotion();
   const [twist, setTwist] = useState(false);
 
@@ -77,6 +79,7 @@ const Hero = () => {
 
   useEffect(() => {
     if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) {
+      setHeroRevealed(true);
       setTyped(HERO_LINES);
       setActiveLine(-1);
       setTypingDone(true);
@@ -88,8 +91,9 @@ const Hero = () => {
       new Promise<void>((resolve) => {
         timers.push(window.setTimeout(resolve, ms));
       });
-    (async () => {
-      await wait(400);
+    const startTyping = () => {
+      setHeroRevealed(true);
+      void (async () => {
       for (let li = 0; li < HERO_LINES.length; li++) {
         if (cancelled) return;
         setActiveLine(li);
@@ -103,9 +107,12 @@ const Hero = () => {
       if (cancelled) return;
       setActiveLine(-1);
       setTypingDone(true);
-    })();
+      })();
+    };
+    window.addEventListener("underwater-intro-reveal", startTyping);
     return () => {
       cancelled = true;
+      window.removeEventListener("underwater-intro-reveal", startTyping);
       timers.forEach((t) => window.clearTimeout(t));
     };
   }, []);
@@ -122,7 +129,7 @@ const Hero = () => {
         {/* Left */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={heroRevealed ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.7 }}
           className="flex flex-col gap-6"
         >
@@ -191,8 +198,8 @@ const Hero = () => {
 
         {/* Right — portrait */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={false}
+          animate={heroRevealed ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
           transition={{ duration: 0.7, delay: 0.3 }}
           className="flex justify-center md:justify-end"
         >
@@ -214,8 +221,8 @@ const Hero = () => {
             <MiniJelly side="right" />
 
             <motion.div
-              initial={{ rotateY: 180 }}
-              animate={twist ? PORTRAIT_TWIST : PORTRAIT_REST}
+              initial={PORTRAIT_HIDDEN}
+              animate={twist ? PORTRAIT_TWIST : heroRevealed ? PORTRAIT_REST : PORTRAIT_HIDDEN}
               transition={twist ? TWIST_TRANSITION : LOAD_TRANSITION}
               style={{ transformStyle: "preserve-3d" }}
               className="relative w-full max-w-[334px] md:w-[270px] lg:w-[334px] aspect-[3/4] rounded-[500px] overflow-hidden border border-border/50 shadow-[var(--shadow-glow)]"
