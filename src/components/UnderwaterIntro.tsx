@@ -22,7 +22,8 @@ const PARTICLES = [
 ];
 
 const HERO_REVEAL_MS = 2195;
-const INTRO_DURATION_MS = 2480;
+const JELLY_EXIT_MS = 2480;
+const INTRO_DURATION_MS = 2660;
 
 const shouldShowIntro = () => {
   if (typeof window === "undefined") return false;
@@ -42,7 +43,7 @@ const UnderwaterIntro = () => {
 
     const revealTimeout = window.setTimeout(() => {
       window.dispatchEvent(new Event("underwater-intro-reveal"));
-    }, HERO_REVEAL_MS);
+    }, JELLY_EXIT_MS);
     const timeout = window.setTimeout(() => {
       setVisible(false);
     }, INTRO_DURATION_MS);
