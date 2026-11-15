@@ -21,6 +21,10 @@ const PARTICLES = [
   { left: "92%", bottom: "18%", size: 3, delay: "120ms" },
 ];
 
+const HERO_REVEAL_MS = 2195;
+const JELLY_EXIT_MS = 2480;
+const INTRO_DURATION_MS = 2660;
+
 const shouldShowIntro = () => {
   if (typeof window === "undefined") return false;
 
@@ -37,11 +41,17 @@ const UnderwaterIntro = () => {
   useEffect(() => {
     if (!visible) return;
 
+    const revealTimeout = window.setTimeout(() => {
+      window.dispatchEvent(new Event("underwater-intro-reveal"));
+    }, JELLY_EXIT_MS);
     const timeout = window.setTimeout(() => {
       setVisible(false);
-    }, 2800);
+    }, INTRO_DURATION_MS);
 
-    return () => window.clearTimeout(timeout);
+    return () => {
+      window.clearTimeout(revealTimeout);
+      window.clearTimeout(timeout);
+    };
   }, [visible]);
 
   if (!visible) return null;
